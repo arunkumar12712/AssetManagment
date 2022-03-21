@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Serenity.Scripts.5.2.4\build\Serenity.Scripts.props" Condition="Exists('..\..\packages\Serenity.Scripts.5.2.4\build\Serenity.Scripts.props')" />
   <Import Project="..\..\packages\Microsoft.TypeScript.MSBuild.3.7.4\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\..\packages\Microsoft.TypeScript.MSBuild.3.7.4\build\Microsoft.TypeScript.MSBuild.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -87,7 +88,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Mono.Cecil, Version=0.11.1.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Serenity.Web.3.13.5\lib\net45\Mono.Cecil.dll</HintPath>
+      <HintPath>..\..\packages\Serenity.Web.3.14.5\lib\net45\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil.Mdb, Version=0.11.1.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Mono.Cecil.0.11.1\lib\net40\Mono.Cecil.Mdb.dll</HintPath>
@@ -112,24 +113,20 @@
       <HintPath>..\..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
-    <Reference Include="Serenity.Core, Version=3.13.5.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\Serenity.Core.3.13.5\lib\net45\Serenity.Core.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Serenity.Core, Version=3.14.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Serenity.Core.3.14.5\lib\net45\Serenity.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Serenity.Data, Version=3.13.5.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\Serenity.Data.3.13.5\lib\net45\Serenity.Data.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Serenity.Data, Version=3.14.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Serenity.Data.3.14.5\lib\net45\Serenity.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Serenity.Data.Entity, Version=3.13.5.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\Serenity.Data.Entity.3.13.5\lib\net45\Serenity.Data.Entity.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Serenity.Data.Entity, Version=3.14.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Serenity.Data.Entity.3.14.5\lib\net45\Serenity.Data.Entity.dll</HintPath>
     </Reference>
-    <Reference Include="Serenity.Services, Version=3.13.5.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\packages\Serenity.Services.3.13.5\lib\net45\Serenity.Services.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Serenity.Services, Version=3.14.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Serenity.Services.3.14.5\lib\net45\Serenity.Services.dll</HintPath>
     </Reference>
-    <Reference Include="Serenity.Web, Version=3.13.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Serenity.Web.3.13.5\lib\net45\Serenity.Web.dll</HintPath>
+    <Reference Include="Serenity.Web, Version=3.14.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Serenity.Web.3.14.5\lib\net45\Serenity.Web.dll</HintPath>
     </Reference>
     <Reference Include="StackExchange.Exceptional, Version=1.0.130.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\StackExchange.Exceptional.1.0.130\lib\net40\StackExchange.Exceptional.dll</HintPath>
@@ -596,6 +593,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\ionicons.svg" />
     <Content Include="fonts\Simple-Line-Icons.svg" />
+    <Content Include="Modules\AddAnAsset\AssetDetails\AssetDetailsDialog.Template.html" />
     <Content Include="Readme.CodeGenerator.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -819,10 +817,6 @@
     <Content Include="Scripts\flot\jquery.flot.threshold.min.js" />
     <Content Include="Scripts\flot\jquery.flot.time.js" />
     <Content Include="Scripts\flot\jquery.flot.time.min.js" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
@@ -845,15 +839,20 @@
     <Content Include="fonts\ionicons.woff" />
     <Content Include="fonts\ionicons.ttf" />
     <Content Include="fonts\ionicons.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="wkhtmltopdf-license.txt" />
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\jquery-ui-1.12.1.js" />
-    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
+    <None Include="Scripts\jquery-3.5.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.5.1.js" />
+    <Content Include="Scripts\jquery-3.5.1.min.js" />
+    <Content Include="Scripts\jquery-3.5.1.slim.js" />
+    <Content Include="Scripts\jquery-3.5.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-i18n.js" />
     <Content Include="Scripts\jquery-ui-i18n.min.js" />
@@ -905,6 +904,38 @@
     <Content Include="Scripts\saltarelle\linq.min.js" />
     <Content Include="Scripts\saltarelle\mscorlib.js" />
     <Content Include="Scripts\saltarelle\mscorlib.min.js" />
+    <Content Include="Scripts\serenity\Serenity.CoreLib.js" />
+    <Content Include="Scripts\serenity\Serenity.CoreLib.min.js" />
+    <Content Include="Scripts\SlickGrid\Controls\slick.columnpicker.js" />
+    <Content Include="Scripts\SlickGrid\Controls\slick.pager.js" />
+    <Content Include="Scripts\SlickGrid\MIT-LICENSE.txt" />
+    <Content Include="Scripts\SlickGrid\Plugins\slick.autotooltips.js" />
+    <Content Include="Scripts\SlickGrid\Plugins\slick.autotooltips.min.js" />
+    <Content Include="Scripts\SlickGrid\Plugins\slick.cellcopymanager.js" />
+    <Content Include="Scripts\SlickGrid\Plugins\slick.cellrangedecorator.js" />
+    <Content Include="Scripts\SlickGrid\Plugins\slick.cellrangeselector.js" />
+    <Content Include="Scripts\SlickGrid\Plugins\slick.cellselectionmodel.js" />
+    <Content Include="Scripts\SlickGrid\Plugins\slick.checkboxselectcolumn.js" />
+    <Content Include="Scripts\SlickGrid\Plugins\slick.headerbuttons.js" />
+    <Content Include="Scripts\SlickGrid\Plugins\slick.headermenu.js" />
+    <Content Include="Scripts\SlickGrid\Plugins\slick.rowmovemanager.js" />
+    <Content Include="Scripts\SlickGrid\Plugins\slick.rowselectionmodel.js" />
+    <Content Include="Scripts\SlickGrid\slick.core.js" />
+    <Content Include="Scripts\SlickGrid\slick.core.min.js" />
+    <Content Include="Scripts\SlickGrid\slick.dataview.js" />
+    <Content Include="Scripts\SlickGrid\slick.editors.js" />
+    <Content Include="Scripts\SlickGrid\slick.formatters.js" />
+    <Content Include="Scripts\SlickGrid\slick.grid.js" />
+    <Content Include="Scripts\SlickGrid\slick.grid.min.js" />
+    <Content Include="Scripts\SlickGrid\slick.groupitemmetadataprovider.js" />
+    <Content Include="Scripts\SlickGrid\slick.groupitemmetadataprovider.min.js" />
+    <Content Include="Scripts\SlickGrid\slick.remotemodel-yahoo.js" />
+    <Content Include="Scripts\SlickGrid\slick.remotemodel.js" />
+    <Content Include="Scripts\sortable.js" />
+    <Content Include="Scripts\sortable.min.js" />
+    <Content Include="wkhtmltopdf-license.txt" />
+    <Content Include="Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
     <Content Include="Scripts\Select2-locales\select2_locale_ar.js" />
     <Content Include="Scripts\Select2-locales\select2_locale_az.js" />
     <Content Include="Scripts\Select2-locales\select2_locale_bg.js" />
@@ -953,55 +984,6 @@
     <Content Include="Scripts\Select2-locales\select2_locale_zh-TW.js" />
     <Content Include="Scripts\select2.js" />
     <Content Include="Scripts\select2.min.js" />
-    <Content Include="Scripts\serenity\core\serenity-core.js" />
-    <Content Include="Scripts\serenity\core\serenity-core.min.js" />
-    <Content Include="Scripts\serenity\dialogs\serenity-dialogs.js" />
-    <Content Include="Scripts\serenity\dialogs\serenity-dialogs.min.js" />
-    <Content Include="Scripts\serenity\editors\serenity-editors.js" />
-    <Content Include="Scripts\serenity\editors\serenity-editors.min.js" />
-    <Content Include="Scripts\serenity\filterpanel\serenity-filterpanel.js" />
-    <Content Include="Scripts\serenity\filterpanel\serenity-filterpanel.min.js" />
-    <Content Include="Scripts\serenity\forms\serenity-forms.js" />
-    <Content Include="Scripts\serenity\forms\serenity-forms.min.js" />
-    <Content Include="Scripts\serenity\grids\serenity-grids.js" />
-    <Content Include="Scripts\serenity\grids\serenity-grids.min.js" />
-    <Content Include="Scripts\serenity\quickfilter\serenity-quickfilter.js" />
-    <Content Include="Scripts\serenity\quickfilter\serenity-quickfilter.min.js" />
-    <Content Include="Scripts\serenity\Serenity.CoreLib.js" />
-    <Content Include="Scripts\serenity\Serenity.CoreLib.min.js" />
-    <Content Include="Scripts\serenity\Serenity.Script.UI.js" />
-    <Content Include="Scripts\serenity\Serenity.Script.UI.min.js" />
-    <Content Include="Scripts\serenity\slick\serenity-slick.js" />
-    <Content Include="Scripts\serenity\slick\serenity-slick.min.js" />
-    <Content Include="Scripts\serenity\widget\serenity-widget.js" />
-    <Content Include="Scripts\serenity\widget\serenity-widget.min.js" />
-    <Content Include="Scripts\SlickGrid\Controls\slick.columnpicker.js" />
-    <Content Include="Scripts\SlickGrid\Controls\slick.pager.js" />
-    <Content Include="Scripts\SlickGrid\MIT-LICENSE.txt" />
-    <Content Include="Scripts\SlickGrid\Plugins\slick.autotooltips.js" />
-    <Content Include="Scripts\SlickGrid\Plugins\slick.autotooltips.min.js" />
-    <Content Include="Scripts\SlickGrid\Plugins\slick.cellcopymanager.js" />
-    <Content Include="Scripts\SlickGrid\Plugins\slick.cellrangedecorator.js" />
-    <Content Include="Scripts\SlickGrid\Plugins\slick.cellrangeselector.js" />
-    <Content Include="Scripts\SlickGrid\Plugins\slick.cellselectionmodel.js" />
-    <Content Include="Scripts\SlickGrid\Plugins\slick.checkboxselectcolumn.js" />
-    <Content Include="Scripts\SlickGrid\Plugins\slick.headerbuttons.js" />
-    <Content Include="Scripts\SlickGrid\Plugins\slick.headermenu.js" />
-    <Content Include="Scripts\SlickGrid\Plugins\slick.rowmovemanager.js" />
-    <Content Include="Scripts\SlickGrid\Plugins\slick.rowselectionmodel.js" />
-    <Content Include="Scripts\SlickGrid\slick.core.js" />
-    <Content Include="Scripts\SlickGrid\slick.core.min.js" />
-    <Content Include="Scripts\SlickGrid\slick.dataview.js" />
-    <Content Include="Scripts\SlickGrid\slick.editors.js" />
-    <Content Include="Scripts\SlickGrid\slick.formatters.js" />
-    <Content Include="Scripts\SlickGrid\slick.grid.js" />
-    <Content Include="Scripts\SlickGrid\slick.grid.min.js" />
-    <Content Include="Scripts\SlickGrid\slick.groupitemmetadataprovider.js" />
-    <Content Include="Scripts\SlickGrid\slick.groupitemmetadataprovider.min.js" />
-    <Content Include="Scripts\SlickGrid\slick.remotemodel-yahoo.js" />
-    <Content Include="Scripts\SlickGrid\slick.remotemodel.js" />
-    <Content Include="Scripts\sortable.js" />
-    <Content Include="Scripts\sortable.min.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
     <Content Include="tools\JsEngine\json2.min.js" />
@@ -1056,6 +1038,63 @@
     <Content Include="tools\Node\less\lib\less\visitor.js" />
     <Content Include="tools\Node\node.exe" />
     <Content Include="tsconfig.json" />
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.AssetDetailsColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.AssetMaintenanceColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.AssetWarrantyColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.DocumentColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Administration.PermissionKeys.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Advanced.CustomersColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Advanced.EmployeeColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Advanced.FundingColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\DepreciableAsset.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.BrandColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.CategoryColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.CompanyColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.CountryColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.CurrencyColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.DepartmentColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.LocationColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.MaintenanceStatusColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.SiteColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.StateColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\Texts.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1070,10 +1109,6 @@
     <TypeScriptCompile Include="node_modules\%40types\toastr\index.d.ts" />
     <Content Include="Content\site\images\accordion-arrows.png" />
     <Content Include="Modules\Membership\Account\SignUp\AccountSignUp.AdminLTE.cshtml" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Imports\Web.config" />
     <Content Include="Migrations\Web.config" />
     <Content Include="Content\site\CssBundles.json" />
@@ -1516,8 +1551,6 @@
     <Content Include="Scripts\site\texts\site.texts.vi-VN.json" />
     <Content Include="package.json" />
     <Content Include="Scripts\site\texts\site.texts.ru.json" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Scripts\jvectormap\jquery-jvectormap-1.2.2.css" />
     <Content Include="Scripts\jvectormap\jquery-jvectormap-1.2.2.min.js" />
     <Content Include="Scripts\jvectormap\jquery-jvectormap-world-mill-en.js" />
@@ -1580,7 +1613,8 @@
     <Content Include="Views\Shared\_LayoutSlim.cshtml" />
     <Content Include="Views\Shared\_LayoutSlimHead.cshtml" />
     <None Include="packages.config" />
-    <Content Include="Scripts\serenity\widget\serenity-widget.js.map" />
+    <Content Include="tools\Node\lessc.cmd" />
+    <Content Include="tools\JsEngine\lib.d.ts_" />
     <Content Include="Scripts\serenity\texts\serenity.texts.zh-CN.json" />
     <Content Include="Scripts\serenity\texts\serenity.texts.vi-VN.json" />
     <Content Include="Scripts\serenity\texts\serenity.texts.tr.json" />
@@ -1592,18 +1626,10 @@
     <Content Include="Scripts\serenity\texts\serenity.texts.es.json" />
     <Content Include="Scripts\serenity\texts\serenity.texts.de.json" />
     <Content Include="Scripts\serenity\texts\serenity.texts.bn.json" />
-    <Content Include="Scripts\serenity\slick\serenity-slick.js.map" />
     <Content Include="Scripts\serenity\Serenity.CoreLib.js.map" />
-    <Content Include="Scripts\serenity\quickfilter\serenity-quickfilter.js.map" />
-    <Content Include="Scripts\serenity\grids\serenity-grids.js.map" />
-    <Content Include="Scripts\serenity\forms\serenity-forms.js.map" />
-    <Content Include="Scripts\serenity\filterpanel\serenity-filterpanel.js.map" />
-    <Content Include="Scripts\serenity\editors\serenity-editors.js.map" />
-    <Content Include="Scripts\serenity\dialogs\serenity-dialogs.js.map" />
-    <Content Include="Scripts\serenity\core\serenity-core.js.map" />
+    <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.5.1.min.map" />
     <Content Include="Scripts\SlickGrid\README.md" />
-    <Content Include="tools\Node\lessc.cmd" />
-    <Content Include="tools\JsEngine\lib.d.ts_" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1620,17 +1646,215 @@
     <TypeScriptCompile Include="Modules\Common\Helpers\ExcelExportHelper.ts" />
     <TypeScriptCompile Include="Modules\Common\Helpers\BasicProgressDialog.ts" />
     <TypeScriptCompile Include="Modules\Common\Helpers\BulkServiceAction.ts" />
-    <TypeScriptCompile Include="Scripts\serenity\core\serenity-core.d.ts" />
-    <TypeScriptCompile Include="Scripts\serenity\dialogs\serenity-dialogs.d.ts" />
-    <TypeScriptCompile Include="Scripts\serenity\editors\serenity-editors.d.ts" />
-    <TypeScriptCompile Include="Scripts\serenity\filterpanel\serenity-filterpanel.d.ts" />
-    <TypeScriptCompile Include="Scripts\serenity\forms\serenity-forms.d.ts" />
-    <TypeScriptCompile Include="Scripts\serenity\grids\serenity-grids.d.ts" />
-    <TypeScriptCompile Include="Scripts\serenity\quickfilter\serenity-quickfilter.d.ts" />
     <TypeScriptCompile Include="Scripts\serenity\Serenity.CoreLib.d.ts" />
-    <TypeScriptCompile Include="Scripts\serenity\slick\serenity-slick.d.ts" />
-    <TypeScriptCompile Include="Scripts\serenity\widget\serenity-widget.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\serenity\Serenity.CoreLib.d.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.CountryRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.CountryService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Setup\Country\CountryIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Setup\Country\CountryDialog.ts" />
+    <TypeScriptCompile Include="Modules\Setup\Country\CountryGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.CountryForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Content\site\site.setup.less" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.CurrencyRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.CurrencyService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Setup\Currency\CurrencyIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Setup\Currency\CurrencyDialog.ts" />
+    <TypeScriptCompile Include="Modules\Setup\Currency\CurrencyGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.CurrencyForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.StateRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.StateService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Setup\State\StateIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Setup\State\StateDialog.ts" />
+    <TypeScriptCompile Include="Modules\Setup\State\StateGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.StateForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.SiteRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.SiteService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Setup\Site\SiteIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Setup\Site\SiteDialog.ts" />
+    <TypeScriptCompile Include="Modules\Setup\Site\SiteGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.SiteForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.LocationRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.LocationService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Setup\Location\LocationIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Setup\Location\LocationDialog.ts" />
+    <TypeScriptCompile Include="Modules\Setup\Location\LocationGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.LocationForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.CategoryRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.CategoryService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Setup\Category\CategoryIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Setup\Category\CategoryDialog.ts" />
+    <TypeScriptCompile Include="Modules\Setup\Category\CategoryGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.CategoryForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.DepartmentRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.DepartmentService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Setup\Department\DepartmentIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Setup\Department\DepartmentDialog.ts" />
+    <TypeScriptCompile Include="Modules\Setup\Department\DepartmentGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.DepartmentForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.CompanyRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.CompanyService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Setup\Company\CompanyIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Setup\Company\CompanyDialog.ts" />
+    <TypeScriptCompile Include="Modules\Setup\Company\CompanyGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.CompanyForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Advanced.EmployeeRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Advanced.EmployeeService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Advanced\Employee\EmployeeIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Advanced\Employee\EmployeeDialog.ts" />
+    <TypeScriptCompile Include="Modules\Advanced\Employee\EmployeeGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Advanced.EmployeeForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Content\site\site.advanced.less" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Advanced.CustomersRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Advanced.CustomersService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Advanced\Customers\CustomersIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Advanced\Customers\CustomersDialog.ts" />
+    <TypeScriptCompile Include="Modules\Advanced\Customers\CustomersGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Advanced.CustomersForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Advanced.FundingRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Advanced.FundingService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Advanced\Funding\FundingIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Advanced\Funding\FundingDialog.ts" />
+    <TypeScriptCompile Include="Modules\Advanced\Funding\FundingGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Advanced.FundingForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.BrandRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.BrandService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Setup\Brand\BrandIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Setup\Brand\BrandDialog.ts" />
+    <TypeScriptCompile Include="Modules\Setup\Brand\BrandGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.BrandForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.AssetDetailsRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.AssetDetailsService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\AddAnAsset\AssetDetails\AssetDetailsIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\AssetDetails\AssetDetailsDialog.ts" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\AssetDetails\AssetDetailsGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.AssetDetailsForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Content\site\site.addanasset.less" />
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.DocumentRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.DocumentService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\AddAnAsset\Document\DocumentIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\Document\DocumentDialog.ts" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\Document\DocumentGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.DocumentForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.MaintenanceStatusRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.MaintenanceStatusService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Setup\MaintenanceStatus\MaintenanceStatusIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Setup\MaintenanceStatus\MaintenanceStatusDialog.ts" />
+    <TypeScriptCompile Include="Modules\Setup\MaintenanceStatus\MaintenanceStatusGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Setup.MaintenanceStatusForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.AssetWarrantyRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.AssetWarrantyService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\AddAnAsset\AssetWarranty\AssetWarrantyIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\AssetWarranty\AssetWarrantyDialog.ts" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\AssetWarranty\AssetWarrantyGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.AssetWarrantyForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.AssetMaintenanceRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.AssetMaintenanceService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\AddAnAsset\AssetMaintenance\AssetMaintenanceIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\AssetMaintenance\AssetMaintenanceDialog.ts" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\AssetMaintenance\AssetMaintenanceGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.AssetMaintenanceForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1648,6 +1872,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Modules\AddAnAsset\AssetDetails\DepreciableAsset.cs" />
     <Compile Include="Modules\Administration\AdministrationNavigation.cs" />
     <Compile Include="Modules\Administration\Language\LanguageLookup.cs" />
     <Compile Include="Modules\Administration\RolePermission\RolePermissionUpdateRequest.cs" />
@@ -1764,6 +1989,111 @@
     <Compile Include="Modules\Administration\UserPermission\UserPermissionRow.cs" />
     <Compile Include="Modules\Administration\UserPermission\UserPermissionRepository.cs" />
     <Compile Include="Modules\Administration\UserPermission\UserPermissionEndpoint.cs" />
+    <Compile Include="Modules\Setup\Country\CountryRow.cs" />
+    <Compile Include="Modules\Setup\Country\CountryRepository.cs" />
+    <Compile Include="Modules\Setup\Country\CountryEndpoint.cs" />
+    <Compile Include="Modules\Setup\Country\CountryPage.cs" />
+    <Compile Include="Modules\Setup\Country\CountryColumns.cs" />
+    <Compile Include="Modules\Setup\Country\CountryForm.cs" />
+    <Compile Include="Modules\Setup\SetupNavigation.cs" />
+    <Compile Include="Modules\Setup\Currency\CurrencyRow.cs" />
+    <Compile Include="Modules\Setup\Currency\CurrencyRepository.cs" />
+    <Compile Include="Modules\Setup\Currency\CurrencyEndpoint.cs" />
+    <Compile Include="Modules\Setup\Currency\CurrencyPage.cs" />
+    <Compile Include="Modules\Setup\Currency\CurrencyColumns.cs" />
+    <Compile Include="Modules\Setup\Currency\CurrencyForm.cs" />
+    <Compile Include="Modules\Setup\State\StateRow.cs" />
+    <Compile Include="Modules\Setup\State\StateRepository.cs" />
+    <Compile Include="Modules\Setup\State\StateEndpoint.cs" />
+    <Compile Include="Modules\Setup\State\StatePage.cs" />
+    <Compile Include="Modules\Setup\State\StateColumns.cs" />
+    <Compile Include="Modules\Setup\State\StateForm.cs" />
+    <Compile Include="Modules\Setup\Site\SiteRow.cs" />
+    <Compile Include="Modules\Setup\Site\SiteRepository.cs" />
+    <Compile Include="Modules\Setup\Site\SiteEndpoint.cs" />
+    <Compile Include="Modules\Setup\Site\SitePage.cs" />
+    <Compile Include="Modules\Setup\Site\SiteColumns.cs" />
+    <Compile Include="Modules\Setup\Site\SiteForm.cs" />
+    <Compile Include="Modules\Setup\Location\LocationRow.cs" />
+    <Compile Include="Modules\Setup\Location\LocationRepository.cs" />
+    <Compile Include="Modules\Setup\Location\LocationEndpoint.cs" />
+    <Compile Include="Modules\Setup\Location\LocationPage.cs" />
+    <Compile Include="Modules\Setup\Location\LocationColumns.cs" />
+    <Compile Include="Modules\Setup\Location\LocationForm.cs" />
+    <Compile Include="Modules\Setup\Category\CategoryRow.cs" />
+    <Compile Include="Modules\Setup\Category\CategoryRepository.cs" />
+    <Compile Include="Modules\Setup\Category\CategoryEndpoint.cs" />
+    <Compile Include="Modules\Setup\Category\CategoryPage.cs" />
+    <Compile Include="Modules\Setup\Category\CategoryColumns.cs" />
+    <Compile Include="Modules\Setup\Category\CategoryForm.cs" />
+    <Compile Include="Modules\Setup\Department\DepartmentRow.cs" />
+    <Compile Include="Modules\Setup\Department\DepartmentRepository.cs" />
+    <Compile Include="Modules\Setup\Department\DepartmentEndpoint.cs" />
+    <Compile Include="Modules\Setup\Department\DepartmentPage.cs" />
+    <Compile Include="Modules\Setup\Department\DepartmentColumns.cs" />
+    <Compile Include="Modules\Setup\Department\DepartmentForm.cs" />
+    <Compile Include="Modules\Setup\Company\CompanyRow.cs" />
+    <Compile Include="Modules\Setup\Company\CompanyRepository.cs" />
+    <Compile Include="Modules\Setup\Company\CompanyEndpoint.cs" />
+    <Compile Include="Modules\Setup\Company\CompanyPage.cs" />
+    <Compile Include="Modules\Setup\Company\CompanyColumns.cs" />
+    <Compile Include="Modules\Setup\Company\CompanyForm.cs" />
+    <Compile Include="Modules\Advanced\Employee\EmployeeRow.cs" />
+    <Compile Include="Modules\Advanced\Employee\EmployeeRepository.cs" />
+    <Compile Include="Modules\Advanced\Employee\EmployeeEndpoint.cs" />
+    <Compile Include="Modules\Advanced\Employee\EmployeePage.cs" />
+    <Compile Include="Modules\Advanced\Employee\EmployeeColumns.cs" />
+    <Compile Include="Modules\Advanced\Employee\EmployeeForm.cs" />
+    <Compile Include="Modules\Advanced\AdvancedNavigation.cs" />
+    <Compile Include="Modules\Advanced\Customers\CustomersRow.cs" />
+    <Compile Include="Modules\Advanced\Customers\CustomersRepository.cs" />
+    <Compile Include="Modules\Advanced\Customers\CustomersEndpoint.cs" />
+    <Compile Include="Modules\Advanced\Customers\CustomersPage.cs" />
+    <Compile Include="Modules\Advanced\Customers\CustomersColumns.cs" />
+    <Compile Include="Modules\Advanced\Customers\CustomersForm.cs" />
+    <Compile Include="Modules\Advanced\Funding\FundingRow.cs" />
+    <Compile Include="Modules\Advanced\Funding\FundingRepository.cs" />
+    <Compile Include="Modules\Advanced\Funding\FundingEndpoint.cs" />
+    <Compile Include="Modules\Advanced\Funding\FundingPage.cs" />
+    <Compile Include="Modules\Advanced\Funding\FundingColumns.cs" />
+    <Compile Include="Modules\Advanced\Funding\FundingForm.cs" />
+    <Compile Include="Modules\Setup\Brand\BrandRow.cs" />
+    <Compile Include="Modules\Setup\Brand\BrandRepository.cs" />
+    <Compile Include="Modules\Setup\Brand\BrandEndpoint.cs" />
+    <Compile Include="Modules\Setup\Brand\BrandPage.cs" />
+    <Compile Include="Modules\Setup\Brand\BrandColumns.cs" />
+    <Compile Include="Modules\Setup\Brand\BrandForm.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetDetails\AssetDetailsRow.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetDetails\AssetDetailsRepository.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetDetails\AssetDetailsEndpoint.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetDetails\AssetDetailsPage.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetDetails\AssetDetailsColumns.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetDetails\AssetDetailsForm.cs" />
+    <Compile Include="Modules\AddAnAsset\AddAnAssetNavigation.cs" />
+    <Compile Include="Modules\AddAnAsset\Document\DocumentRow.cs" />
+    <Compile Include="Modules\AddAnAsset\Document\DocumentRepository.cs" />
+    <Compile Include="Modules\AddAnAsset\Document\DocumentEndpoint.cs" />
+    <Compile Include="Modules\AddAnAsset\Document\DocumentPage.cs" />
+    <Compile Include="Modules\AddAnAsset\Document\DocumentColumns.cs" />
+    <Compile Include="Modules\AddAnAsset\Document\DocumentForm.cs" />
+    <Compile Include="Modules\Setup\MaintenanceStatus\MaintenanceStatusRow.cs" />
+    <Compile Include="Modules\Setup\MaintenanceStatus\MaintenanceStatusRepository.cs" />
+    <Compile Include="Modules\Setup\MaintenanceStatus\MaintenanceStatusEndpoint.cs" />
+    <Compile Include="Modules\Setup\MaintenanceStatus\MaintenanceStatusPage.cs" />
+    <Compile Include="Modules\Setup\MaintenanceStatus\MaintenanceStatusColumns.cs" />
+    <Compile Include="Modules\Setup\MaintenanceStatus\MaintenanceStatusForm.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetWarranty\AssetWarrantyRow.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetWarranty\AssetWarrantyRepository.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetWarranty\AssetWarrantyEndpoint.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetWarranty\AssetWarrantyPage.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetWarranty\AssetWarrantyColumns.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetWarranty\AssetWarrantyForm.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetMaintenance\AssetMaintenanceRow.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetMaintenance\AssetMaintenanceRepository.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetMaintenance\AssetMaintenanceEndpoint.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetMaintenance\AssetMaintenancePage.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetMaintenance\AssetMaintenanceColumns.cs" />
+    <Compile Include="Modules\AddAnAsset\AssetMaintenance\AssetMaintenanceForm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1956,6 +2286,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Microsoft.TypeScript.MSBuild.3.7.4\build\Microsoft.TypeScript.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.TypeScript.MSBuild.3.7.4\build\Microsoft.TypeScript.MSBuild.props'))" />
     <Error Condition="!Exists('..\..\packages\Microsoft.TypeScript.MSBuild.3.7.4\build\Microsoft.TypeScript.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.TypeScript.MSBuild.3.7.4\build\Microsoft.TypeScript.MSBuild.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Serenity.Scripts.5.2.4\build\Serenity.Scripts.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Serenity.Scripts.5.2.4\build\Serenity.Scripts.props'))" />
   </Target>
   <Import Project="..\..\packages\Microsoft.TypeScript.MSBuild.3.7.4\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('..\..\packages\Microsoft.TypeScript.MSBuild.3.7.4\build\Microsoft.TypeScript.MSBuild.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
