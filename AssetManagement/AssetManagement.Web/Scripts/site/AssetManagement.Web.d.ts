@@ -258,6 +258,299 @@ declare namespace AssetManagement.AddAnAsset {
 declare namespace AssetManagement.AddAnAsset {
 }
 declare namespace AssetManagement.AddAnAsset {
+    interface CheckInForm {
+        DueDate: Serenity.DateEditor;
+        ReturnDate: Serenity.DateEditor;
+        SiteId: Serenity.LookupEditor;
+        LocationId: Serenity.LookupEditor;
+        DepartmentId: Serenity.LookupEditor;
+        Notes: Serenity.TextAreaEditor;
+        SendMail: Serenity.BooleanEditor;
+        Email: Serenity.StringEditor;
+        AssetId: Serenity.IntegerEditor;
+    }
+    class CheckInForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    interface CheckInRow {
+        CheckId?: number;
+        DueDate?: string;
+        ReturnDate?: string;
+        SiteId?: number;
+        LocationId?: number;
+        DepartmentId?: number;
+        Notes?: string;
+        SendMail?: boolean;
+        Email?: string;
+        AssetId?: number;
+        SiteSiteName?: string;
+        SiteDescription?: string;
+        SiteAddress?: string;
+        SiteSuite?: string;
+        SiteCity?: string;
+        SiteStateId?: number;
+        LocationSiteId?: number;
+        Location?: string;
+        Department?: string;
+        AssetDescription?: string;
+        AssetAssetTagId?: number;
+        AssetPurchasedfrom?: string;
+        AssetPurchaseDate?: string;
+        AssetBrandId?: number;
+        AssetCost?: number;
+        AssetModel?: string;
+        AssetColor?: string;
+        AssetSiteId?: number;
+        AssetCategoryId?: number;
+        AssetLocationId?: number;
+        AssetDepartmentId?: number;
+        AssetDepreciableAsset?: number;
+        AssetDepreciableCost?: number;
+        AssetAssetLife?: number;
+        AssetSalvageValue?: number;
+        AssetDepreciationMethod?: string;
+        AssetDateAcquired?: string;
+        AssetAssetPhoto?: string;
+        AssetCreatedby?: string;
+        AssetOnCreated?: string;
+        AssetUserId?: number;
+    }
+    namespace CheckInRow {
+        const idProperty = "CheckId";
+        const nameProperty = "Notes";
+        const localTextPrefix = "AddAnAsset.CheckIn";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            CheckId = "CheckId",
+            DueDate = "DueDate",
+            ReturnDate = "ReturnDate",
+            SiteId = "SiteId",
+            LocationId = "LocationId",
+            DepartmentId = "DepartmentId",
+            Notes = "Notes",
+            SendMail = "SendMail",
+            Email = "Email",
+            AssetId = "AssetId",
+            SiteSiteName = "SiteSiteName",
+            SiteDescription = "SiteDescription",
+            SiteAddress = "SiteAddress",
+            SiteSuite = "SiteSuite",
+            SiteCity = "SiteCity",
+            SiteStateId = "SiteStateId",
+            LocationSiteId = "LocationSiteId",
+            Location = "Location",
+            Department = "Department",
+            AssetDescription = "AssetDescription",
+            AssetAssetTagId = "AssetAssetTagId",
+            AssetPurchasedfrom = "AssetPurchasedfrom",
+            AssetPurchaseDate = "AssetPurchaseDate",
+            AssetBrandId = "AssetBrandId",
+            AssetCost = "AssetCost",
+            AssetModel = "AssetModel",
+            AssetColor = "AssetColor",
+            AssetSiteId = "AssetSiteId",
+            AssetCategoryId = "AssetCategoryId",
+            AssetLocationId = "AssetLocationId",
+            AssetDepartmentId = "AssetDepartmentId",
+            AssetDepreciableAsset = "AssetDepreciableAsset",
+            AssetDepreciableCost = "AssetDepreciableCost",
+            AssetAssetLife = "AssetAssetLife",
+            AssetSalvageValue = "AssetSalvageValue",
+            AssetDepreciationMethod = "AssetDepreciationMethod",
+            AssetDateAcquired = "AssetDateAcquired",
+            AssetAssetPhoto = "AssetAssetPhoto",
+            AssetCreatedby = "AssetCreatedby",
+            AssetOnCreated = "AssetOnCreated",
+            AssetUserId = "AssetUserId"
+        }
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    namespace CheckInService {
+        const baseUrl = "AddAnAsset/CheckIn";
+        function Create(request: Serenity.SaveRequest<CheckInRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<CheckInRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CheckInRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CheckInRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "AddAnAsset/CheckIn/Create",
+            Update = "AddAnAsset/CheckIn/Update",
+            Delete = "AddAnAsset/CheckIn/Delete",
+            Retrieve = "AddAnAsset/CheckIn/Retrieve",
+            List = "AddAnAsset/CheckIn/List"
+        }
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+}
+declare namespace AssetManagement.AddAnAsset {
+    interface CheckOutForm {
+        CheckOutDate: Serenity.DateEditor;
+        CheckOutTo: Serenity.RadioButtonEditor;
+        EmployeeId: Serenity.LookupEditor;
+        NoDueDate: Serenity.BooleanEditor;
+        DueDate: Serenity.DateEditor;
+        SiteId: Serenity.LookupEditor;
+        LocationId: Serenity.LookupEditor;
+        DepartmentId: Serenity.LookupEditor;
+        Notes: Serenity.TextAreaEditor;
+        SendMail: Serenity.BooleanEditor;
+        Email: Serenity.StringEditor;
+        AssetId: Serenity.IntegerEditor;
+    }
+    class CheckOutForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    interface CheckOutRow {
+        CheckOutId?: number;
+        CheckOutDate?: string;
+        CheckOutTo?: number;
+        EmployeeId?: number;
+        NoDueDate?: boolean;
+        DueDate?: string;
+        SiteId?: number;
+        LocationId?: number;
+        DepartmentId?: number;
+        Notes?: string;
+        SendMail?: boolean;
+        Email?: string;
+        AssetId?: number;
+        EmployeeEmployeeName?: string;
+        EmployeeTitle?: string;
+        EmployeePhone?: number;
+        EmployeeEmail?: string;
+        EmployeeSiteId?: number;
+        EmployeeLocationId?: number;
+        EmployeeDepartmentId?: number;
+        EmployeeNote?: string;
+        SiteSiteName?: string;
+        SiteDescription?: string;
+        SiteAddress?: string;
+        SiteSuite?: string;
+        SiteCity?: string;
+        SiteStateId?: number;
+        LocationSiteId?: number;
+        Location?: string;
+        Department?: string;
+        AssetDescription?: string;
+        AssetAssetTagId?: number;
+        AssetPurchasedfrom?: string;
+        AssetPurchaseDate?: string;
+        AssetBrandId?: number;
+        AssetCost?: number;
+        AssetModel?: string;
+        AssetColor?: string;
+        AssetSiteId?: number;
+        AssetCategoryId?: number;
+        AssetLocationId?: number;
+        AssetDepartmentId?: number;
+        AssetDepreciableAsset?: number;
+        AssetDepreciableCost?: number;
+        AssetAssetLife?: number;
+        AssetSalvageValue?: number;
+        AssetDepreciationMethod?: string;
+        AssetDateAcquired?: string;
+        AssetAssetPhoto?: string;
+        AssetCreatedby?: string;
+        AssetOnCreated?: string;
+        AssetUserId?: number;
+    }
+    namespace CheckOutRow {
+        const idProperty = "CheckOutId";
+        const nameProperty = "Notes";
+        const localTextPrefix = "AddAnAsset.CheckOut";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            CheckOutId = "CheckOutId",
+            CheckOutDate = "CheckOutDate",
+            CheckOutTo = "CheckOutTo",
+            EmployeeId = "EmployeeId",
+            NoDueDate = "NoDueDate",
+            DueDate = "DueDate",
+            SiteId = "SiteId",
+            LocationId = "LocationId",
+            DepartmentId = "DepartmentId",
+            Notes = "Notes",
+            SendMail = "SendMail",
+            Email = "Email",
+            AssetId = "AssetId",
+            EmployeeEmployeeName = "EmployeeEmployeeName",
+            EmployeeTitle = "EmployeeTitle",
+            EmployeePhone = "EmployeePhone",
+            EmployeeEmail = "EmployeeEmail",
+            EmployeeSiteId = "EmployeeSiteId",
+            EmployeeLocationId = "EmployeeLocationId",
+            EmployeeDepartmentId = "EmployeeDepartmentId",
+            EmployeeNote = "EmployeeNote",
+            SiteSiteName = "SiteSiteName",
+            SiteDescription = "SiteDescription",
+            SiteAddress = "SiteAddress",
+            SiteSuite = "SiteSuite",
+            SiteCity = "SiteCity",
+            SiteStateId = "SiteStateId",
+            LocationSiteId = "LocationSiteId",
+            Location = "Location",
+            Department = "Department",
+            AssetDescription = "AssetDescription",
+            AssetAssetTagId = "AssetAssetTagId",
+            AssetPurchasedfrom = "AssetPurchasedfrom",
+            AssetPurchaseDate = "AssetPurchaseDate",
+            AssetBrandId = "AssetBrandId",
+            AssetCost = "AssetCost",
+            AssetModel = "AssetModel",
+            AssetColor = "AssetColor",
+            AssetSiteId = "AssetSiteId",
+            AssetCategoryId = "AssetCategoryId",
+            AssetLocationId = "AssetLocationId",
+            AssetDepartmentId = "AssetDepartmentId",
+            AssetDepreciableAsset = "AssetDepreciableAsset",
+            AssetDepreciableCost = "AssetDepreciableCost",
+            AssetAssetLife = "AssetAssetLife",
+            AssetSalvageValue = "AssetSalvageValue",
+            AssetDepreciationMethod = "AssetDepreciationMethod",
+            AssetDateAcquired = "AssetDateAcquired",
+            AssetAssetPhoto = "AssetAssetPhoto",
+            AssetCreatedby = "AssetCreatedby",
+            AssetOnCreated = "AssetOnCreated",
+            AssetUserId = "AssetUserId"
+        }
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    namespace CheckOutService {
+        const baseUrl = "AddAnAsset/CheckOut";
+        function Create(request: Serenity.SaveRequest<CheckOutRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<CheckOutRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CheckOutRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CheckOutRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "AddAnAsset/CheckOut/Create",
+            Update = "AddAnAsset/CheckOut/Update",
+            Delete = "AddAnAsset/CheckOut/Delete",
+            Retrieve = "AddAnAsset/CheckOut/Retrieve",
+            List = "AddAnAsset/CheckOut/List"
+        }
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+}
+declare namespace AssetManagement.AddAnAsset {
     interface DocumentForm {
         Document: Serenity.ImageUploadEditor;
         Description: Serenity.TextAreaEditor;
@@ -780,8 +1073,8 @@ declare namespace AssetManagement.Advanced {
 declare namespace AssetManagement.Advanced {
     interface EmployeeForm {
         EmployeeName: Serenity.StringEditor;
-        Title: Serenity.StringEditor;
-        Phone: Serenity.IntegerEditor;
+        Title: Serenity.TextAreaEditor;
+        Phone: Serenity.StringEditor;
         Email: Serenity.StringEditor;
         SiteId: Serenity.LookupEditor;
         LocationId: Serenity.LookupEditor;
@@ -799,7 +1092,7 @@ declare namespace AssetManagement.Advanced {
         EmployeeId?: number;
         EmployeeName?: string;
         Title?: string;
-        Phone?: number;
+        Phone?: string;
         Email?: string;
         SiteId?: number;
         LocationId?: number;
@@ -1102,6 +1395,12 @@ declare namespace AssetManagement.Membership {
         DisplayName?: string;
         Email?: string;
         Password?: string;
+    }
+}
+declare namespace AssetManagement.Modules.AddAnAsset.CheckOut {
+    enum CheckOutTo {
+        Person = 1,
+        Site_Location = 2
     }
 }
 declare namespace AssetManagement {
@@ -1680,6 +1979,8 @@ declare namespace AssetManagement.AddAnAsset {
         private DocumentGrid;
         private AssetWarrantyGrid;
         private AssetMaintenanceGrid;
+        private CheckInGrid;
+        private CheckOutGrid;
         constructor();
         protected afterLoadEntity(): void;
     }
@@ -1718,10 +2019,9 @@ declare namespace AssetManagement.AddAnAsset {
         constructor(container: JQuery);
         protected addButtonClick(): void;
         protected usePager(): boolean;
-        protected getGridCanLoad(): boolean;
         private _AssetId;
-        readonly AssetId: number;
-        AssetMaintenanceId: number;
+        get AssetId(): number;
+        set AssetId(value: number);
     }
 }
 declare namespace AssetManagement.AddAnAsset {
@@ -1748,10 +2048,71 @@ declare namespace AssetManagement.AddAnAsset {
         constructor(container: JQuery);
         protected addButtonClick(): void;
         protected usePager(): boolean;
-        protected getGridCanLoad(): boolean;
         private _AssetId;
-        readonly AssetId: number;
-        Id: number;
+        get AssetId(): number;
+        set AssetId(value: number);
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    class CheckInDialog extends Serenity.EntityDialog<CheckInRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: CheckInForm;
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    class CheckInGrid extends Serenity.EntityGrid<CheckInRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CheckInDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+        protected usePager(): boolean;
+        private _AssetId;
+        get AssetId(): number;
+        set AssetId(value: number);
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    class CheckOutDialog extends Serenity.EntityDialog<CheckOutRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: CheckOutForm;
+        constructor();
+        protected afterLoadEntity(): void;
+        protected setShowHideFields(): void;
+        protected getDueDateFields(): void;
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    class CheckOutGrid extends Serenity.EntityGrid<CheckOutRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CheckOutDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+        protected usePager(): boolean;
+        private _AssetId;
+        get AssetId(): number;
+        set AssetId(value: number);
     }
 }
 declare namespace AssetManagement.AddAnAsset {
@@ -1778,10 +2139,9 @@ declare namespace AssetManagement.AddAnAsset {
         constructor(container: JQuery);
         protected addButtonClick(): void;
         protected usePager(): boolean;
-        protected getGridCanLoad(): boolean;
         private _AssetId;
-        readonly AssetId: number;
-        Id: number;
+        get AssetId(): number;
+        set AssetId(value: number);
     }
 }
 declare namespace AssetManagement.Administration {
@@ -1913,11 +2273,13 @@ declare namespace AssetManagement.Administration {
         protected getButtons(): Serenity.ToolButton[];
         protected createToolbarExtensions(): void;
         private getSortedGroupAndPermissionKeys;
-        value: UserPermissionRow[];
+        get value(): UserPermissionRow[];
+        set value(value: UserPermissionRow[]);
         private _rolePermissions;
-        rolePermissions: string[];
+        get rolePermissions(): string[];
+        set rolePermissions(value: string[]);
         private _implicitPermissions;
-        implicitPermissions: Q.Dictionary<string[]>;
+        set implicitPermissions(value: Q.Dictionary<string[]>);
     }
     interface PermissionCheckEditorOptions {
         showRevoke?: boolean;
@@ -2045,9 +2407,12 @@ declare namespace AssetManagement {
     class BasicProgressDialog extends Serenity.TemplatedDialog<any> {
         constructor();
         cancelled: boolean;
-        max: number;
-        value: number;
-        title: string;
+        get max(): number;
+        set max(value: number);
+        get value(): number;
+        set value(value: number);
+        get title(): string;
+        set title(value: string);
         cancelTitle: string;
         getDialogOptions(): JQueryUI.DialogOptions;
         initDialog(): void;
@@ -2134,7 +2499,8 @@ declare namespace AssetManagement.Common {
         protected editItem(entityOrId: any): void;
         getEditValue(property: any, target: any): void;
         setEditValue(source: any, property: any): void;
-        value: TEntity[];
+        get value(): TEntity[];
+        set value(value: TEntity[]);
         protected getGridCanLoad(): boolean;
         protected usePager(): boolean;
         protected getInitialTitle(): any;

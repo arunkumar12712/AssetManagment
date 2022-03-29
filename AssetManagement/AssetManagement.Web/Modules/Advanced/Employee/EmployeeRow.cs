@@ -39,7 +39,7 @@ namespace AssetManagement.Advanced.Entities
         }
 
         [DisplayName("Phone")]
-        public Int32? Phone
+        public String Phone
         {
             get { return Fields.Phone[this]; }
             set { Fields.Phone[this] = value; }
@@ -168,7 +168,7 @@ namespace AssetManagement.Advanced.Entities
             public Int32Field EmployeeId;
             public StringField EmployeeName;
             public StringField Title;
-            public Int32Field Phone;
+            public StringField Phone;
             public StringField Email;
             public Int32Field SiteId;
             public Int32Field LocationId;

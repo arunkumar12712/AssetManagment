@@ -21,6 +21,7 @@ namespace AssetManagement.AddAnAsset.Columns
         public DateTime DueDate { get; set; }
         public String MaintenanceBy { get; set; }
         public String MaintenanceStatus { get; set; }
+        [Width(150)]
         public DateTime DateCompleted { get; set; }
         [Hidden]
         public Int32 AssetId { get; set; }

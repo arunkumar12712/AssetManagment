@@ -17,7 +17,7 @@ namespace AssetManagement.AddAnAsset.Forms
         public String Document { get; set; }
         [TextAreaEditor(Rows = 3)]
         public String Description { get; set; }
-        [Hidden]
+        //[Hidden]
         public Int32 AssetId { get; set; }
     }
 }

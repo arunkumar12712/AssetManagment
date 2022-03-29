@@ -16,6 +16,7 @@ namespace AssetManagement.AddAnAsset.Columns
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignCenter]
         public Int32 Id { get; set; }
         public Int32 Length { get; set; }
+        [Width(150)]
         public DateTime ExpirationDate { get; set; }
         [EditLink]
         public String Notes { get; set; }

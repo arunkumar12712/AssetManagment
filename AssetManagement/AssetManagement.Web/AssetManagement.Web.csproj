@@ -1047,6 +1047,12 @@
     <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.AssetWarrantyColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.CheckInColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.CheckOutColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.DocumentColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1063,6 +1069,9 @@
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\DepreciableAsset.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Modules.AddAnAsset.CheckOut.CheckOutTo.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\Setup.BrandColumns.ts">
@@ -1855,6 +1864,30 @@
     <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.AssetMaintenanceForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.CheckInRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.CheckInService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\AddAnAsset\CheckIn\CheckInIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\CheckIn\CheckInDialog.ts" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\CheckIn\CheckInGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.CheckInForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.CheckOutRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.CheckOutService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\AddAnAsset\CheckOut\CheckOutIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\CheckOut\CheckOutDialog.ts" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\CheckOut\CheckOutGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.CheckOutForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1873,6 +1906,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Modules\AddAnAsset\AssetDetails\DepreciableAsset.cs" />
+    <Compile Include="Modules\AddAnAsset\CheckOut\CheckOutTo.cs" />
     <Compile Include="Modules\Administration\AdministrationNavigation.cs" />
     <Compile Include="Modules\Administration\Language\LanguageLookup.cs" />
     <Compile Include="Modules\Administration\RolePermission\RolePermissionUpdateRequest.cs" />
@@ -2094,6 +2128,18 @@
     <Compile Include="Modules\AddAnAsset\AssetMaintenance\AssetMaintenancePage.cs" />
     <Compile Include="Modules\AddAnAsset\AssetMaintenance\AssetMaintenanceColumns.cs" />
     <Compile Include="Modules\AddAnAsset\AssetMaintenance\AssetMaintenanceForm.cs" />
+    <Compile Include="Modules\AddAnAsset\CheckIn\CheckInRow.cs" />
+    <Compile Include="Modules\AddAnAsset\CheckIn\CheckInRepository.cs" />
+    <Compile Include="Modules\AddAnAsset\CheckIn\CheckInEndpoint.cs" />
+    <Compile Include="Modules\AddAnAsset\CheckIn\CheckInPage.cs" />
+    <Compile Include="Modules\AddAnAsset\CheckIn\CheckInColumns.cs" />
+    <Compile Include="Modules\AddAnAsset\CheckIn\CheckInForm.cs" />
+    <Compile Include="Modules\AddAnAsset\CheckOut\CheckOutRow.cs" />
+    <Compile Include="Modules\AddAnAsset\CheckOut\CheckOutRepository.cs" />
+    <Compile Include="Modules\AddAnAsset\CheckOut\CheckOutEndpoint.cs" />
+    <Compile Include="Modules\AddAnAsset\CheckOut\CheckOutPage.cs" />
+    <Compile Include="Modules\AddAnAsset\CheckOut\CheckOutColumns.cs" />
+    <Compile Include="Modules\AddAnAsset\CheckOut\CheckOutForm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

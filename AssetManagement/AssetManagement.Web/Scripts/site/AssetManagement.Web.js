@@ -224,6 +224,158 @@ var AssetManagement;
 (function (AssetManagement) {
     var AddAnAsset;
     (function (AddAnAsset) {
+        var CheckInForm = /** @class */ (function (_super) {
+            __extends(CheckInForm, _super);
+            function CheckInForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!CheckInForm.init) {
+                    CheckInForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.DateEditor;
+                    var w1 = s.LookupEditor;
+                    var w2 = s.TextAreaEditor;
+                    var w3 = s.BooleanEditor;
+                    var w4 = s.StringEditor;
+                    var w5 = s.IntegerEditor;
+                    Q.initFormType(CheckInForm, [
+                        'DueDate', w0,
+                        'ReturnDate', w0,
+                        'SiteId', w1,
+                        'LocationId', w1,
+                        'DepartmentId', w1,
+                        'Notes', w2,
+                        'SendMail', w3,
+                        'Email', w4,
+                        'AssetId', w5
+                    ]);
+                }
+                return _this;
+            }
+            CheckInForm.formKey = 'AddAnAsset.CheckIn';
+            return CheckInForm;
+        }(Serenity.PrefixedContext));
+        AddAnAsset.CheckInForm = CheckInForm;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var CheckInRow;
+        (function (CheckInRow) {
+            CheckInRow.idProperty = 'CheckId';
+            CheckInRow.nameProperty = 'Notes';
+            CheckInRow.localTextPrefix = 'AddAnAsset.CheckIn';
+            CheckInRow.deletePermission = 'Administration:General';
+            CheckInRow.insertPermission = 'Administration:General';
+            CheckInRow.readPermission = 'Administration:General';
+            CheckInRow.updatePermission = 'Administration:General';
+        })(CheckInRow = AddAnAsset.CheckInRow || (AddAnAsset.CheckInRow = {}));
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var CheckInService;
+        (function (CheckInService) {
+            CheckInService.baseUrl = 'AddAnAsset/CheckIn';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                CheckInService[x] = function (r, s, o) {
+                    return Q.serviceRequest(CheckInService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(CheckInService = AddAnAsset.CheckInService || (AddAnAsset.CheckInService = {}));
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var CheckOutForm = /** @class */ (function (_super) {
+            __extends(CheckOutForm, _super);
+            function CheckOutForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!CheckOutForm.init) {
+                    CheckOutForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.DateEditor;
+                    var w1 = s.RadioButtonEditor;
+                    var w2 = s.LookupEditor;
+                    var w3 = s.BooleanEditor;
+                    var w4 = s.TextAreaEditor;
+                    var w5 = s.StringEditor;
+                    var w6 = s.IntegerEditor;
+                    Q.initFormType(CheckOutForm, [
+                        'CheckOutDate', w0,
+                        'CheckOutTo', w1,
+                        'EmployeeId', w2,
+                        'NoDueDate', w3,
+                        'DueDate', w0,
+                        'SiteId', w2,
+                        'LocationId', w2,
+                        'DepartmentId', w2,
+                        'Notes', w4,
+                        'SendMail', w3,
+                        'Email', w5,
+                        'AssetId', w6
+                    ]);
+                }
+                return _this;
+            }
+            CheckOutForm.formKey = 'AddAnAsset.CheckOut';
+            return CheckOutForm;
+        }(Serenity.PrefixedContext));
+        AddAnAsset.CheckOutForm = CheckOutForm;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var CheckOutRow;
+        (function (CheckOutRow) {
+            CheckOutRow.idProperty = 'CheckOutId';
+            CheckOutRow.nameProperty = 'Notes';
+            CheckOutRow.localTextPrefix = 'AddAnAsset.CheckOut';
+            CheckOutRow.deletePermission = 'Administration:General';
+            CheckOutRow.insertPermission = 'Administration:General';
+            CheckOutRow.readPermission = 'Administration:General';
+            CheckOutRow.updatePermission = 'Administration:General';
+        })(CheckOutRow = AddAnAsset.CheckOutRow || (AddAnAsset.CheckOutRow = {}));
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var CheckOutService;
+        (function (CheckOutService) {
+            CheckOutService.baseUrl = 'AddAnAsset/CheckOut';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                CheckOutService[x] = function (r, s, o) {
+                    return Q.serviceRequest(CheckOutService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(CheckOutService = AddAnAsset.CheckOutService || (AddAnAsset.CheckOutService = {}));
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
         var DocumentForm = /** @class */ (function (_super) {
             __extends(DocumentForm, _super);
             function DocumentForm(prefix) {
@@ -706,18 +858,17 @@ var AssetManagement;
                     EmployeeForm.init = true;
                     var s = Serenity;
                     var w0 = s.StringEditor;
-                    var w1 = s.IntegerEditor;
+                    var w1 = s.TextAreaEditor;
                     var w2 = s.LookupEditor;
-                    var w3 = s.TextAreaEditor;
                     Q.initFormType(EmployeeForm, [
                         'EmployeeName', w0,
-                        'Title', w0,
-                        'Phone', w1,
+                        'Title', w1,
+                        'Phone', w0,
                         'Email', w0,
                         'SiteId', w2,
                         'LocationId', w2,
                         'DepartmentId', w2,
-                        'Note', w3
+                        'Note', w1
                     ]);
                 }
                 return _this;
@@ -1014,6 +1165,24 @@ var AssetManagement;
         }(Serenity.PrefixedContext));
         Membership.SignUpForm = SignUpForm;
     })(Membership = AssetManagement.Membership || (AssetManagement.Membership = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var Modules;
+    (function (Modules) {
+        var AddAnAsset;
+        (function (AddAnAsset) {
+            var CheckOut;
+            (function (CheckOut) {
+                var CheckOutTo;
+                (function (CheckOutTo) {
+                    CheckOutTo[CheckOutTo["Person"] = 1] = "Person";
+                    CheckOutTo[CheckOutTo["Site_Location"] = 2] = "Site_Location";
+                })(CheckOutTo = CheckOut.CheckOutTo || (CheckOut.CheckOutTo = {}));
+                Serenity.Decorators.registerEnumType(CheckOutTo, 'AssetManagement.Modules.AddAnAsset.CheckOut.CheckOutTo', 'CheckOut.CheckOutTo');
+            })(CheckOut = AddAnAsset.CheckOut || (AddAnAsset.CheckOut = {}));
+        })(AddAnAsset = Modules.AddAnAsset || (Modules.AddAnAsset = {}));
+    })(Modules = AssetManagement.Modules || (AssetManagement.Modules = {}));
 })(AssetManagement || (AssetManagement = {}));
 var AssetManagement;
 (function (AssetManagement) {
@@ -1685,7 +1854,7 @@ var AssetManagement;
 (function (AssetManagement) {
     var Texts;
     (function (Texts) {
-        AssetManagement['Texts'] = Q.proxyTexts(Texts, '', { Db: { AddAnAsset: { AssetDetails: { AssetId: 1, AssetLife: 1, AssetPhoto: 1, AssetTagId: 1, BrandBrandName: 1, BrandId: 1, Category: 1, CategoryId: 1, Color: 1, Cost: 1, Createdby: 1, DateAcquired: 1, Department: 1, DepartmentId: 1, DepreciableAsset: 1, DepreciableCost: 1, DepreciationMethod: 1, Description: 1, Location: 1, LocationId: 1, LocationSiteId: 1, Model: 1, OnCreated: 1, PurchaseDate: 1, Purchasedfrom: 1, SalvageValue: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1, UserId: 1 }, AssetMaintenance: { AssetId: 1, AssetMaintenanceId: 1, DateCompleted: 1, Details: 1, DueDate: 1, Id: 1, MaintenanceBy: 1, MaintenanceStatus: 1, Title: 1 }, AssetWarranty: { AssetId: 1, ExpirationDate: 1, Id: 1, Length: 1, Notes: 1 }, Document: { AssetId: 1, Description: 1, Document: 1, Id: 1 } }, Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Advanced: { Customers: { Address: 1, City: 1, Company: 1, CountryCountryName: 1, CountryId: 1, CustomerId: 1, CustomerName: 1, Email: 1, Notes: 1, Phone: 1, SiteStateId: 1, StateId: 1, StateName: 1, Zip: 1 }, Employee: { Department: 1, DepartmentId: 1, Email: 1, EmployeeId: 1, EmployeeName: 1, Location: 1, LocationId: 1, LocationSiteId: 1, Note: 1, Phone: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1, Title: 1 }, Funding: { Amount: 1, Description: 1, EndDate: 1, FundingId: 1, IsActive: 1, Name: 1, Notes: 1, StartDate: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } }, Setup: { Brand: { BrandId: 1, BrandName: 1 }, Category: { Category: 1, CategoryId: 1 }, Company: { Address: 1, City: 1, CompanyId: 1, CompanyName: 1, CountryCountryName: 1, CountryId: 1, PostalCode: 1, StateId: 1, StateStateName: 1, Suite: 1 }, Country: { CountryId: 1, CountryName: 1 }, Currency: { CurrencyId: 1, CurrencyName: 1 }, Department: { Department: 1, DepartmentId: 1 }, Location: { Location: 1, LocationId: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1 }, MaintenanceStatus: { Id: 1, MaintenanceStatus: 1 }, Site: { Address: 1, City: 1, Description: 1, SiteId: 1, SiteName: 1, StateId: 1, StateStateName: 1, Suite: 1 }, State: { StateId: 1, StateName: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
+        AssetManagement['Texts'] = Q.proxyTexts(Texts, '', { Db: { AddAnAsset: { AssetDetails: { AssetId: 1, AssetLife: 1, AssetPhoto: 1, AssetTagId: 1, BrandBrandName: 1, BrandId: 1, Category: 1, CategoryId: 1, Color: 1, Cost: 1, Createdby: 1, DateAcquired: 1, Department: 1, DepartmentId: 1, DepreciableAsset: 1, DepreciableCost: 1, DepreciationMethod: 1, Description: 1, Location: 1, LocationId: 1, LocationSiteId: 1, Model: 1, OnCreated: 1, PurchaseDate: 1, Purchasedfrom: 1, SalvageValue: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1, UserId: 1 }, AssetMaintenance: { AssetId: 1, AssetMaintenanceId: 1, DateCompleted: 1, Details: 1, DueDate: 1, Id: 1, MaintenanceBy: 1, MaintenanceStatus: 1, Title: 1 }, AssetWarranty: { AssetId: 1, ExpirationDate: 1, Id: 1, Length: 1, Notes: 1 }, CheckIn: { AssetAssetLife: 1, AssetAssetPhoto: 1, AssetAssetTagId: 1, AssetBrandId: 1, AssetCategoryId: 1, AssetColor: 1, AssetCost: 1, AssetCreatedby: 1, AssetDateAcquired: 1, AssetDepartmentId: 1, AssetDepreciableAsset: 1, AssetDepreciableCost: 1, AssetDepreciationMethod: 1, AssetDescription: 1, AssetId: 1, AssetLocationId: 1, AssetModel: 1, AssetOnCreated: 1, AssetPurchaseDate: 1, AssetPurchasedfrom: 1, AssetSalvageValue: 1, AssetSiteId: 1, AssetUserId: 1, CheckId: 1, Department: 1, DepartmentId: 1, DueDate: 1, Email: 1, Location: 1, LocationId: 1, LocationSiteId: 1, Notes: 1, ReturnDate: 1, SendMail: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1 }, CheckOut: { AssetAssetLife: 1, AssetAssetPhoto: 1, AssetAssetTagId: 1, AssetBrandId: 1, AssetCategoryId: 1, AssetColor: 1, AssetCost: 1, AssetCreatedby: 1, AssetDateAcquired: 1, AssetDepartmentId: 1, AssetDepreciableAsset: 1, AssetDepreciableCost: 1, AssetDepreciationMethod: 1, AssetDescription: 1, AssetId: 1, AssetLocationId: 1, AssetModel: 1, AssetOnCreated: 1, AssetPurchaseDate: 1, AssetPurchasedfrom: 1, AssetSalvageValue: 1, AssetSiteId: 1, AssetUserId: 1, CheckOutDate: 1, CheckOutId: 1, CheckOutTo: 1, Department: 1, DepartmentId: 1, DueDate: 1, Email: 1, EmployeeDepartmentId: 1, EmployeeEmail: 1, EmployeeEmployeeName: 1, EmployeeId: 1, EmployeeLocationId: 1, EmployeeNote: 1, EmployeePhone: 1, EmployeeSiteId: 1, EmployeeTitle: 1, Location: 1, LocationId: 1, LocationSiteId: 1, NoDueDate: 1, Notes: 1, SendMail: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1 }, Document: { AssetId: 1, Description: 1, Document: 1, Id: 1 } }, Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Advanced: { Customers: { Address: 1, City: 1, Company: 1, CountryCountryName: 1, CountryId: 1, CustomerId: 1, CustomerName: 1, Email: 1, Notes: 1, Phone: 1, SiteStateId: 1, StateId: 1, StateName: 1, Zip: 1 }, Employee: { Department: 1, DepartmentId: 1, Email: 1, EmployeeId: 1, EmployeeName: 1, Location: 1, LocationId: 1, LocationSiteId: 1, Note: 1, Phone: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1, Title: 1 }, Funding: { Amount: 1, Description: 1, EndDate: 1, FundingId: 1, IsActive: 1, Name: 1, Notes: 1, StartDate: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } }, Setup: { Brand: { BrandId: 1, BrandName: 1 }, Category: { Category: 1, CategoryId: 1 }, Company: { Address: 1, City: 1, CompanyId: 1, CompanyName: 1, CountryCountryName: 1, CountryId: 1, PostalCode: 1, StateId: 1, StateStateName: 1, Suite: 1 }, Country: { CountryId: 1, CountryName: 1 }, Currency: { CurrencyId: 1, CurrencyName: 1 }, Department: { Department: 1, DepartmentId: 1 }, Location: { Location: 1, LocationId: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1 }, MaintenanceStatus: { Id: 1, MaintenanceStatus: 1 }, Site: { Address: 1, City: 1, Description: 1, SiteId: 1, SiteName: 1, StateId: 1, StateStateName: 1, Suite: 1 }, State: { StateId: 1, StateName: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
     })(Texts = AssetManagement.Texts || (AssetManagement.Texts = {}));
 })(AssetManagement || (AssetManagement = {}));
 var AssetManagement;
@@ -1709,6 +1878,14 @@ var AssetManagement;
                 _this.tabs.on('tabsactivate', function (e, i) {
                     _this.arrange();
                 });
+                _this.CheckInGrid = new AddAnAsset.CheckInGrid(_this.byId("CheckInGrid"));
+                _this.tabs.on('tabsactivate', function (e, i) {
+                    _this.arrange();
+                });
+                _this.CheckOutGrid = new AddAnAsset.CheckOutGrid(_this.byId("CheckOutGrid"));
+                _this.tabs.on('tabsactivate', function (e, i) {
+                    _this.arrange();
+                });
                 return _this;
             }
             AssetDetailsDialog.prototype.getFormKey = function () { return AddAnAsset.AssetDetailsForm.formKey; };
@@ -1721,9 +1898,11 @@ var AssetManagement;
             AssetDetailsDialog.prototype.getUpdatePermission = function () { return AddAnAsset.AssetDetailsRow.updatePermission; };
             AssetDetailsDialog.prototype.afterLoadEntity = function () {
                 _super.prototype.afterLoadEntity.call(this);
-                this.DocumentGrid.Id = this.entityId;
-                this.AssetWarrantyGrid.Id = this.entityId;
-                this.AssetMaintenanceGrid.Id = this.entityId;
+                this.DocumentGrid.AssetId = this.entity.AssetId;
+                this.AssetWarrantyGrid.AssetId = this.entity.AssetId;
+                this.AssetMaintenanceGrid.AssetId = this.entity.AssetId;
+                this.CheckInGrid.AssetId = this.entity.AssetId;
+                this.CheckOutGrid.AssetId = this.entity.AssetId;
             };
             AssetDetailsDialog = __decorate([
                 Serenity.Decorators.registerClass(),
@@ -1810,17 +1989,10 @@ var AssetManagement;
             AssetMaintenanceGrid.prototype.usePager = function () {
                 return false;
             };
-            AssetMaintenanceGrid.prototype.getGridCanLoad = function () {
-                return this.AssetId != null;
-            };
             Object.defineProperty(AssetMaintenanceGrid.prototype, "AssetId", {
                 get: function () {
                     return this._AssetId;
                 },
-                enumerable: true,
-                configurable: true
-            });
-            Object.defineProperty(AssetMaintenanceGrid.prototype, "AssetMaintenanceId", {
                 set: function (value) {
                     if (this._AssetId != value) {
                         this._AssetId = value;
@@ -1892,17 +2064,10 @@ var AssetManagement;
             AssetWarrantyGrid.prototype.usePager = function () {
                 return false;
             };
-            AssetWarrantyGrid.prototype.getGridCanLoad = function () {
-                return this.AssetId != null;
-            };
             Object.defineProperty(AssetWarrantyGrid.prototype, "AssetId", {
                 get: function () {
                     return this._AssetId;
                 },
-                enumerable: true,
-                configurable: true
-            });
-            Object.defineProperty(AssetWarrantyGrid.prototype, "Id", {
                 set: function (value) {
                     if (this._AssetId != value) {
                         this._AssetId = value;
@@ -1919,6 +2084,258 @@ var AssetManagement;
             return AssetWarrantyGrid;
         }(Serenity.EntityGrid));
         AddAnAsset.AssetWarrantyGrid = AssetWarrantyGrid;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var CheckInDialog = /** @class */ (function (_super) {
+            __extends(CheckInDialog, _super);
+            function CheckInDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new AddAnAsset.CheckInForm(_this.idPrefix);
+                return _this;
+            }
+            CheckInDialog.prototype.getFormKey = function () { return AddAnAsset.CheckInForm.formKey; };
+            CheckInDialog.prototype.getIdProperty = function () { return AddAnAsset.CheckInRow.idProperty; };
+            CheckInDialog.prototype.getLocalTextPrefix = function () { return AddAnAsset.CheckInRow.localTextPrefix; };
+            CheckInDialog.prototype.getNameProperty = function () { return AddAnAsset.CheckInRow.nameProperty; };
+            CheckInDialog.prototype.getService = function () { return AddAnAsset.CheckInService.baseUrl; };
+            CheckInDialog.prototype.getDeletePermission = function () { return AddAnAsset.CheckInRow.deletePermission; };
+            CheckInDialog.prototype.getInsertPermission = function () { return AddAnAsset.CheckInRow.insertPermission; };
+            CheckInDialog.prototype.getUpdatePermission = function () { return AddAnAsset.CheckInRow.updatePermission; };
+            CheckInDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CheckInDialog);
+            return CheckInDialog;
+        }(Serenity.EntityDialog));
+        AddAnAsset.CheckInDialog = CheckInDialog;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var CheckInGrid = /** @class */ (function (_super) {
+            __extends(CheckInGrid, _super);
+            function CheckInGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            CheckInGrid.prototype.getColumnsKey = function () { return 'AddAnAsset.CheckIn'; };
+            CheckInGrid.prototype.getDialogType = function () { return AddAnAsset.CheckInDialog; };
+            CheckInGrid.prototype.getIdProperty = function () { return AddAnAsset.CheckInRow.idProperty; };
+            CheckInGrid.prototype.getInsertPermission = function () { return AddAnAsset.CheckInRow.insertPermission; };
+            CheckInGrid.prototype.getLocalTextPrefix = function () { return AddAnAsset.CheckInRow.localTextPrefix; };
+            CheckInGrid.prototype.getService = function () { return AddAnAsset.CheckInService.baseUrl; };
+            CheckInGrid.prototype.addButtonClick = function () {
+                this.editItem({
+                    AssetId: this.AssetId
+                });
+            };
+            //protected getInitialTitle() {
+            //    return null;
+            //}
+            CheckInGrid.prototype.usePager = function () {
+                return false;
+            };
+            Object.defineProperty(CheckInGrid.prototype, "AssetId", {
+                get: function () {
+                    return this._AssetId;
+                },
+                set: function (value) {
+                    if (this._AssetId != value) {
+                        this._AssetId = value;
+                        this.setEquality("AssetId" /* AssetId */, value);
+                        this.refresh();
+                    }
+                },
+                enumerable: true,
+                configurable: true
+            });
+            CheckInGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CheckInGrid);
+            return CheckInGrid;
+        }(Serenity.EntityGrid));
+        AddAnAsset.CheckInGrid = CheckInGrid;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var CheckOutDialog = /** @class */ (function (_super) {
+            __extends(CheckOutDialog, _super);
+            function CheckOutDialog() {
+                var _this = _super.call(this) || this;
+                _this.form = new AddAnAsset.CheckOutForm(_this.idPrefix);
+                //    this.form.Email.change(e => {
+                //        this.toggleCheck(this.form.SendMail.value);
+                //    });
+                //}
+                //protected toggleCheck(value) {
+                //    this.form.Email.value = value;
+                _this.form.SendMail.change(function (e) {
+                    _this.getGridField();
+                    if (_this.form.SendMail.value != false)
+                        Serenity.EditorUtils.setReadOnly(_this.form.Email, true);
+                    else {
+                        _this.form.SendMail.change(function () {
+                            _this.form.SendMail.value;
+                            Serenity.EditorUtils.setReadOnly(_this.form.Email, true);
+                        });
+                    }
+                });
+                return _this;
+                //this.get_readOnly();
+                //    if (this.form.SendMail.value == false)
+                //        Serenity.EditorUtils.setReadOnly(this.form.Email, true);
+                //    this.element.find('Email').hide();
+                //});
+                //function (e) {
+                //    if (this.form.CheckOutTo.value == true) {
+                //        Serenity.EditorUtils.setRequired(this.form.SiteId, false);
+                //        this.form.CheckOutDate.getGridField().toggle(true);
+                //        Serenity.EditorUtils.setRequired(this.form.LocationId, false);
+                //        this.form.LocationId.getGridField().toggle(true);
+                //        Serenity.EditorUtils.setRequired(this.form.DepartmentId, false);
+                //        this.form.DepartmentId.getGridField().toggle(true);
+                //        Serenity.EditorUtils.setRequired(this.form.CheckOutDate, false);
+                //        this.form.CheckOutDate.getGridField().toggle(true);
+                //        Serenity.EditorUtils.setRequired(this.form.Notes, false);
+                //        this.form.Notes.getGridField().toggle(true);
+                //        Serenity.EditorUtils.setRequired(this.form.NoDueDate, false);
+                //        this.form.NoDueDate.getGridField().toggle(true);
+                //        Serenity.EditorUtils.setRequired(this.form.DueDate, false);
+                //        this.form.DueDate.getGridField().toggle(true);
+                //    }
+                //    else {
+                //        //Serenity.EditorUtils.setRequired(this.form.CheckOutDate, true);
+                //        //this.form.CheckOutDate.getGridField().toggle(false);
+                //        Serenity.EditorUtils.setRequired(this.form.EmployeeId, true);
+                //        this.form.EmployeeId.getGridField().toggle(false);
+                //        //Serenity.EditorUtils.setRequired(this.form.NoDueDate, true);
+                //        //this.form.NoDueDate.getGridField().toggle(false);
+                //        Serenity.EditorUtils.setRequired(this.form.DueDate, true);
+                //        this.form.DueDate.getGridField().toggle(false);
+                //        //Serenity.EditorUtils.setRequired(this.form.SiteId, true);
+                //        //this.form.SiteId.getGridField().toggle(false);
+                //        //Serenity.EditorUtils.setRequired(this.form.LocationId, true);
+                //        //this.form.LocationId.getGridField().toggle(false);
+                //        //Serenity.EditorUtils.setRequired(this.form.DepartmentId, true);
+                //        //this.form.DepartmentId.getGridField().toggle(false);
+                //        //Serenity.EditorUtils.setRequired(this.form.Notes, true);
+                //        //this.form.Notes.getGridField().toggle(false);
+                //        //Serenity.EditorUtils.setRequired(this.form.SendMail, true);
+                //        //this.form.SendMail.getGridField().toggle(false);
+                //        //Serenity.EditorUtils.setRequired(this.form.Email, true);
+                //        //this.form.Email.getGridField().toggle(false);
+                //    }
+                //}.bind(this)
+                //  );
+            }
+            CheckOutDialog.prototype.getFormKey = function () { return AddAnAsset.CheckOutForm.formKey; };
+            CheckOutDialog.prototype.getIdProperty = function () { return AddAnAsset.CheckOutRow.idProperty; };
+            CheckOutDialog.prototype.getLocalTextPrefix = function () { return AddAnAsset.CheckOutRow.localTextPrefix; };
+            CheckOutDialog.prototype.getNameProperty = function () { return AddAnAsset.CheckOutRow.nameProperty; };
+            CheckOutDialog.prototype.getService = function () { return AddAnAsset.CheckOutService.baseUrl; };
+            CheckOutDialog.prototype.getDeletePermission = function () { return AddAnAsset.CheckOutRow.deletePermission; };
+            CheckOutDialog.prototype.getInsertPermission = function () { return AddAnAsset.CheckOutRow.insertPermission; };
+            CheckOutDialog.prototype.getUpdatePermission = function () { return AddAnAsset.CheckOutRow.updatePermission; };
+            CheckOutDialog.prototype.afterLoadEntity = function () {
+                var _this = this;
+                _super.prototype.afterLoadEntity.call(this);
+                this.form.NoDueDate.change(function () {
+                    _this.getDueDateFields();
+                });
+                this.getDueDateFields();
+                this.form.CheckOutTo.change(function () {
+                    _this.setShowHideFields();
+                });
+                this.setShowHideFields();
+            };
+            CheckOutDialog.prototype.setShowHideFields = function () {
+                debugger;
+                this.form.EmployeeId.getGridField().toggle(false);
+                if (this.form.CheckOutTo.value) {
+                    if (this.form.CheckOutTo.value == '1') {
+                        this.form.EmployeeId.getGridField().toggle(true);
+                    }
+                    this.form.SendMail.getGridField().toggle(true);
+                    if (this.form.CheckOutTo.value) {
+                        if (this.form.CheckOutTo.value == '2') {
+                            this.form.SendMail.getGridField().toggle(false);
+                        }
+                        this.form.Email.getGridField().toggle(true);
+                        if (this.form.CheckOutTo.value) {
+                            if (this.form.CheckOutTo.value == '2') {
+                                this.form.Email.getGridField().toggle(false);
+                            }
+                        }
+                    }
+                }
+            };
+            CheckOutDialog.prototype.getDueDateFields = function () {
+                this.form.DueDate.getGridField().toggle(true);
+                if (this.form.NoDueDate.value) {
+                    this.form.DueDate.getGridField().toggle(false);
+                }
+            };
+            CheckOutDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CheckOutDialog);
+            return CheckOutDialog;
+        }(Serenity.EntityDialog));
+        AddAnAsset.CheckOutDialog = CheckOutDialog;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var CheckOutGrid = /** @class */ (function (_super) {
+            __extends(CheckOutGrid, _super);
+            function CheckOutGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            CheckOutGrid.prototype.getColumnsKey = function () { return 'AddAnAsset.CheckOut'; };
+            CheckOutGrid.prototype.getDialogType = function () { return AddAnAsset.CheckOutDialog; };
+            CheckOutGrid.prototype.getIdProperty = function () { return AddAnAsset.CheckOutRow.idProperty; };
+            CheckOutGrid.prototype.getInsertPermission = function () { return AddAnAsset.CheckOutRow.insertPermission; };
+            CheckOutGrid.prototype.getLocalTextPrefix = function () { return AddAnAsset.CheckOutRow.localTextPrefix; };
+            CheckOutGrid.prototype.getService = function () { return AddAnAsset.CheckOutService.baseUrl; };
+            CheckOutGrid.prototype.addButtonClick = function () {
+                this.editItem({
+                    AssetId: this.AssetId
+                });
+            };
+            //protected getInitialTitle() {
+            //    return null;
+            //}
+            CheckOutGrid.prototype.usePager = function () {
+                return false;
+            };
+            Object.defineProperty(CheckOutGrid.prototype, "AssetId", {
+                get: function () {
+                    return this._AssetId;
+                },
+                set: function (value) {
+                    if (this._AssetId != value) {
+                        this._AssetId = value;
+                        this.setEquality("AssetId" /* AssetId */, value);
+                        this.refresh();
+                    }
+                },
+                enumerable: true,
+                configurable: true
+            });
+            CheckOutGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CheckOutGrid);
+            return CheckOutGrid;
+        }(Serenity.EntityGrid));
+        AddAnAsset.CheckOutGrid = CheckOutGrid;
     })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
 })(AssetManagement || (AssetManagement = {}));
 var AssetManagement;
@@ -1974,17 +2391,10 @@ var AssetManagement;
             DocumentGrid.prototype.usePager = function () {
                 return false;
             };
-            DocumentGrid.prototype.getGridCanLoad = function () {
-                return this.AssetId != null;
-            };
             Object.defineProperty(DocumentGrid.prototype, "AssetId", {
                 get: function () {
                     return this._AssetId;
                 },
-                enumerable: true,
-                configurable: true
-            });
-            Object.defineProperty(DocumentGrid.prototype, "Id", {
                 set: function (value) {
                     if (this._AssetId != value) {
                         this._AssetId = value;

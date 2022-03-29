@@ -21,6 +21,16 @@ namespace MVC
                 public const string AssetWarrantyIndex = "~/Modules/AddAnAsset/AssetWarranty/AssetWarrantyIndex.cshtml";
             }
 
+            public static class CheckIn
+            {
+                public const string CheckInIndex = "~/Modules/AddAnAsset/CheckIn/CheckInIndex.cshtml";
+            }
+
+            public static class CheckOut
+            {
+                public const string CheckOutIndex = "~/Modules/AddAnAsset/CheckOut/CheckOutIndex.cshtml";
+            }
+
             public static class Document
             {
                 public const string DocumentIndex = "~/Modules/AddAnAsset/Document/DocumentIndex.cshtml";

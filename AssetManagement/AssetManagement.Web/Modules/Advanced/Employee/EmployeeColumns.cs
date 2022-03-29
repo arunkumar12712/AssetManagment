@@ -18,7 +18,7 @@ namespace AssetManagement.Advanced.Columns
         [EditLink]
         public String EmployeeName { get; set; }
         public String Title { get; set; }
-        public Int32 Phone { get; set; }
+        public String Phone { get; set; }
         public String Email { get; set; }
         public String SiteSiteName { get; set; }
         public String Location { get; set; }

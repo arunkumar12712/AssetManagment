@@ -29,19 +29,19 @@ namespace AssetManagement.AddAnAsset {
             return false;
         }
 
-        protected getGridCanLoad() {
-            return this.AssetId != null;
-        }
+        //protected getGridCanLoad() {
+        //    return this.AssetId != null;
+        //}
 
         private _AssetId: number;
 
         get AssetId() {
             return this._AssetId;
         }
-        set Id(value: number) {
+        set AssetId(value: number) {
             if (this._AssetId != value) {
                 this._AssetId = value;
-                this.setEquality(AssetDetailsRow.Fields.AssetId, value);
+                this.setEquality(DocumentRow.Fields.AssetId, value);
                 this.refresh();
             }
         }

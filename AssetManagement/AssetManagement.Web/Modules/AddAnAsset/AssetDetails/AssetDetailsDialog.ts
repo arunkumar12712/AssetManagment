@@ -18,6 +18,9 @@ namespace AssetManagement.AddAnAsset {
         private DocumentGrid: DocumentGrid;
         private AssetWarrantyGrid: AssetWarrantyGrid;
         private AssetMaintenanceGrid: AssetMaintenanceGrid;
+        private CheckInGrid: CheckInGrid;
+        private CheckOutGrid: CheckOutGrid;
+     
 
         constructor() {
             super();
@@ -34,13 +37,28 @@ namespace AssetManagement.AddAnAsset {
             this.tabs.on('tabsactivate', (e, i) => {
                 this.arrange();
             });
+
+
+            this.CheckInGrid = new CheckInGrid(this.byId("CheckInGrid"));
+            this.tabs.on('tabsactivate', (e, i) => {
+                this.arrange();
+            });
+
+            this.CheckOutGrid = new CheckOutGrid(this.byId("CheckOutGrid"));
+            this.tabs.on('tabsactivate', (e, i) => {
+                this.arrange();
+            });
+            
         }
              protected afterLoadEntity() {
             super.afterLoadEntity();
 
-                 this.DocumentGrid.Id = this.entityId;
-                 this.AssetWarrantyGrid.Id = this.entityId;
-                 this.AssetMaintenanceGrid.Id = this.entityId;
+                 this.DocumentGrid.AssetId = this.entity.AssetId
+                 this.AssetWarrantyGrid.AssetId = this.entity.AssetId
+                 this.AssetMaintenanceGrid.AssetId = this.entity.AssetId
+                 this.CheckInGrid.AssetId = this.entity.AssetId
+                 this.CheckOutGrid.AssetId = this.entity.AssetId
+                 
 
             }
 

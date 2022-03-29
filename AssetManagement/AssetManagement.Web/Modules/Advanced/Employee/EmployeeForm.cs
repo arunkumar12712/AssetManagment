@@ -14,8 +14,9 @@ namespace AssetManagement.Advanced.Forms
     public class EmployeeForm
     {
         public String EmployeeName { get; set; }
+        [TextAreaEditor(Rows = 4 )]
         public String Title { get; set; }
-        public Int32 Phone { get; set; }
+        public String Phone { get; set; }
         public String Email { get; set; }
         public Int32 SiteId { get; set; }
         public Int32 LocationId { get; set; }

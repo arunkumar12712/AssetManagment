@@ -1,8 +1,8 @@
 ﻿namespace AssetManagement.Advanced {
     export interface EmployeeForm {
         EmployeeName: Serenity.StringEditor;
-        Title: Serenity.StringEditor;
-        Phone: Serenity.IntegerEditor;
+        Title: Serenity.TextAreaEditor;
+        Phone: Serenity.StringEditor;
         Email: Serenity.StringEditor;
         SiteId: Serenity.LookupEditor;
         LocationId: Serenity.LookupEditor;
@@ -22,19 +22,18 @@
 
                 var s = Serenity;
                 var w0 = s.StringEditor;
-                var w1 = s.IntegerEditor;
+                var w1 = s.TextAreaEditor;
                 var w2 = s.LookupEditor;
-                var w3 = s.TextAreaEditor;
 
                 Q.initFormType(EmployeeForm, [
                     'EmployeeName', w0,
-                    'Title', w0,
-                    'Phone', w1,
+                    'Title', w1,
+                    'Phone', w0,
                     'Email', w0,
                     'SiteId', w2,
                     'LocationId', w2,
                     'DepartmentId', w2,
-                    'Note', w3
+                    'Note', w1
                 ]);
             }
         }

@@ -7506,3 +7506,15 @@ section.content > .s-DataGrid {
 .s-AddAnAsset-AssetMaintenanceDialog .caption {
   width: 150px;
 }
+.s-AddAnAsset-CheckInDialog > .size {
+  width: 650px;
+}
+.s-AddAnAsset-CheckInDialog .caption {
+  width: 150px;
+}
+.s-AddAnAsset-CheckOutDialog > .size {
+  width: 650px;
+}
+.s-AddAnAsset-CheckOutDialog .caption {
+  width: 150px;
+}

@@ -17,12 +17,12 @@ namespace AssetManagement.AddAnAsset.Columns
         public Int32 AssetId { get; set; }
         [EditLink]
         public String Description { get; set; }
-        [Width(200)]
+        [Width(100)]
         public Int32 AssetTagId { get; set; }
-        [Width(150)]
+        [Width(100)]
         public String Purchasedfrom { get; set; }
         [DisplayFormat("dd/MM/yyyy")]
-        [Width(150)]
+        [Width(100)]
         public DateTime PurchaseDate { get; set; }
 
         public String BrandBrandName { get; set; }
@@ -41,16 +41,16 @@ namespace AssetManagement.AddAnAsset.Columns
         public Decimal DepreciableCost { get; set; }
         [Width(150)]
         public Int32 AssetLife { get; set; }
-        [Width(150)]
+        [Width(100)]
         public Decimal SalvageValue { get; set; }
         public String DepreciationMethod { get; set; }
-        [Width(150)]
+        [Width(100)]
         [DisplayFormat("dd/MM/yyyy")]
         public DateTime DateAcquired { get; set; }
-        [Width(200)]
+        [Width(150)]
         [Serenity.ComponentModel.DisplayFormat("dd/MM/yyyy HH:mm:ss")]
         public DateTime OnCreated { get; set; }
         public String Createdby { get; set; }
-      //  public String Username { get; set; }
+       // public String Username { get; set; }
     }
 }

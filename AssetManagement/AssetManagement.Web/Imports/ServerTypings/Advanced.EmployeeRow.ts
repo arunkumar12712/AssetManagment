@@ -3,7 +3,7 @@
         EmployeeId?: number;
         EmployeeName?: string;
         Title?: string;
-        Phone?: number;
+        Phone?: string;
         Email?: string;
         SiteId?: number;
         LocationId?: number;
