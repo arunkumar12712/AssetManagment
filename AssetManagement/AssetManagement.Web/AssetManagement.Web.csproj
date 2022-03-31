@@ -1047,13 +1047,31 @@
     <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.AssetWarrantyColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.BrokenAssetColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.CheckInColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.CheckOutColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.DisposeAssetColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.DocumentColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.DonateAssetColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.LeaseColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.RepairAssetColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.SellAssetColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\Administration.PermissionKeys.ts">
@@ -1072,6 +1090,9 @@
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\Modules.AddAnAsset.CheckOut.CheckOutTo.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Modules.AddAnAsset.DonateAsset.Deductible.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\Setup.BrandColumns.ts">
@@ -1888,6 +1909,78 @@
     <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.CheckOutForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.LeaseRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.LeaseService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\AddAnAsset\Lease\LeaseIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\Lease\LeaseDialog.ts" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\Lease\LeaseGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.LeaseForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.RepairAssetRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.RepairAssetService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\AddAnAsset\RepairAsset\RepairAssetIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\RepairAsset\RepairAssetDialog.ts" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\RepairAsset\RepairAssetGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.RepairAssetForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.BrokenAssetRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.BrokenAssetService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\AddAnAsset\BrokenAsset\BrokenAssetIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\BrokenAsset\BrokenAssetDialog.ts" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\BrokenAsset\BrokenAssetGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.BrokenAssetForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.DisposeAssetRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.DisposeAssetService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\AddAnAsset\DisposeAsset\DisposeAssetIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\DisposeAsset\DisposeAssetDialog.ts" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\DisposeAsset\DisposeAssetGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.DisposeAssetForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.DonateAssetRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.DonateAssetService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\AddAnAsset\DonateAsset\DonateAssetIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\DonateAsset\DonateAssetDialog.ts" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\DonateAsset\DonateAssetGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.DonateAssetForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.SellAssetRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.SellAssetService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\AddAnAsset\SellAsset\SellAssetIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\SellAsset\SellAssetDialog.ts" />
+    <TypeScriptCompile Include="Modules\AddAnAsset\SellAsset\SellAssetGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\AddAnAsset.SellAssetForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1907,6 +2000,7 @@
     </Compile>
     <Compile Include="Modules\AddAnAsset\AssetDetails\DepreciableAsset.cs" />
     <Compile Include="Modules\AddAnAsset\CheckOut\CheckOutTo.cs" />
+    <Compile Include="Modules\AddAnAsset\DonateAsset\Deductible.cs" />
     <Compile Include="Modules\Administration\AdministrationNavigation.cs" />
     <Compile Include="Modules\Administration\Language\LanguageLookup.cs" />
     <Compile Include="Modules\Administration\RolePermission\RolePermissionUpdateRequest.cs" />
@@ -2140,6 +2234,42 @@
     <Compile Include="Modules\AddAnAsset\CheckOut\CheckOutPage.cs" />
     <Compile Include="Modules\AddAnAsset\CheckOut\CheckOutColumns.cs" />
     <Compile Include="Modules\AddAnAsset\CheckOut\CheckOutForm.cs" />
+    <Compile Include="Modules\AddAnAsset\Lease\LeaseRow.cs" />
+    <Compile Include="Modules\AddAnAsset\Lease\LeaseRepository.cs" />
+    <Compile Include="Modules\AddAnAsset\Lease\LeaseEndpoint.cs" />
+    <Compile Include="Modules\AddAnAsset\Lease\LeasePage.cs" />
+    <Compile Include="Modules\AddAnAsset\Lease\LeaseColumns.cs" />
+    <Compile Include="Modules\AddAnAsset\Lease\LeaseForm.cs" />
+    <Compile Include="Modules\AddAnAsset\RepairAsset\RepairAssetRow.cs" />
+    <Compile Include="Modules\AddAnAsset\RepairAsset\RepairAssetRepository.cs" />
+    <Compile Include="Modules\AddAnAsset\RepairAsset\RepairAssetEndpoint.cs" />
+    <Compile Include="Modules\AddAnAsset\RepairAsset\RepairAssetPage.cs" />
+    <Compile Include="Modules\AddAnAsset\RepairAsset\RepairAssetColumns.cs" />
+    <Compile Include="Modules\AddAnAsset\RepairAsset\RepairAssetForm.cs" />
+    <Compile Include="Modules\AddAnAsset\BrokenAsset\BrokenAssetRow.cs" />
+    <Compile Include="Modules\AddAnAsset\BrokenAsset\BrokenAssetRepository.cs" />
+    <Compile Include="Modules\AddAnAsset\BrokenAsset\BrokenAssetEndpoint.cs" />
+    <Compile Include="Modules\AddAnAsset\BrokenAsset\BrokenAssetPage.cs" />
+    <Compile Include="Modules\AddAnAsset\BrokenAsset\BrokenAssetColumns.cs" />
+    <Compile Include="Modules\AddAnAsset\BrokenAsset\BrokenAssetForm.cs" />
+    <Compile Include="Modules\AddAnAsset\DisposeAsset\DisposeAssetRow.cs" />
+    <Compile Include="Modules\AddAnAsset\DisposeAsset\DisposeAssetRepository.cs" />
+    <Compile Include="Modules\AddAnAsset\DisposeAsset\DisposeAssetEndpoint.cs" />
+    <Compile Include="Modules\AddAnAsset\DisposeAsset\DisposeAssetPage.cs" />
+    <Compile Include="Modules\AddAnAsset\DisposeAsset\DisposeAssetColumns.cs" />
+    <Compile Include="Modules\AddAnAsset\DisposeAsset\DisposeAssetForm.cs" />
+    <Compile Include="Modules\AddAnAsset\DonateAsset\DonateAssetRow.cs" />
+    <Compile Include="Modules\AddAnAsset\DonateAsset\DonateAssetRepository.cs" />
+    <Compile Include="Modules\AddAnAsset\DonateAsset\DonateAssetEndpoint.cs" />
+    <Compile Include="Modules\AddAnAsset\DonateAsset\DonateAssetPage.cs" />
+    <Compile Include="Modules\AddAnAsset\DonateAsset\DonateAssetColumns.cs" />
+    <Compile Include="Modules\AddAnAsset\DonateAsset\DonateAssetForm.cs" />
+    <Compile Include="Modules\AddAnAsset\SellAsset\SellAssetRow.cs" />
+    <Compile Include="Modules\AddAnAsset\SellAsset\SellAssetRepository.cs" />
+    <Compile Include="Modules\AddAnAsset\SellAsset\SellAssetEndpoint.cs" />
+    <Compile Include="Modules\AddAnAsset\SellAsset\SellAssetPage.cs" />
+    <Compile Include="Modules\AddAnAsset\SellAsset\SellAssetColumns.cs" />
+    <Compile Include="Modules\AddAnAsset\SellAsset\SellAssetForm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -258,6 +258,104 @@ declare namespace AssetManagement.AddAnAsset {
 declare namespace AssetManagement.AddAnAsset {
 }
 declare namespace AssetManagement.AddAnAsset {
+    interface BrokenAssetForm {
+        DateBroken: Serenity.DateEditor;
+        Notes: Serenity.TextAreaEditor;
+        AssetId: Serenity.IntegerEditor;
+    }
+    class BrokenAssetForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    interface BrokenAssetRow {
+        BrokenId?: number;
+        DateBroken?: string;
+        Notes?: string;
+        AssetId?: number;
+        AssetDescription?: string;
+        AssetAssetTagId?: number;
+        AssetPurchasedfrom?: string;
+        AssetPurchaseDate?: string;
+        AssetBrandId?: number;
+        AssetCost?: number;
+        AssetModel?: string;
+        AssetColor?: string;
+        AssetSiteId?: number;
+        AssetCategoryId?: number;
+        AssetLocationId?: number;
+        AssetDepartmentId?: number;
+        AssetDepreciableAsset?: number;
+        AssetDepreciableCost?: number;
+        AssetAssetLife?: number;
+        AssetSalvageValue?: number;
+        AssetDepreciationMethod?: string;
+        AssetDateAcquired?: string;
+        AssetAssetPhoto?: string;
+        AssetCreatedby?: string;
+        AssetOnCreated?: string;
+        AssetUserId?: number;
+    }
+    namespace BrokenAssetRow {
+        const idProperty = "BrokenId";
+        const nameProperty = "Notes";
+        const localTextPrefix = "AddAnAsset.BrokenAsset";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            BrokenId = "BrokenId",
+            DateBroken = "DateBroken",
+            Notes = "Notes",
+            AssetId = "AssetId",
+            AssetDescription = "AssetDescription",
+            AssetAssetTagId = "AssetAssetTagId",
+            AssetPurchasedfrom = "AssetPurchasedfrom",
+            AssetPurchaseDate = "AssetPurchaseDate",
+            AssetBrandId = "AssetBrandId",
+            AssetCost = "AssetCost",
+            AssetModel = "AssetModel",
+            AssetColor = "AssetColor",
+            AssetSiteId = "AssetSiteId",
+            AssetCategoryId = "AssetCategoryId",
+            AssetLocationId = "AssetLocationId",
+            AssetDepartmentId = "AssetDepartmentId",
+            AssetDepreciableAsset = "AssetDepreciableAsset",
+            AssetDepreciableCost = "AssetDepreciableCost",
+            AssetAssetLife = "AssetAssetLife",
+            AssetSalvageValue = "AssetSalvageValue",
+            AssetDepreciationMethod = "AssetDepreciationMethod",
+            AssetDateAcquired = "AssetDateAcquired",
+            AssetAssetPhoto = "AssetAssetPhoto",
+            AssetCreatedby = "AssetCreatedby",
+            AssetOnCreated = "AssetOnCreated",
+            AssetUserId = "AssetUserId"
+        }
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    namespace BrokenAssetService {
+        const baseUrl = "AddAnAsset/BrokenAsset";
+        function Create(request: Serenity.SaveRequest<BrokenAssetRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<BrokenAssetRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<BrokenAssetRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<BrokenAssetRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "AddAnAsset/BrokenAsset/Create",
+            Update = "AddAnAsset/BrokenAsset/Update",
+            Delete = "AddAnAsset/BrokenAsset/Delete",
+            Retrieve = "AddAnAsset/BrokenAsset/Retrieve",
+            List = "AddAnAsset/BrokenAsset/List"
+        }
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+}
+declare namespace AssetManagement.AddAnAsset {
     interface CheckInForm {
         DueDate: Serenity.DateEditor;
         ReturnDate: Serenity.DateEditor;
@@ -551,6 +649,107 @@ declare namespace AssetManagement.AddAnAsset {
 declare namespace AssetManagement.AddAnAsset {
 }
 declare namespace AssetManagement.AddAnAsset {
+    interface DisposeAssetForm {
+        DateDisposed: Serenity.DateEditor;
+        DisposeTo: Serenity.StringEditor;
+        Notes: Serenity.TextAreaEditor;
+        AssetId: Serenity.IntegerEditor;
+    }
+    class DisposeAssetForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    interface DisposeAssetRow {
+        DisposeId?: number;
+        DateDisposed?: string;
+        DisposeTo?: string;
+        Notes?: string;
+        AssetId?: number;
+        AssetDescription?: string;
+        AssetAssetTagId?: number;
+        AssetPurchasedfrom?: string;
+        AssetPurchaseDate?: string;
+        AssetBrandId?: number;
+        AssetCost?: number;
+        AssetModel?: string;
+        AssetColor?: string;
+        AssetSiteId?: number;
+        AssetCategoryId?: number;
+        AssetLocationId?: number;
+        AssetDepartmentId?: number;
+        AssetDepreciableAsset?: number;
+        AssetDepreciableCost?: number;
+        AssetAssetLife?: number;
+        AssetSalvageValue?: number;
+        AssetDepreciationMethod?: string;
+        AssetDateAcquired?: string;
+        AssetAssetPhoto?: string;
+        AssetCreatedby?: string;
+        AssetOnCreated?: string;
+        AssetUserId?: number;
+    }
+    namespace DisposeAssetRow {
+        const idProperty = "DisposeId";
+        const nameProperty = "DisposeTo";
+        const localTextPrefix = "AddAnAsset.DisposeAsset";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            DisposeId = "DisposeId",
+            DateDisposed = "DateDisposed",
+            DisposeTo = "DisposeTo",
+            Notes = "Notes",
+            AssetId = "AssetId",
+            AssetDescription = "AssetDescription",
+            AssetAssetTagId = "AssetAssetTagId",
+            AssetPurchasedfrom = "AssetPurchasedfrom",
+            AssetPurchaseDate = "AssetPurchaseDate",
+            AssetBrandId = "AssetBrandId",
+            AssetCost = "AssetCost",
+            AssetModel = "AssetModel",
+            AssetColor = "AssetColor",
+            AssetSiteId = "AssetSiteId",
+            AssetCategoryId = "AssetCategoryId",
+            AssetLocationId = "AssetLocationId",
+            AssetDepartmentId = "AssetDepartmentId",
+            AssetDepreciableAsset = "AssetDepreciableAsset",
+            AssetDepreciableCost = "AssetDepreciableCost",
+            AssetAssetLife = "AssetAssetLife",
+            AssetSalvageValue = "AssetSalvageValue",
+            AssetDepreciationMethod = "AssetDepreciationMethod",
+            AssetDateAcquired = "AssetDateAcquired",
+            AssetAssetPhoto = "AssetAssetPhoto",
+            AssetCreatedby = "AssetCreatedby",
+            AssetOnCreated = "AssetOnCreated",
+            AssetUserId = "AssetUserId"
+        }
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    namespace DisposeAssetService {
+        const baseUrl = "AddAnAsset/DisposeAsset";
+        function Create(request: Serenity.SaveRequest<DisposeAssetRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<DisposeAssetRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<DisposeAssetRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<DisposeAssetRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "AddAnAsset/DisposeAsset/Create",
+            Update = "AddAnAsset/DisposeAsset/Update",
+            Delete = "AddAnAsset/DisposeAsset/Delete",
+            Retrieve = "AddAnAsset/DisposeAsset/Retrieve",
+            List = "AddAnAsset/DisposeAsset/List"
+        }
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+}
+declare namespace AssetManagement.AddAnAsset {
     interface DocumentForm {
         Document: Serenity.ImageUploadEditor;
         Description: Serenity.TextAreaEditor;
@@ -599,6 +798,454 @@ declare namespace AssetManagement.AddAnAsset {
             Delete = "AddAnAsset/Document/Delete",
             Retrieve = "AddAnAsset/Document/Retrieve",
             List = "AddAnAsset/Document/List"
+        }
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+}
+declare namespace AssetManagement.AddAnAsset {
+    interface DonateAssetForm {
+        DateDonated: Serenity.DateEditor;
+        DonateTo: Serenity.StringEditor;
+        DonateValue: Serenity.DecimalEditor;
+        Deductible: Serenity.RadioButtonEditor;
+        Notes: Serenity.TextAreaEditor;
+        AssetId: Serenity.IntegerEditor;
+    }
+    class DonateAssetForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    interface DonateAssetRow {
+        DonateId?: number;
+        DateDonated?: string;
+        DonateTo?: string;
+        DonateValue?: number;
+        Deductible?: string;
+        Notes?: string;
+        AssetId?: number;
+        AssetDescription?: string;
+        AssetAssetTagId?: number;
+        AssetPurchasedfrom?: string;
+        AssetPurchaseDate?: string;
+        AssetBrandId?: number;
+        AssetCost?: number;
+        AssetModel?: string;
+        AssetColor?: string;
+        AssetSiteId?: number;
+        AssetCategoryId?: number;
+        AssetLocationId?: number;
+        AssetDepartmentId?: number;
+        AssetDepreciableAsset?: number;
+        AssetDepreciableCost?: number;
+        AssetAssetLife?: number;
+        AssetSalvageValue?: number;
+        AssetDepreciationMethod?: string;
+        AssetDateAcquired?: string;
+        AssetAssetPhoto?: string;
+        AssetCreatedby?: string;
+        AssetOnCreated?: string;
+        AssetUserId?: number;
+    }
+    namespace DonateAssetRow {
+        const idProperty = "DonateId";
+        const nameProperty = "DonateTo";
+        const localTextPrefix = "AddAnAsset.DonateAsset";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            DonateId = "DonateId",
+            DateDonated = "DateDonated",
+            DonateTo = "DonateTo",
+            DonateValue = "DonateValue",
+            Deductible = "Deductible",
+            Notes = "Notes",
+            AssetId = "AssetId",
+            AssetDescription = "AssetDescription",
+            AssetAssetTagId = "AssetAssetTagId",
+            AssetPurchasedfrom = "AssetPurchasedfrom",
+            AssetPurchaseDate = "AssetPurchaseDate",
+            AssetBrandId = "AssetBrandId",
+            AssetCost = "AssetCost",
+            AssetModel = "AssetModel",
+            AssetColor = "AssetColor",
+            AssetSiteId = "AssetSiteId",
+            AssetCategoryId = "AssetCategoryId",
+            AssetLocationId = "AssetLocationId",
+            AssetDepartmentId = "AssetDepartmentId",
+            AssetDepreciableAsset = "AssetDepreciableAsset",
+            AssetDepreciableCost = "AssetDepreciableCost",
+            AssetAssetLife = "AssetAssetLife",
+            AssetSalvageValue = "AssetSalvageValue",
+            AssetDepreciationMethod = "AssetDepreciationMethod",
+            AssetDateAcquired = "AssetDateAcquired",
+            AssetAssetPhoto = "AssetAssetPhoto",
+            AssetCreatedby = "AssetCreatedby",
+            AssetOnCreated = "AssetOnCreated",
+            AssetUserId = "AssetUserId"
+        }
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    namespace DonateAssetService {
+        const baseUrl = "AddAnAsset/DonateAsset";
+        function Create(request: Serenity.SaveRequest<DonateAssetRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<DonateAssetRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<DonateAssetRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<DonateAssetRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "AddAnAsset/DonateAsset/Create",
+            Update = "AddAnAsset/DonateAsset/Update",
+            Delete = "AddAnAsset/DonateAsset/Delete",
+            Retrieve = "AddAnAsset/DonateAsset/Retrieve",
+            List = "AddAnAsset/DonateAsset/List"
+        }
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+}
+declare namespace AssetManagement.AddAnAsset {
+    interface LeaseForm {
+        LeaseBegins: Serenity.DateEditor;
+        CustomerId: Serenity.LookupEditor;
+        LeaseExpires: Serenity.DateEditor;
+        Notes: Serenity.TextAreaEditor;
+        SendEmail: Serenity.BooleanEditor;
+        Email: Serenity.StringEditor;
+        AssetId: Serenity.IntegerEditor;
+    }
+    class LeaseForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    interface LeaseRow {
+        LeaseId?: number;
+        LeaseBegins?: string;
+        CustomerId?: number;
+        LeaseExpires?: string;
+        Notes?: string;
+        SendEmail?: boolean;
+        Email?: string;
+        AssetId?: number;
+        CustomerName?: string;
+        CustomerCompany?: string;
+        CustomerAddress?: string;
+        CustomerCity?: string;
+        CustomerZip?: string;
+        CustomerCountryId?: number;
+        CustomerPhone?: string;
+        CustomerEmail?: string;
+        CustomerNotes?: string;
+        CustomerStateId?: number;
+        AssetDescription?: string;
+        AssetAssetTagId?: number;
+        AssetPurchasedfrom?: string;
+        AssetPurchaseDate?: string;
+        AssetBrandId?: number;
+        AssetCost?: number;
+        AssetModel?: string;
+        AssetColor?: string;
+        AssetSiteId?: number;
+        AssetCategoryId?: number;
+        AssetLocationId?: number;
+        AssetDepartmentId?: number;
+        AssetDepreciableAsset?: number;
+        AssetDepreciableCost?: number;
+        AssetAssetLife?: number;
+        AssetSalvageValue?: number;
+        AssetDepreciationMethod?: string;
+        AssetDateAcquired?: string;
+        AssetAssetPhoto?: string;
+        AssetCreatedby?: string;
+        AssetOnCreated?: string;
+        AssetUserId?: number;
+    }
+    namespace LeaseRow {
+        const idProperty = "LeaseId";
+        const nameProperty = "Notes";
+        const localTextPrefix = "AddAnAsset.Lease";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            LeaseId = "LeaseId",
+            LeaseBegins = "LeaseBegins",
+            CustomerId = "CustomerId",
+            LeaseExpires = "LeaseExpires",
+            Notes = "Notes",
+            SendEmail = "SendEmail",
+            Email = "Email",
+            AssetId = "AssetId",
+            CustomerName = "CustomerName",
+            CustomerCompany = "CustomerCompany",
+            CustomerAddress = "CustomerAddress",
+            CustomerCity = "CustomerCity",
+            CustomerZip = "CustomerZip",
+            CustomerCountryId = "CustomerCountryId",
+            CustomerPhone = "CustomerPhone",
+            CustomerEmail = "CustomerEmail",
+            CustomerNotes = "CustomerNotes",
+            CustomerStateId = "CustomerStateId",
+            AssetDescription = "AssetDescription",
+            AssetAssetTagId = "AssetAssetTagId",
+            AssetPurchasedfrom = "AssetPurchasedfrom",
+            AssetPurchaseDate = "AssetPurchaseDate",
+            AssetBrandId = "AssetBrandId",
+            AssetCost = "AssetCost",
+            AssetModel = "AssetModel",
+            AssetColor = "AssetColor",
+            AssetSiteId = "AssetSiteId",
+            AssetCategoryId = "AssetCategoryId",
+            AssetLocationId = "AssetLocationId",
+            AssetDepartmentId = "AssetDepartmentId",
+            AssetDepreciableAsset = "AssetDepreciableAsset",
+            AssetDepreciableCost = "AssetDepreciableCost",
+            AssetAssetLife = "AssetAssetLife",
+            AssetSalvageValue = "AssetSalvageValue",
+            AssetDepreciationMethod = "AssetDepreciationMethod",
+            AssetDateAcquired = "AssetDateAcquired",
+            AssetAssetPhoto = "AssetAssetPhoto",
+            AssetCreatedby = "AssetCreatedby",
+            AssetOnCreated = "AssetOnCreated",
+            AssetUserId = "AssetUserId"
+        }
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    namespace LeaseService {
+        const baseUrl = "AddAnAsset/Lease";
+        function Create(request: Serenity.SaveRequest<LeaseRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<LeaseRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<LeaseRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<LeaseRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "AddAnAsset/Lease/Create",
+            Update = "AddAnAsset/Lease/Update",
+            Delete = "AddAnAsset/Lease/Delete",
+            Retrieve = "AddAnAsset/Lease/Retrieve",
+            List = "AddAnAsset/Lease/List"
+        }
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+}
+declare namespace AssetManagement.AddAnAsset {
+    interface RepairAssetForm {
+        ScheduleDate: Serenity.DateEditor;
+        AssignedTo: Serenity.StringEditor;
+        DateCompleted: Serenity.DateEditor;
+        RepairCost: Serenity.DecimalEditor;
+        Notes: Serenity.TextAreaEditor;
+        AssetId: Serenity.IntegerEditor;
+    }
+    class RepairAssetForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    interface RepairAssetRow {
+        Id?: number;
+        ScheduleDate?: string;
+        AssignedTo?: string;
+        DateCompleted?: string;
+        RepairCost?: number;
+        Notes?: string;
+        AssetId?: number;
+        AssetDescription?: string;
+        AssetAssetTagId?: number;
+        AssetPurchasedfrom?: string;
+        AssetPurchaseDate?: string;
+        AssetBrandId?: number;
+        AssetCost?: number;
+        AssetModel?: string;
+        AssetColor?: string;
+        AssetSiteId?: number;
+        AssetCategoryId?: number;
+        AssetLocationId?: number;
+        AssetDepartmentId?: number;
+        AssetDepreciableAsset?: number;
+        AssetDepreciableCost?: number;
+        AssetAssetLife?: number;
+        AssetSalvageValue?: number;
+        AssetDepreciationMethod?: string;
+        AssetDateAcquired?: string;
+        AssetAssetPhoto?: string;
+        AssetCreatedby?: string;
+        AssetOnCreated?: string;
+        AssetUserId?: number;
+    }
+    namespace RepairAssetRow {
+        const idProperty = "Id";
+        const nameProperty = "AssignedTo";
+        const localTextPrefix = "AddAnAsset.RepairAsset";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            ScheduleDate = "ScheduleDate",
+            AssignedTo = "AssignedTo",
+            DateCompleted = "DateCompleted",
+            RepairCost = "RepairCost",
+            Notes = "Notes",
+            AssetId = "AssetId",
+            AssetDescription = "AssetDescription",
+            AssetAssetTagId = "AssetAssetTagId",
+            AssetPurchasedfrom = "AssetPurchasedfrom",
+            AssetPurchaseDate = "AssetPurchaseDate",
+            AssetBrandId = "AssetBrandId",
+            AssetCost = "AssetCost",
+            AssetModel = "AssetModel",
+            AssetColor = "AssetColor",
+            AssetSiteId = "AssetSiteId",
+            AssetCategoryId = "AssetCategoryId",
+            AssetLocationId = "AssetLocationId",
+            AssetDepartmentId = "AssetDepartmentId",
+            AssetDepreciableAsset = "AssetDepreciableAsset",
+            AssetDepreciableCost = "AssetDepreciableCost",
+            AssetAssetLife = "AssetAssetLife",
+            AssetSalvageValue = "AssetSalvageValue",
+            AssetDepreciationMethod = "AssetDepreciationMethod",
+            AssetDateAcquired = "AssetDateAcquired",
+            AssetAssetPhoto = "AssetAssetPhoto",
+            AssetCreatedby = "AssetCreatedby",
+            AssetOnCreated = "AssetOnCreated",
+            AssetUserId = "AssetUserId"
+        }
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    namespace RepairAssetService {
+        const baseUrl = "AddAnAsset/RepairAsset";
+        function Create(request: Serenity.SaveRequest<RepairAssetRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<RepairAssetRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<RepairAssetRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<RepairAssetRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "AddAnAsset/RepairAsset/Create",
+            Update = "AddAnAsset/RepairAsset/Update",
+            Delete = "AddAnAsset/RepairAsset/Delete",
+            Retrieve = "AddAnAsset/RepairAsset/Retrieve",
+            List = "AddAnAsset/RepairAsset/List"
+        }
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+}
+declare namespace AssetManagement.AddAnAsset {
+    interface SellAssetForm {
+        SaleDate: Serenity.DateEditor;
+        SoldTo: Serenity.StringEditor;
+        SaleAmount: Serenity.DecimalEditor;
+        Notes: Serenity.StringEditor;
+        AssetId: Serenity.IntegerEditor;
+    }
+    class SellAssetForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    interface SellAssetRow {
+        SellId?: number;
+        SaleDate?: string;
+        SoldTo?: string;
+        SaleAmount?: number;
+        Notes?: string;
+        AssetId?: number;
+        AssetDescription?: string;
+        AssetAssetTagId?: number;
+        AssetPurchasedfrom?: string;
+        AssetPurchaseDate?: string;
+        AssetBrandId?: number;
+        AssetCost?: number;
+        AssetModel?: string;
+        AssetColor?: string;
+        AssetSiteId?: number;
+        AssetCategoryId?: number;
+        AssetLocationId?: number;
+        AssetDepartmentId?: number;
+        AssetDepreciableAsset?: number;
+        AssetDepreciableCost?: number;
+        AssetAssetLife?: number;
+        AssetSalvageValue?: number;
+        AssetDepreciationMethod?: string;
+        AssetDateAcquired?: string;
+        AssetAssetPhoto?: string;
+        AssetCreatedby?: string;
+        AssetOnCreated?: string;
+        AssetUserId?: number;
+    }
+    namespace SellAssetRow {
+        const idProperty = "SellId";
+        const nameProperty = "SoldTo";
+        const localTextPrefix = "AddAnAsset.SellAsset";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            SellId = "SellId",
+            SaleDate = "SaleDate",
+            SoldTo = "SoldTo",
+            SaleAmount = "SaleAmount",
+            Notes = "Notes",
+            AssetId = "AssetId",
+            AssetDescription = "AssetDescription",
+            AssetAssetTagId = "AssetAssetTagId",
+            AssetPurchasedfrom = "AssetPurchasedfrom",
+            AssetPurchaseDate = "AssetPurchaseDate",
+            AssetBrandId = "AssetBrandId",
+            AssetCost = "AssetCost",
+            AssetModel = "AssetModel",
+            AssetColor = "AssetColor",
+            AssetSiteId = "AssetSiteId",
+            AssetCategoryId = "AssetCategoryId",
+            AssetLocationId = "AssetLocationId",
+            AssetDepartmentId = "AssetDepartmentId",
+            AssetDepreciableAsset = "AssetDepreciableAsset",
+            AssetDepreciableCost = "AssetDepreciableCost",
+            AssetAssetLife = "AssetAssetLife",
+            AssetSalvageValue = "AssetSalvageValue",
+            AssetDepreciationMethod = "AssetDepreciationMethod",
+            AssetDateAcquired = "AssetDateAcquired",
+            AssetAssetPhoto = "AssetAssetPhoto",
+            AssetCreatedby = "AssetCreatedby",
+            AssetOnCreated = "AssetOnCreated",
+            AssetUserId = "AssetUserId"
+        }
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    namespace SellAssetService {
+        const baseUrl = "AddAnAsset/SellAsset";
+        function Create(request: Serenity.SaveRequest<SellAssetRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SellAssetRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SellAssetRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SellAssetRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "AddAnAsset/SellAsset/Create",
+            Update = "AddAnAsset/SellAsset/Update",
+            Delete = "AddAnAsset/SellAsset/Delete",
+            Retrieve = "AddAnAsset/SellAsset/Retrieve",
+            List = "AddAnAsset/SellAsset/List"
         }
     }
 }
@@ -1029,6 +1676,8 @@ declare namespace AssetManagement.Advanced {
         const idProperty = "CustomerId";
         const nameProperty = "CustomerName";
         const localTextPrefix = "Advanced.Customers";
+        const lookupKey = "Advanced.Customers";
+        function getLookup(): Q.Lookup<CustomersRow>;
         const deletePermission = "Administration:General";
         const insertPermission = "Administration:General";
         const readPermission = "Administration:General";
@@ -1401,6 +2050,12 @@ declare namespace AssetManagement.Modules.AddAnAsset.CheckOut {
     enum CheckOutTo {
         Person = 1,
         Site_Location = 2
+    }
+}
+declare namespace AssetManagement.Modules.AddAnAsset.DonateAsset {
+    enum Deductible {
+        Yes = 1,
+        No = 2
     }
 }
 declare namespace AssetManagement {
@@ -1981,6 +2636,12 @@ declare namespace AssetManagement.AddAnAsset {
         private AssetMaintenanceGrid;
         private CheckInGrid;
         private CheckOutGrid;
+        private LeaseGrid;
+        private RepairAssetGrid;
+        private BrokenAssetGrid;
+        private DisposeAssetGrid;
+        private DonateAssetGrid;
+        private SellAssetGrid;
         constructor();
         protected afterLoadEntity(): void;
     }
@@ -2054,6 +2715,35 @@ declare namespace AssetManagement.AddAnAsset {
     }
 }
 declare namespace AssetManagement.AddAnAsset {
+    class BrokenAssetDialog extends Serenity.EntityDialog<BrokenAssetRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: BrokenAssetForm;
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    class BrokenAssetGrid extends Serenity.EntityGrid<BrokenAssetRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof BrokenAssetDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+        protected usePager(): boolean;
+        private _AssetId;
+        get AssetId(): number;
+        set AssetId(value: number);
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
     class CheckInDialog extends Serenity.EntityDialog<CheckInRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
@@ -2064,6 +2754,7 @@ declare namespace AssetManagement.AddAnAsset {
         protected getInsertPermission(): string;
         protected getUpdatePermission(): string;
         protected form: CheckInForm;
+        constructor();
     }
 }
 declare namespace AssetManagement.AddAnAsset {
@@ -2116,6 +2807,35 @@ declare namespace AssetManagement.AddAnAsset {
     }
 }
 declare namespace AssetManagement.AddAnAsset {
+    class DisposeAssetDialog extends Serenity.EntityDialog<DisposeAssetRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: DisposeAssetForm;
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    class DisposeAssetGrid extends Serenity.EntityGrid<DisposeAssetRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof DisposeAssetDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+        protected usePager(): boolean;
+        private _AssetId;
+        get AssetId(): number;
+        set AssetId(value: number);
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
     class DocumentDialog extends Serenity.EntityDialog<DocumentRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
@@ -2132,6 +2852,123 @@ declare namespace AssetManagement.AddAnAsset {
     class DocumentGrid extends Serenity.EntityGrid<DocumentRow, any> {
         protected getColumnsKey(): string;
         protected getDialogType(): typeof DocumentDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+        protected usePager(): boolean;
+        private _AssetId;
+        get AssetId(): number;
+        set AssetId(value: number);
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    class DonateAssetDialog extends Serenity.EntityDialog<DonateAssetRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: DonateAssetForm;
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    class DonateAssetGrid extends Serenity.EntityGrid<DonateAssetRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof DonateAssetDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+        protected usePager(): boolean;
+        private _AssetId;
+        get AssetId(): number;
+        set AssetId(value: number);
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    class LeaseDialog extends Serenity.EntityDialog<LeaseRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: LeaseForm;
+        constructor();
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    class LeaseGrid extends Serenity.EntityGrid<LeaseRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof LeaseDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+        protected usePager(): boolean;
+        private _AssetId;
+        get AssetId(): number;
+        set AssetId(value: number);
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    class RepairAssetDialog extends Serenity.EntityDialog<RepairAssetRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: RepairAssetForm;
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    class RepairAssetGrid extends Serenity.EntityGrid<RepairAssetRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof RepairAssetDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+        protected usePager(): boolean;
+        private _AssetId;
+        get AssetId(): number;
+        set AssetId(value: number);
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    class SellAssetDialog extends Serenity.EntityDialog<SellAssetRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: SellAssetForm;
+    }
+}
+declare namespace AssetManagement.AddAnAsset {
+    class SellAssetGrid extends Serenity.EntityGrid<SellAssetRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SellAssetDialog;
         protected getIdProperty(): string;
         protected getInsertPermission(): string;
         protected getLocalTextPrefix(): string;

@@ -61,6 +61,35 @@
                 export const Notes: string;
             }
 
+            namespace BrokenAsset {
+                export const AssetAssetLife: string;
+                export const AssetAssetPhoto: string;
+                export const AssetAssetTagId: string;
+                export const AssetBrandId: string;
+                export const AssetCategoryId: string;
+                export const AssetColor: string;
+                export const AssetCost: string;
+                export const AssetCreatedby: string;
+                export const AssetDateAcquired: string;
+                export const AssetDepartmentId: string;
+                export const AssetDepreciableAsset: string;
+                export const AssetDepreciableCost: string;
+                export const AssetDepreciationMethod: string;
+                export const AssetDescription: string;
+                export const AssetId: string;
+                export const AssetLocationId: string;
+                export const AssetModel: string;
+                export const AssetOnCreated: string;
+                export const AssetPurchaseDate: string;
+                export const AssetPurchasedfrom: string;
+                export const AssetSalvageValue: string;
+                export const AssetSiteId: string;
+                export const AssetUserId: string;
+                export const BrokenId: string;
+                export const DateBroken: string;
+                export const Notes: string;
+            }
+
             namespace CheckIn {
                 export const AssetAssetLife: string;
                 export const AssetAssetPhoto: string;
@@ -160,11 +189,179 @@
                 export const SiteSuite: string;
             }
 
+            namespace DisposeAsset {
+                export const AssetAssetLife: string;
+                export const AssetAssetPhoto: string;
+                export const AssetAssetTagId: string;
+                export const AssetBrandId: string;
+                export const AssetCategoryId: string;
+                export const AssetColor: string;
+                export const AssetCost: string;
+                export const AssetCreatedby: string;
+                export const AssetDateAcquired: string;
+                export const AssetDepartmentId: string;
+                export const AssetDepreciableAsset: string;
+                export const AssetDepreciableCost: string;
+                export const AssetDepreciationMethod: string;
+                export const AssetDescription: string;
+                export const AssetId: string;
+                export const AssetLocationId: string;
+                export const AssetModel: string;
+                export const AssetOnCreated: string;
+                export const AssetPurchaseDate: string;
+                export const AssetPurchasedfrom: string;
+                export const AssetSalvageValue: string;
+                export const AssetSiteId: string;
+                export const AssetUserId: string;
+                export const DateDisposed: string;
+                export const DisposeId: string;
+                export const DisposeTo: string;
+                export const Notes: string;
+            }
+
             namespace Document {
                 export const AssetId: string;
                 export const Description: string;
                 export const Document: string;
                 export const Id: string;
+            }
+
+            namespace DonateAsset {
+                export const AssetAssetLife: string;
+                export const AssetAssetPhoto: string;
+                export const AssetAssetTagId: string;
+                export const AssetBrandId: string;
+                export const AssetCategoryId: string;
+                export const AssetColor: string;
+                export const AssetCost: string;
+                export const AssetCreatedby: string;
+                export const AssetDateAcquired: string;
+                export const AssetDepartmentId: string;
+                export const AssetDepreciableAsset: string;
+                export const AssetDepreciableCost: string;
+                export const AssetDepreciationMethod: string;
+                export const AssetDescription: string;
+                export const AssetId: string;
+                export const AssetLocationId: string;
+                export const AssetModel: string;
+                export const AssetOnCreated: string;
+                export const AssetPurchaseDate: string;
+                export const AssetPurchasedfrom: string;
+                export const AssetSalvageValue: string;
+                export const AssetSiteId: string;
+                export const AssetUserId: string;
+                export const DateDonated: string;
+                export const Deductible: string;
+                export const DonateId: string;
+                export const DonateTo: string;
+                export const DonateValue: string;
+                export const Notes: string;
+            }
+
+            namespace Lease {
+                export const AssetAssetLife: string;
+                export const AssetAssetPhoto: string;
+                export const AssetAssetTagId: string;
+                export const AssetBrandId: string;
+                export const AssetCategoryId: string;
+                export const AssetColor: string;
+                export const AssetCost: string;
+                export const AssetCreatedby: string;
+                export const AssetDateAcquired: string;
+                export const AssetDepartmentId: string;
+                export const AssetDepreciableAsset: string;
+                export const AssetDepreciableCost: string;
+                export const AssetDepreciationMethod: string;
+                export const AssetDescription: string;
+                export const AssetId: string;
+                export const AssetLocationId: string;
+                export const AssetModel: string;
+                export const AssetOnCreated: string;
+                export const AssetPurchaseDate: string;
+                export const AssetPurchasedfrom: string;
+                export const AssetSalvageValue: string;
+                export const AssetSiteId: string;
+                export const AssetUserId: string;
+                export const CustomerAddress: string;
+                export const CustomerCity: string;
+                export const CustomerCompany: string;
+                export const CustomerCountryId: string;
+                export const CustomerEmail: string;
+                export const CustomerId: string;
+                export const CustomerName: string;
+                export const CustomerNotes: string;
+                export const CustomerPhone: string;
+                export const CustomerStateId: string;
+                export const CustomerZip: string;
+                export const Email: string;
+                export const LeaseBegins: string;
+                export const LeaseExpires: string;
+                export const LeaseId: string;
+                export const Notes: string;
+                export const SendEmail: string;
+            }
+
+            namespace RepairAsset {
+                export const AssetAssetLife: string;
+                export const AssetAssetPhoto: string;
+                export const AssetAssetTagId: string;
+                export const AssetBrandId: string;
+                export const AssetCategoryId: string;
+                export const AssetColor: string;
+                export const AssetCost: string;
+                export const AssetCreatedby: string;
+                export const AssetDateAcquired: string;
+                export const AssetDepartmentId: string;
+                export const AssetDepreciableAsset: string;
+                export const AssetDepreciableCost: string;
+                export const AssetDepreciationMethod: string;
+                export const AssetDescription: string;
+                export const AssetId: string;
+                export const AssetLocationId: string;
+                export const AssetModel: string;
+                export const AssetOnCreated: string;
+                export const AssetPurchaseDate: string;
+                export const AssetPurchasedfrom: string;
+                export const AssetSalvageValue: string;
+                export const AssetSiteId: string;
+                export const AssetUserId: string;
+                export const AssignedTo: string;
+                export const DateCompleted: string;
+                export const Id: string;
+                export const Notes: string;
+                export const RepairCost: string;
+                export const ScheduleDate: string;
+            }
+
+            namespace SellAsset {
+                export const AssetAssetLife: string;
+                export const AssetAssetPhoto: string;
+                export const AssetAssetTagId: string;
+                export const AssetBrandId: string;
+                export const AssetCategoryId: string;
+                export const AssetColor: string;
+                export const AssetCost: string;
+                export const AssetCreatedby: string;
+                export const AssetDateAcquired: string;
+                export const AssetDepartmentId: string;
+                export const AssetDepreciableAsset: string;
+                export const AssetDepreciableCost: string;
+                export const AssetDepreciationMethod: string;
+                export const AssetDescription: string;
+                export const AssetId: string;
+                export const AssetLocationId: string;
+                export const AssetModel: string;
+                export const AssetOnCreated: string;
+                export const AssetPurchaseDate: string;
+                export const AssetPurchasedfrom: string;
+                export const AssetSalvageValue: string;
+                export const AssetSiteId: string;
+                export const AssetUserId: string;
+                export const Notes: string;
+                export const SaleAmount: string;
+                export const SaleDate: string;
+                export const SellId: string;
+                export const SoldTo: string;
             }
         }
 
@@ -522,6 +719,6 @@
         export const SavePrimaryKeyError: string;
     }
 
-    AssetManagement['Texts'] = Q.proxyTexts(Texts, '', {Db:{AddAnAsset:{AssetDetails:{AssetId:1,AssetLife:1,AssetPhoto:1,AssetTagId:1,BrandBrandName:1,BrandId:1,Category:1,CategoryId:1,Color:1,Cost:1,Createdby:1,DateAcquired:1,Department:1,DepartmentId:1,DepreciableAsset:1,DepreciableCost:1,DepreciationMethod:1,Description:1,Location:1,LocationId:1,LocationSiteId:1,Model:1,OnCreated:1,PurchaseDate:1,Purchasedfrom:1,SalvageValue:1,SiteAddress:1,SiteCity:1,SiteDescription:1,SiteId:1,SiteSiteName:1,SiteStateId:1,SiteSuite:1,UserId:1},AssetMaintenance:{AssetId:1,AssetMaintenanceId:1,DateCompleted:1,Details:1,DueDate:1,Id:1,MaintenanceBy:1,MaintenanceStatus:1,Title:1},AssetWarranty:{AssetId:1,ExpirationDate:1,Id:1,Length:1,Notes:1},CheckIn:{AssetAssetLife:1,AssetAssetPhoto:1,AssetAssetTagId:1,AssetBrandId:1,AssetCategoryId:1,AssetColor:1,AssetCost:1,AssetCreatedby:1,AssetDateAcquired:1,AssetDepartmentId:1,AssetDepreciableAsset:1,AssetDepreciableCost:1,AssetDepreciationMethod:1,AssetDescription:1,AssetId:1,AssetLocationId:1,AssetModel:1,AssetOnCreated:1,AssetPurchaseDate:1,AssetPurchasedfrom:1,AssetSalvageValue:1,AssetSiteId:1,AssetUserId:1,CheckId:1,Department:1,DepartmentId:1,DueDate:1,Email:1,Location:1,LocationId:1,LocationSiteId:1,Notes:1,ReturnDate:1,SendMail:1,SiteAddress:1,SiteCity:1,SiteDescription:1,SiteId:1,SiteSiteName:1,SiteStateId:1,SiteSuite:1},CheckOut:{AssetAssetLife:1,AssetAssetPhoto:1,AssetAssetTagId:1,AssetBrandId:1,AssetCategoryId:1,AssetColor:1,AssetCost:1,AssetCreatedby:1,AssetDateAcquired:1,AssetDepartmentId:1,AssetDepreciableAsset:1,AssetDepreciableCost:1,AssetDepreciationMethod:1,AssetDescription:1,AssetId:1,AssetLocationId:1,AssetModel:1,AssetOnCreated:1,AssetPurchaseDate:1,AssetPurchasedfrom:1,AssetSalvageValue:1,AssetSiteId:1,AssetUserId:1,CheckOutDate:1,CheckOutId:1,CheckOutTo:1,Department:1,DepartmentId:1,DueDate:1,Email:1,EmployeeDepartmentId:1,EmployeeEmail:1,EmployeeEmployeeName:1,EmployeeId:1,EmployeeLocationId:1,EmployeeNote:1,EmployeePhone:1,EmployeeSiteId:1,EmployeeTitle:1,Location:1,LocationId:1,LocationSiteId:1,NoDueDate:1,Notes:1,SendMail:1,SiteAddress:1,SiteCity:1,SiteDescription:1,SiteId:1,SiteSiteName:1,SiteStateId:1,SiteSuite:1},Document:{AssetId:1,Description:1,Document:1,Id:1}},Administration:{Language:{Id:1,LanguageId:1,LanguageName:1},Role:{RoleId:1,RoleName:1},RolePermission:{PermissionKey:1,RoleId:1,RolePermissionId:1,RoleRoleName:1},Translation:{CustomText:1,EntityPlural:1,Key:1,OverrideConfirmation:1,SaveChangesButton:1,SourceLanguage:1,SourceText:1,TargetLanguage:1,TargetText:1},User:{DisplayName:1,Email:1,InsertDate:1,InsertUserId:1,IsActive:1,LastDirectoryUpdate:1,Password:1,PasswordConfirm:1,PasswordHash:1,PasswordSalt:1,Source:1,UpdateDate:1,UpdateUserId:1,UserId:1,UserImage:1,Username:1},UserPermission:{Granted:1,PermissionKey:1,User:1,UserId:1,UserPermissionId:1,Username:1},UserRole:{RoleId:1,User:1,UserId:1,UserRoleId:1,Username:1}},Advanced:{Customers:{Address:1,City:1,Company:1,CountryCountryName:1,CountryId:1,CustomerId:1,CustomerName:1,Email:1,Notes:1,Phone:1,SiteStateId:1,StateId:1,StateName:1,Zip:1},Employee:{Department:1,DepartmentId:1,Email:1,EmployeeId:1,EmployeeName:1,Location:1,LocationId:1,LocationSiteId:1,Note:1,Phone:1,SiteAddress:1,SiteCity:1,SiteDescription:1,SiteId:1,SiteSiteName:1,SiteStateId:1,SiteSuite:1,Title:1},Funding:{Amount:1,Description:1,EndDate:1,FundingId:1,IsActive:1,Name:1,Notes:1,StartDate:1}},Common:{UserPreference:{Name:1,PreferenceType:1,UserId:1,UserPreferenceId:1,Value:1}},Setup:{Brand:{BrandId:1,BrandName:1},Category:{Category:1,CategoryId:1},Company:{Address:1,City:1,CompanyId:1,CompanyName:1,CountryCountryName:1,CountryId:1,PostalCode:1,StateId:1,StateStateName:1,Suite:1},Country:{CountryId:1,CountryName:1},Currency:{CurrencyId:1,CurrencyName:1},Department:{Department:1,DepartmentId:1},Location:{Location:1,LocationId:1,SiteAddress:1,SiteCity:1,SiteDescription:1,SiteId:1,SiteSiteName:1,SiteStateId:1,SiteSuite:1},MaintenanceStatus:{Id:1,MaintenanceStatus:1},Site:{Address:1,City:1,Description:1,SiteId:1,SiteName:1,StateId:1,StateStateName:1,Suite:1},State:{StateId:1,StateName:1}}},Forms:{Membership:{ChangePassword:{FormTitle:1,SubmitButton:1,Success:1},ForgotPassword:{BackToLogin:1,FormInfo:1,FormTitle:1,SubmitButton:1,Success:1},Login:{FacebookButton:1,ForgotPassword:1,FormTitle:1,GoogleButton:1,OR:1,RememberMe:1,SignInButton:1,SignUpButton:1},ResetPassword:{BackToLogin:1,EmailSubject:1,FormTitle:1,SubmitButton:1,Success:1},SignUp:{AcceptTerms:1,ActivateEmailSubject:1,ActivationCompleteMessage:1,BackToLogin:1,ConfirmEmail:1,ConfirmPassword:1,DisplayName:1,Email:1,FormInfo:1,FormTitle:1,Password:1,SubmitButton:1,Success:1}}},Site:{AccessDenied:{ClickToChangeUser:1,ClickToLogin:1,LackPermissions:1,NotLoggedIn:1,PageTitle:1},BasicProgressDialog:{CancelTitle:1,PleaseWait:1},BulkServiceAction:{AllHadErrorsFormat:1,AllSuccessFormat:1,ConfirmationFormat:1,ErrorCount:1,NothingToProcess:1,SomeHadErrorsFormat:1,SuccessCount:1},Dashboard:{ContentDescription:1},Layout:{FooterCopyright:1,FooterInfo:1,FooterRights:1,GeneralSettings:1,Language:1,Theme:1,ThemeBlack:1,ThemeBlackLight:1,ThemeBlue:1,ThemeBlueLight:1,ThemeGreen:1,ThemeGreenLight:1,ThemePurple:1,ThemePurpleLight:1,ThemeRed:1,ThemeRedLight:1,ThemeYellow:1,ThemeYellowLight:1},RolePermissionDialog:{DialogTitle:1,EditButton:1,SaveSuccess:1},UserDialog:{EditPermissionsButton:1,EditRolesButton:1},UserPermissionDialog:{DialogTitle:1,Grant:1,Permission:1,Revoke:1,SaveSuccess:1},UserRoleDialog:{DialogTitle:1,SaveSuccess:1},ValidationError:{Title:1}},Validation:{AuthenticationError:1,CantFindUserWithEmail:1,CurrentPasswordMismatch:1,DeleteForeignKeyError:1,EmailConfirm:1,EmailInUse:1,InvalidActivateToken:1,InvalidResetToken:1,MinRequiredPasswordLength:1,SavePrimaryKeyError:1}});
+    AssetManagement['Texts'] = Q.proxyTexts(Texts, '', {Db:{AddAnAsset:{AssetDetails:{AssetId:1,AssetLife:1,AssetPhoto:1,AssetTagId:1,BrandBrandName:1,BrandId:1,Category:1,CategoryId:1,Color:1,Cost:1,Createdby:1,DateAcquired:1,Department:1,DepartmentId:1,DepreciableAsset:1,DepreciableCost:1,DepreciationMethod:1,Description:1,Location:1,LocationId:1,LocationSiteId:1,Model:1,OnCreated:1,PurchaseDate:1,Purchasedfrom:1,SalvageValue:1,SiteAddress:1,SiteCity:1,SiteDescription:1,SiteId:1,SiteSiteName:1,SiteStateId:1,SiteSuite:1,UserId:1},AssetMaintenance:{AssetId:1,AssetMaintenanceId:1,DateCompleted:1,Details:1,DueDate:1,Id:1,MaintenanceBy:1,MaintenanceStatus:1,Title:1},AssetWarranty:{AssetId:1,ExpirationDate:1,Id:1,Length:1,Notes:1},BrokenAsset:{AssetAssetLife:1,AssetAssetPhoto:1,AssetAssetTagId:1,AssetBrandId:1,AssetCategoryId:1,AssetColor:1,AssetCost:1,AssetCreatedby:1,AssetDateAcquired:1,AssetDepartmentId:1,AssetDepreciableAsset:1,AssetDepreciableCost:1,AssetDepreciationMethod:1,AssetDescription:1,AssetId:1,AssetLocationId:1,AssetModel:1,AssetOnCreated:1,AssetPurchaseDate:1,AssetPurchasedfrom:1,AssetSalvageValue:1,AssetSiteId:1,AssetUserId:1,BrokenId:1,DateBroken:1,Notes:1},CheckIn:{AssetAssetLife:1,AssetAssetPhoto:1,AssetAssetTagId:1,AssetBrandId:1,AssetCategoryId:1,AssetColor:1,AssetCost:1,AssetCreatedby:1,AssetDateAcquired:1,AssetDepartmentId:1,AssetDepreciableAsset:1,AssetDepreciableCost:1,AssetDepreciationMethod:1,AssetDescription:1,AssetId:1,AssetLocationId:1,AssetModel:1,AssetOnCreated:1,AssetPurchaseDate:1,AssetPurchasedfrom:1,AssetSalvageValue:1,AssetSiteId:1,AssetUserId:1,CheckId:1,Department:1,DepartmentId:1,DueDate:1,Email:1,Location:1,LocationId:1,LocationSiteId:1,Notes:1,ReturnDate:1,SendMail:1,SiteAddress:1,SiteCity:1,SiteDescription:1,SiteId:1,SiteSiteName:1,SiteStateId:1,SiteSuite:1},CheckOut:{AssetAssetLife:1,AssetAssetPhoto:1,AssetAssetTagId:1,AssetBrandId:1,AssetCategoryId:1,AssetColor:1,AssetCost:1,AssetCreatedby:1,AssetDateAcquired:1,AssetDepartmentId:1,AssetDepreciableAsset:1,AssetDepreciableCost:1,AssetDepreciationMethod:1,AssetDescription:1,AssetId:1,AssetLocationId:1,AssetModel:1,AssetOnCreated:1,AssetPurchaseDate:1,AssetPurchasedfrom:1,AssetSalvageValue:1,AssetSiteId:1,AssetUserId:1,CheckOutDate:1,CheckOutId:1,CheckOutTo:1,Department:1,DepartmentId:1,DueDate:1,Email:1,EmployeeDepartmentId:1,EmployeeEmail:1,EmployeeEmployeeName:1,EmployeeId:1,EmployeeLocationId:1,EmployeeNote:1,EmployeePhone:1,EmployeeSiteId:1,EmployeeTitle:1,Location:1,LocationId:1,LocationSiteId:1,NoDueDate:1,Notes:1,SendMail:1,SiteAddress:1,SiteCity:1,SiteDescription:1,SiteId:1,SiteSiteName:1,SiteStateId:1,SiteSuite:1},DisposeAsset:{AssetAssetLife:1,AssetAssetPhoto:1,AssetAssetTagId:1,AssetBrandId:1,AssetCategoryId:1,AssetColor:1,AssetCost:1,AssetCreatedby:1,AssetDateAcquired:1,AssetDepartmentId:1,AssetDepreciableAsset:1,AssetDepreciableCost:1,AssetDepreciationMethod:1,AssetDescription:1,AssetId:1,AssetLocationId:1,AssetModel:1,AssetOnCreated:1,AssetPurchaseDate:1,AssetPurchasedfrom:1,AssetSalvageValue:1,AssetSiteId:1,AssetUserId:1,DateDisposed:1,DisposeId:1,DisposeTo:1,Notes:1},Document:{AssetId:1,Description:1,Document:1,Id:1},DonateAsset:{AssetAssetLife:1,AssetAssetPhoto:1,AssetAssetTagId:1,AssetBrandId:1,AssetCategoryId:1,AssetColor:1,AssetCost:1,AssetCreatedby:1,AssetDateAcquired:1,AssetDepartmentId:1,AssetDepreciableAsset:1,AssetDepreciableCost:1,AssetDepreciationMethod:1,AssetDescription:1,AssetId:1,AssetLocationId:1,AssetModel:1,AssetOnCreated:1,AssetPurchaseDate:1,AssetPurchasedfrom:1,AssetSalvageValue:1,AssetSiteId:1,AssetUserId:1,DateDonated:1,Deductible:1,DonateId:1,DonateTo:1,DonateValue:1,Notes:1},Lease:{AssetAssetLife:1,AssetAssetPhoto:1,AssetAssetTagId:1,AssetBrandId:1,AssetCategoryId:1,AssetColor:1,AssetCost:1,AssetCreatedby:1,AssetDateAcquired:1,AssetDepartmentId:1,AssetDepreciableAsset:1,AssetDepreciableCost:1,AssetDepreciationMethod:1,AssetDescription:1,AssetId:1,AssetLocationId:1,AssetModel:1,AssetOnCreated:1,AssetPurchaseDate:1,AssetPurchasedfrom:1,AssetSalvageValue:1,AssetSiteId:1,AssetUserId:1,CustomerAddress:1,CustomerCity:1,CustomerCompany:1,CustomerCountryId:1,CustomerEmail:1,CustomerId:1,CustomerName:1,CustomerNotes:1,CustomerPhone:1,CustomerStateId:1,CustomerZip:1,Email:1,LeaseBegins:1,LeaseExpires:1,LeaseId:1,Notes:1,SendEmail:1},RepairAsset:{AssetAssetLife:1,AssetAssetPhoto:1,AssetAssetTagId:1,AssetBrandId:1,AssetCategoryId:1,AssetColor:1,AssetCost:1,AssetCreatedby:1,AssetDateAcquired:1,AssetDepartmentId:1,AssetDepreciableAsset:1,AssetDepreciableCost:1,AssetDepreciationMethod:1,AssetDescription:1,AssetId:1,AssetLocationId:1,AssetModel:1,AssetOnCreated:1,AssetPurchaseDate:1,AssetPurchasedfrom:1,AssetSalvageValue:1,AssetSiteId:1,AssetUserId:1,AssignedTo:1,DateCompleted:1,Id:1,Notes:1,RepairCost:1,ScheduleDate:1},SellAsset:{AssetAssetLife:1,AssetAssetPhoto:1,AssetAssetTagId:1,AssetBrandId:1,AssetCategoryId:1,AssetColor:1,AssetCost:1,AssetCreatedby:1,AssetDateAcquired:1,AssetDepartmentId:1,AssetDepreciableAsset:1,AssetDepreciableCost:1,AssetDepreciationMethod:1,AssetDescription:1,AssetId:1,AssetLocationId:1,AssetModel:1,AssetOnCreated:1,AssetPurchaseDate:1,AssetPurchasedfrom:1,AssetSalvageValue:1,AssetSiteId:1,AssetUserId:1,Notes:1,SaleAmount:1,SaleDate:1,SellId:1,SoldTo:1}},Administration:{Language:{Id:1,LanguageId:1,LanguageName:1},Role:{RoleId:1,RoleName:1},RolePermission:{PermissionKey:1,RoleId:1,RolePermissionId:1,RoleRoleName:1},Translation:{CustomText:1,EntityPlural:1,Key:1,OverrideConfirmation:1,SaveChangesButton:1,SourceLanguage:1,SourceText:1,TargetLanguage:1,TargetText:1},User:{DisplayName:1,Email:1,InsertDate:1,InsertUserId:1,IsActive:1,LastDirectoryUpdate:1,Password:1,PasswordConfirm:1,PasswordHash:1,PasswordSalt:1,Source:1,UpdateDate:1,UpdateUserId:1,UserId:1,UserImage:1,Username:1},UserPermission:{Granted:1,PermissionKey:1,User:1,UserId:1,UserPermissionId:1,Username:1},UserRole:{RoleId:1,User:1,UserId:1,UserRoleId:1,Username:1}},Advanced:{Customers:{Address:1,City:1,Company:1,CountryCountryName:1,CountryId:1,CustomerId:1,CustomerName:1,Email:1,Notes:1,Phone:1,SiteStateId:1,StateId:1,StateName:1,Zip:1},Employee:{Department:1,DepartmentId:1,Email:1,EmployeeId:1,EmployeeName:1,Location:1,LocationId:1,LocationSiteId:1,Note:1,Phone:1,SiteAddress:1,SiteCity:1,SiteDescription:1,SiteId:1,SiteSiteName:1,SiteStateId:1,SiteSuite:1,Title:1},Funding:{Amount:1,Description:1,EndDate:1,FundingId:1,IsActive:1,Name:1,Notes:1,StartDate:1}},Common:{UserPreference:{Name:1,PreferenceType:1,UserId:1,UserPreferenceId:1,Value:1}},Setup:{Brand:{BrandId:1,BrandName:1},Category:{Category:1,CategoryId:1},Company:{Address:1,City:1,CompanyId:1,CompanyName:1,CountryCountryName:1,CountryId:1,PostalCode:1,StateId:1,StateStateName:1,Suite:1},Country:{CountryId:1,CountryName:1},Currency:{CurrencyId:1,CurrencyName:1},Department:{Department:1,DepartmentId:1},Location:{Location:1,LocationId:1,SiteAddress:1,SiteCity:1,SiteDescription:1,SiteId:1,SiteSiteName:1,SiteStateId:1,SiteSuite:1},MaintenanceStatus:{Id:1,MaintenanceStatus:1},Site:{Address:1,City:1,Description:1,SiteId:1,SiteName:1,StateId:1,StateStateName:1,Suite:1},State:{StateId:1,StateName:1}}},Forms:{Membership:{ChangePassword:{FormTitle:1,SubmitButton:1,Success:1},ForgotPassword:{BackToLogin:1,FormInfo:1,FormTitle:1,SubmitButton:1,Success:1},Login:{FacebookButton:1,ForgotPassword:1,FormTitle:1,GoogleButton:1,OR:1,RememberMe:1,SignInButton:1,SignUpButton:1},ResetPassword:{BackToLogin:1,EmailSubject:1,FormTitle:1,SubmitButton:1,Success:1},SignUp:{AcceptTerms:1,ActivateEmailSubject:1,ActivationCompleteMessage:1,BackToLogin:1,ConfirmEmail:1,ConfirmPassword:1,DisplayName:1,Email:1,FormInfo:1,FormTitle:1,Password:1,SubmitButton:1,Success:1}}},Site:{AccessDenied:{ClickToChangeUser:1,ClickToLogin:1,LackPermissions:1,NotLoggedIn:1,PageTitle:1},BasicProgressDialog:{CancelTitle:1,PleaseWait:1},BulkServiceAction:{AllHadErrorsFormat:1,AllSuccessFormat:1,ConfirmationFormat:1,ErrorCount:1,NothingToProcess:1,SomeHadErrorsFormat:1,SuccessCount:1},Dashboard:{ContentDescription:1},Layout:{FooterCopyright:1,FooterInfo:1,FooterRights:1,GeneralSettings:1,Language:1,Theme:1,ThemeBlack:1,ThemeBlackLight:1,ThemeBlue:1,ThemeBlueLight:1,ThemeGreen:1,ThemeGreenLight:1,ThemePurple:1,ThemePurpleLight:1,ThemeRed:1,ThemeRedLight:1,ThemeYellow:1,ThemeYellowLight:1},RolePermissionDialog:{DialogTitle:1,EditButton:1,SaveSuccess:1},UserDialog:{EditPermissionsButton:1,EditRolesButton:1},UserPermissionDialog:{DialogTitle:1,Grant:1,Permission:1,Revoke:1,SaveSuccess:1},UserRoleDialog:{DialogTitle:1,SaveSuccess:1},ValidationError:{Title:1}},Validation:{AuthenticationError:1,CantFindUserWithEmail:1,CurrentPasswordMismatch:1,DeleteForeignKeyError:1,EmailConfirm:1,EmailInUse:1,InvalidActivateToken:1,InvalidResetToken:1,MinRequiredPasswordLength:1,SavePrimaryKeyError:1}});
 }
 

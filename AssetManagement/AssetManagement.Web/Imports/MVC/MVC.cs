@@ -21,6 +21,11 @@ namespace MVC
                 public const string AssetWarrantyIndex = "~/Modules/AddAnAsset/AssetWarranty/AssetWarrantyIndex.cshtml";
             }
 
+            public static class BrokenAsset
+            {
+                public const string BrokenAssetIndex = "~/Modules/AddAnAsset/BrokenAsset/BrokenAssetIndex.cshtml";
+            }
+
             public static class CheckIn
             {
                 public const string CheckInIndex = "~/Modules/AddAnAsset/CheckIn/CheckInIndex.cshtml";
@@ -31,9 +36,34 @@ namespace MVC
                 public const string CheckOutIndex = "~/Modules/AddAnAsset/CheckOut/CheckOutIndex.cshtml";
             }
 
+            public static class DisposeAsset
+            {
+                public const string DisposeAssetIndex = "~/Modules/AddAnAsset/DisposeAsset/DisposeAssetIndex.cshtml";
+            }
+
             public static class Document
             {
                 public const string DocumentIndex = "~/Modules/AddAnAsset/Document/DocumentIndex.cshtml";
+            }
+
+            public static class DonateAsset
+            {
+                public const string DonateAssetIndex = "~/Modules/AddAnAsset/DonateAsset/DonateAssetIndex.cshtml";
+            }
+
+            public static class Lease
+            {
+                public const string LeaseIndex = "~/Modules/AddAnAsset/Lease/LeaseIndex.cshtml";
+            }
+
+            public static class RepairAsset
+            {
+                public const string RepairAssetIndex = "~/Modules/AddAnAsset/RepairAsset/RepairAssetIndex.cshtml";
+            }
+
+            public static class SellAsset
+            {
+                public const string SellAssetIndex = "~/Modules/AddAnAsset/SellAsset/SellAssetIndex.cshtml";
             }
 
         }

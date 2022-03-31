@@ -7518,3 +7518,39 @@ section.content > .s-DataGrid {
 .s-AddAnAsset-CheckOutDialog .caption {
   width: 150px;
 }
+.s-AddAnAsset-LeaseDialog > .size {
+  width: 650px;
+}
+.s-AddAnAsset-LeaseDialog .caption {
+  width: 150px;
+}
+.s-AddAnAsset-RepairAssetDialog > .size {
+  width: 650px;
+}
+.s-AddAnAsset-RepairAssetDialog .caption {
+  width: 150px;
+}
+.s-AddAnAsset-BrokenAssetDialog > .size {
+  width: 650px;
+}
+.s-AddAnAsset-BrokenAssetDialog .caption {
+  width: 150px;
+}
+.s-AddAnAsset-DisposeAssetDialog > .size {
+  width: 650px;
+}
+.s-AddAnAsset-DisposeAssetDialog .caption {
+  width: 150px;
+}
+.s-AddAnAsset-DonateAssetDialog > .size {
+  width: 650px;
+}
+.s-AddAnAsset-DonateAssetDialog .caption {
+  width: 150px;
+}
+.s-AddAnAsset-SellAssetDialog > .size {
+  width: 650px;
+}
+.s-AddAnAsset-SellAssetDialog .caption {
+  width: 150px;
+}

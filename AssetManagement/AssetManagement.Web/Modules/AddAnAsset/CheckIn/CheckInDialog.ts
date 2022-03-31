@@ -14,5 +14,20 @@ namespace AssetManagement.AddAnAsset {
 
         protected form = new CheckInForm(this.idPrefix);
 
+        constructor() {
+            super();
+
+            this.form.SendMail.change(e => {
+                this.getGridField();
+                if (!this.form.SendMail.value)
+                    Serenity.EditorUtils.setReadOnly(this.form.Email, true);
+                else {
+                    Serenity.EditorUtils.setReadOnly(this.form.Email, false);
+                }
+            });
+
+            if (!this.form.SendMail.value)
+                Serenity.EditorUtils.setReadOnly(this.form.Email, true);
+        }
     }
 }

@@ -20,19 +20,9 @@ namespace AssetManagement.AddAnAsset {
             });
 
         }
-
-        //protected getInitialTitle() {
-        //    return null;
-        //}
-
         protected usePager() {
             return false;
         }
-
-        //protected getGridCanLoad() {
-        //    return this.AssetId != null;
-        //}
-
         private _AssetId: number;
 
         get AssetId() {

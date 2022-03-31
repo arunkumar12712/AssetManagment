@@ -15,92 +15,13 @@ namespace AssetManagement.AddAnAsset {
         protected form = new CheckOutForm(this.idPrefix);
 
         constructor() {
-            super();
-
-        //    this.form.Email.change(e => {
-        //        this.toggleCheck(this.form.SendMail.value);
-        //    });
-        //}
-        //protected toggleCheck(value) {
-        //    this.form.Email.value = value;
-        
-
-
-
-        this.form.SendMail.change(e => {
-            this.getGridField();
-            if (this.form.SendMail.value != false)
-                Serenity.EditorUtils.setReadOnly(this.form.Email, true);
-
-            else {
-                this.form.SendMail.change(() => {
-                    this.form.SendMail.value
-                    Serenity.EditorUtils.setReadOnly(this.form.Email, true);
-                });
-            }
-
-        });
-
-        //this.get_readOnly();
-
-        //    if (this.form.SendMail.value == false)
-        //        Serenity.EditorUtils.setReadOnly(this.form.Email, true);
-        //    this.element.find('Email').hide();
-        //});
-        //function (e) {
-        //    if (this.form.CheckOutTo.value == true) {
-        //        Serenity.EditorUtils.setRequired(this.form.SiteId, false);
-        //        this.form.CheckOutDate.getGridField().toggle(true);
-        //        Serenity.EditorUtils.setRequired(this.form.LocationId, false);
-        //        this.form.LocationId.getGridField().toggle(true);
-        //        Serenity.EditorUtils.setRequired(this.form.DepartmentId, false);
-        //        this.form.DepartmentId.getGridField().toggle(true);
-        //        Serenity.EditorUtils.setRequired(this.form.CheckOutDate, false);
-        //        this.form.CheckOutDate.getGridField().toggle(true);
-        //        Serenity.EditorUtils.setRequired(this.form.Notes, false);
-        //        this.form.Notes.getGridField().toggle(true);
-        //        Serenity.EditorUtils.setRequired(this.form.NoDueDate, false);
-        //        this.form.NoDueDate.getGridField().toggle(true);
-        //        Serenity.EditorUtils.setRequired(this.form.DueDate, false);
-        //        this.form.DueDate.getGridField().toggle(true);
-
-        //    }
-
-
-        //    else {
-        //        //Serenity.EditorUtils.setRequired(this.form.CheckOutDate, true);
-        //        //this.form.CheckOutDate.getGridField().toggle(false);
-        //        Serenity.EditorUtils.setRequired(this.form.EmployeeId, true);
-        //        this.form.EmployeeId.getGridField().toggle(false);
-        //        //Serenity.EditorUtils.setRequired(this.form.NoDueDate, true);
-        //        //this.form.NoDueDate.getGridField().toggle(false);
-        //        Serenity.EditorUtils.setRequired(this.form.DueDate, true);
-        //        this.form.DueDate.getGridField().toggle(false);
-        //        //Serenity.EditorUtils.setRequired(this.form.SiteId, true);
-        //        //this.form.SiteId.getGridField().toggle(false);
-        //        //Serenity.EditorUtils.setRequired(this.form.LocationId, true);
-        //        //this.form.LocationId.getGridField().toggle(false);
-        //        //Serenity.EditorUtils.setRequired(this.form.DepartmentId, true);
-        //        //this.form.DepartmentId.getGridField().toggle(false);
-        //        //Serenity.EditorUtils.setRequired(this.form.Notes, true);
-        //        //this.form.Notes.getGridField().toggle(false);
-        //        //Serenity.EditorUtils.setRequired(this.form.SendMail, true);
-        //        //this.form.SendMail.getGridField().toggle(false);
-        //        //Serenity.EditorUtils.setRequired(this.form.Email, true);
-        //        //this.form.Email.getGridField().toggle(false);
-
-        //    }
-
-        //}.bind(this)
-
-        //  );
-    }
-
+            super();                   
+        }
 
         protected afterLoadEntity() {
             super.afterLoadEntity();
 
-           
+
             this.form.NoDueDate.change(() => {
                 this.getDueDateFields();
             });
@@ -110,12 +31,24 @@ namespace AssetManagement.AddAnAsset {
                 this.setShowHideFields();
             });
             this.setShowHideFields();
+
+            this.form.SendMail.change(e => {
+                this.getGridField();
+                if (!this.form.SendMail.value)
+                    Serenity.EditorUtils.setReadOnly(this.form.Email, true);
+                else {
+                    Serenity.EditorUtils.setReadOnly(this.form.Email, false);
+                }
+            });
+
+            if (!this.form.SendMail.value)
+                Serenity.EditorUtils.setReadOnly(this.form.Email, true);
         }
 
 
 
         protected setShowHideFields() {
-            debugger
+            
             this.form.EmployeeId.getGridField().toggle(false);
             if (this.form.CheckOutTo.value) {
                 if (this.form.CheckOutTo.value == '1') {
@@ -136,7 +69,7 @@ namespace AssetManagement.AddAnAsset {
                     }
                 }
             }
-             
+
         }
 
 
@@ -148,4 +81,4 @@ namespace AssetManagement.AddAnAsset {
         }
     }
 }
-     
+

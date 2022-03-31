@@ -14,6 +14,7 @@ namespace AssetManagement.Advanced.Entities
     [DisplayName("Customers"), InstanceName("Customers")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [LookupScript(Permission = "*")]
     public sealed class CustomersRow : Row, IIdRow, INameRow
     {
         [DisplayName("Customer Id"), Identity]

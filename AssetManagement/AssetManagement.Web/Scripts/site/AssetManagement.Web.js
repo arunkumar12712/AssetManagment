@@ -224,6 +224,71 @@ var AssetManagement;
 (function (AssetManagement) {
     var AddAnAsset;
     (function (AddAnAsset) {
+        var BrokenAssetForm = /** @class */ (function (_super) {
+            __extends(BrokenAssetForm, _super);
+            function BrokenAssetForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!BrokenAssetForm.init) {
+                    BrokenAssetForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.DateEditor;
+                    var w1 = s.TextAreaEditor;
+                    var w2 = s.IntegerEditor;
+                    Q.initFormType(BrokenAssetForm, [
+                        'DateBroken', w0,
+                        'Notes', w1,
+                        'AssetId', w2
+                    ]);
+                }
+                return _this;
+            }
+            BrokenAssetForm.formKey = 'AddAnAsset.BrokenAsset';
+            return BrokenAssetForm;
+        }(Serenity.PrefixedContext));
+        AddAnAsset.BrokenAssetForm = BrokenAssetForm;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var BrokenAssetRow;
+        (function (BrokenAssetRow) {
+            BrokenAssetRow.idProperty = 'BrokenId';
+            BrokenAssetRow.nameProperty = 'Notes';
+            BrokenAssetRow.localTextPrefix = 'AddAnAsset.BrokenAsset';
+            BrokenAssetRow.deletePermission = 'Administration:General';
+            BrokenAssetRow.insertPermission = 'Administration:General';
+            BrokenAssetRow.readPermission = 'Administration:General';
+            BrokenAssetRow.updatePermission = 'Administration:General';
+        })(BrokenAssetRow = AddAnAsset.BrokenAssetRow || (AddAnAsset.BrokenAssetRow = {}));
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var BrokenAssetService;
+        (function (BrokenAssetService) {
+            BrokenAssetService.baseUrl = 'AddAnAsset/BrokenAsset';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                BrokenAssetService[x] = function (r, s, o) {
+                    return Q.serviceRequest(BrokenAssetService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(BrokenAssetService = AddAnAsset.BrokenAssetService || (AddAnAsset.BrokenAssetService = {}));
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
         var CheckInForm = /** @class */ (function (_super) {
             __extends(CheckInForm, _super);
             function CheckInForm(prefix) {
@@ -376,6 +441,73 @@ var AssetManagement;
 (function (AssetManagement) {
     var AddAnAsset;
     (function (AddAnAsset) {
+        var DisposeAssetForm = /** @class */ (function (_super) {
+            __extends(DisposeAssetForm, _super);
+            function DisposeAssetForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!DisposeAssetForm.init) {
+                    DisposeAssetForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.DateEditor;
+                    var w1 = s.StringEditor;
+                    var w2 = s.TextAreaEditor;
+                    var w3 = s.IntegerEditor;
+                    Q.initFormType(DisposeAssetForm, [
+                        'DateDisposed', w0,
+                        'DisposeTo', w1,
+                        'Notes', w2,
+                        'AssetId', w3
+                    ]);
+                }
+                return _this;
+            }
+            DisposeAssetForm.formKey = 'AddAnAsset.DisposeAsset';
+            return DisposeAssetForm;
+        }(Serenity.PrefixedContext));
+        AddAnAsset.DisposeAssetForm = DisposeAssetForm;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var DisposeAssetRow;
+        (function (DisposeAssetRow) {
+            DisposeAssetRow.idProperty = 'DisposeId';
+            DisposeAssetRow.nameProperty = 'DisposeTo';
+            DisposeAssetRow.localTextPrefix = 'AddAnAsset.DisposeAsset';
+            DisposeAssetRow.deletePermission = 'Administration:General';
+            DisposeAssetRow.insertPermission = 'Administration:General';
+            DisposeAssetRow.readPermission = 'Administration:General';
+            DisposeAssetRow.updatePermission = 'Administration:General';
+        })(DisposeAssetRow = AddAnAsset.DisposeAssetRow || (AddAnAsset.DisposeAssetRow = {}));
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var DisposeAssetService;
+        (function (DisposeAssetService) {
+            DisposeAssetService.baseUrl = 'AddAnAsset/DisposeAsset';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                DisposeAssetService[x] = function (r, s, o) {
+                    return Q.serviceRequest(DisposeAssetService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(DisposeAssetService = AddAnAsset.DisposeAssetService || (AddAnAsset.DisposeAssetService = {}));
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
         var DocumentForm = /** @class */ (function (_super) {
             __extends(DocumentForm, _super);
             function DocumentForm(prefix) {
@@ -435,6 +567,287 @@ var AssetManagement;
                 };
             });
         })(DocumentService = AddAnAsset.DocumentService || (AddAnAsset.DocumentService = {}));
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var DonateAssetForm = /** @class */ (function (_super) {
+            __extends(DonateAssetForm, _super);
+            function DonateAssetForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!DonateAssetForm.init) {
+                    DonateAssetForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.DateEditor;
+                    var w1 = s.StringEditor;
+                    var w2 = s.DecimalEditor;
+                    var w3 = s.RadioButtonEditor;
+                    var w4 = s.TextAreaEditor;
+                    var w5 = s.IntegerEditor;
+                    Q.initFormType(DonateAssetForm, [
+                        'DateDonated', w0,
+                        'DonateTo', w1,
+                        'DonateValue', w2,
+                        'Deductible', w3,
+                        'Notes', w4,
+                        'AssetId', w5
+                    ]);
+                }
+                return _this;
+            }
+            DonateAssetForm.formKey = 'AddAnAsset.DonateAsset';
+            return DonateAssetForm;
+        }(Serenity.PrefixedContext));
+        AddAnAsset.DonateAssetForm = DonateAssetForm;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var DonateAssetRow;
+        (function (DonateAssetRow) {
+            DonateAssetRow.idProperty = 'DonateId';
+            DonateAssetRow.nameProperty = 'DonateTo';
+            DonateAssetRow.localTextPrefix = 'AddAnAsset.DonateAsset';
+            DonateAssetRow.deletePermission = 'Administration:General';
+            DonateAssetRow.insertPermission = 'Administration:General';
+            DonateAssetRow.readPermission = 'Administration:General';
+            DonateAssetRow.updatePermission = 'Administration:General';
+        })(DonateAssetRow = AddAnAsset.DonateAssetRow || (AddAnAsset.DonateAssetRow = {}));
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var DonateAssetService;
+        (function (DonateAssetService) {
+            DonateAssetService.baseUrl = 'AddAnAsset/DonateAsset';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                DonateAssetService[x] = function (r, s, o) {
+                    return Q.serviceRequest(DonateAssetService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(DonateAssetService = AddAnAsset.DonateAssetService || (AddAnAsset.DonateAssetService = {}));
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var LeaseForm = /** @class */ (function (_super) {
+            __extends(LeaseForm, _super);
+            function LeaseForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!LeaseForm.init) {
+                    LeaseForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.DateEditor;
+                    var w1 = s.LookupEditor;
+                    var w2 = s.TextAreaEditor;
+                    var w3 = s.BooleanEditor;
+                    var w4 = s.StringEditor;
+                    var w5 = s.IntegerEditor;
+                    Q.initFormType(LeaseForm, [
+                        'LeaseBegins', w0,
+                        'CustomerId', w1,
+                        'LeaseExpires', w0,
+                        'Notes', w2,
+                        'SendEmail', w3,
+                        'Email', w4,
+                        'AssetId', w5
+                    ]);
+                }
+                return _this;
+            }
+            LeaseForm.formKey = 'AddAnAsset.Lease';
+            return LeaseForm;
+        }(Serenity.PrefixedContext));
+        AddAnAsset.LeaseForm = LeaseForm;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var LeaseRow;
+        (function (LeaseRow) {
+            LeaseRow.idProperty = 'LeaseId';
+            LeaseRow.nameProperty = 'Notes';
+            LeaseRow.localTextPrefix = 'AddAnAsset.Lease';
+            LeaseRow.deletePermission = 'Administration:General';
+            LeaseRow.insertPermission = 'Administration:General';
+            LeaseRow.readPermission = 'Administration:General';
+            LeaseRow.updatePermission = 'Administration:General';
+        })(LeaseRow = AddAnAsset.LeaseRow || (AddAnAsset.LeaseRow = {}));
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var LeaseService;
+        (function (LeaseService) {
+            LeaseService.baseUrl = 'AddAnAsset/Lease';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                LeaseService[x] = function (r, s, o) {
+                    return Q.serviceRequest(LeaseService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(LeaseService = AddAnAsset.LeaseService || (AddAnAsset.LeaseService = {}));
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var RepairAssetForm = /** @class */ (function (_super) {
+            __extends(RepairAssetForm, _super);
+            function RepairAssetForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!RepairAssetForm.init) {
+                    RepairAssetForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.DateEditor;
+                    var w1 = s.StringEditor;
+                    var w2 = s.DecimalEditor;
+                    var w3 = s.TextAreaEditor;
+                    var w4 = s.IntegerEditor;
+                    Q.initFormType(RepairAssetForm, [
+                        'ScheduleDate', w0,
+                        'AssignedTo', w1,
+                        'DateCompleted', w0,
+                        'RepairCost', w2,
+                        'Notes', w3,
+                        'AssetId', w4
+                    ]);
+                }
+                return _this;
+            }
+            RepairAssetForm.formKey = 'AddAnAsset.RepairAsset';
+            return RepairAssetForm;
+        }(Serenity.PrefixedContext));
+        AddAnAsset.RepairAssetForm = RepairAssetForm;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var RepairAssetRow;
+        (function (RepairAssetRow) {
+            RepairAssetRow.idProperty = 'Id';
+            RepairAssetRow.nameProperty = 'AssignedTo';
+            RepairAssetRow.localTextPrefix = 'AddAnAsset.RepairAsset';
+            RepairAssetRow.deletePermission = 'Administration:General';
+            RepairAssetRow.insertPermission = 'Administration:General';
+            RepairAssetRow.readPermission = 'Administration:General';
+            RepairAssetRow.updatePermission = 'Administration:General';
+        })(RepairAssetRow = AddAnAsset.RepairAssetRow || (AddAnAsset.RepairAssetRow = {}));
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var RepairAssetService;
+        (function (RepairAssetService) {
+            RepairAssetService.baseUrl = 'AddAnAsset/RepairAsset';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                RepairAssetService[x] = function (r, s, o) {
+                    return Q.serviceRequest(RepairAssetService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(RepairAssetService = AddAnAsset.RepairAssetService || (AddAnAsset.RepairAssetService = {}));
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var SellAssetForm = /** @class */ (function (_super) {
+            __extends(SellAssetForm, _super);
+            function SellAssetForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!SellAssetForm.init) {
+                    SellAssetForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.DateEditor;
+                    var w1 = s.StringEditor;
+                    var w2 = s.DecimalEditor;
+                    var w3 = s.IntegerEditor;
+                    Q.initFormType(SellAssetForm, [
+                        'SaleDate', w0,
+                        'SoldTo', w1,
+                        'SaleAmount', w2,
+                        'Notes', w1,
+                        'AssetId', w3
+                    ]);
+                }
+                return _this;
+            }
+            SellAssetForm.formKey = 'AddAnAsset.SellAsset';
+            return SellAssetForm;
+        }(Serenity.PrefixedContext));
+        AddAnAsset.SellAssetForm = SellAssetForm;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var SellAssetRow;
+        (function (SellAssetRow) {
+            SellAssetRow.idProperty = 'SellId';
+            SellAssetRow.nameProperty = 'SoldTo';
+            SellAssetRow.localTextPrefix = 'AddAnAsset.SellAsset';
+            SellAssetRow.deletePermission = 'Administration:General';
+            SellAssetRow.insertPermission = 'Administration:General';
+            SellAssetRow.readPermission = 'Administration:General';
+            SellAssetRow.updatePermission = 'Administration:General';
+        })(SellAssetRow = AddAnAsset.SellAssetRow || (AddAnAsset.SellAssetRow = {}));
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var SellAssetService;
+        (function (SellAssetService) {
+            SellAssetService.baseUrl = 'AddAnAsset/SellAsset';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                SellAssetService[x] = function (r, s, o) {
+                    return Q.serviceRequest(SellAssetService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(SellAssetService = AddAnAsset.SellAssetService || (AddAnAsset.SellAssetService = {}));
     })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
 })(AssetManagement || (AssetManagement = {}));
 var AssetManagement;
@@ -818,6 +1231,11 @@ var AssetManagement;
             CustomersRow.idProperty = 'CustomerId';
             CustomersRow.nameProperty = 'CustomerName';
             CustomersRow.localTextPrefix = 'Advanced.Customers';
+            CustomersRow.lookupKey = 'Advanced.Customers';
+            function getLookup() {
+                return Q.getLookup('Advanced.Customers');
+            }
+            CustomersRow.getLookup = getLookup;
             CustomersRow.deletePermission = 'Administration:General';
             CustomersRow.insertPermission = 'Administration:General';
             CustomersRow.readPermission = 'Administration:General';
@@ -1181,6 +1599,24 @@ var AssetManagement;
                 })(CheckOutTo = CheckOut.CheckOutTo || (CheckOut.CheckOutTo = {}));
                 Serenity.Decorators.registerEnumType(CheckOutTo, 'AssetManagement.Modules.AddAnAsset.CheckOut.CheckOutTo', 'CheckOut.CheckOutTo');
             })(CheckOut = AddAnAsset.CheckOut || (AddAnAsset.CheckOut = {}));
+        })(AddAnAsset = Modules.AddAnAsset || (Modules.AddAnAsset = {}));
+    })(Modules = AssetManagement.Modules || (AssetManagement.Modules = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var Modules;
+    (function (Modules) {
+        var AddAnAsset;
+        (function (AddAnAsset) {
+            var DonateAsset;
+            (function (DonateAsset) {
+                var Deductible;
+                (function (Deductible) {
+                    Deductible[Deductible["Yes"] = 1] = "Yes";
+                    Deductible[Deductible["No"] = 2] = "No";
+                })(Deductible = DonateAsset.Deductible || (DonateAsset.Deductible = {}));
+                Serenity.Decorators.registerEnumType(Deductible, 'AssetManagement.Modules.AddAnAsset.DonateAsset.Deductible', 'DonateAsset.Deductible');
+            })(DonateAsset = AddAnAsset.DonateAsset || (AddAnAsset.DonateAsset = {}));
         })(AddAnAsset = Modules.AddAnAsset || (Modules.AddAnAsset = {}));
     })(Modules = AssetManagement.Modules || (AssetManagement.Modules = {}));
 })(AssetManagement || (AssetManagement = {}));
@@ -1854,7 +2290,7 @@ var AssetManagement;
 (function (AssetManagement) {
     var Texts;
     (function (Texts) {
-        AssetManagement['Texts'] = Q.proxyTexts(Texts, '', { Db: { AddAnAsset: { AssetDetails: { AssetId: 1, AssetLife: 1, AssetPhoto: 1, AssetTagId: 1, BrandBrandName: 1, BrandId: 1, Category: 1, CategoryId: 1, Color: 1, Cost: 1, Createdby: 1, DateAcquired: 1, Department: 1, DepartmentId: 1, DepreciableAsset: 1, DepreciableCost: 1, DepreciationMethod: 1, Description: 1, Location: 1, LocationId: 1, LocationSiteId: 1, Model: 1, OnCreated: 1, PurchaseDate: 1, Purchasedfrom: 1, SalvageValue: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1, UserId: 1 }, AssetMaintenance: { AssetId: 1, AssetMaintenanceId: 1, DateCompleted: 1, Details: 1, DueDate: 1, Id: 1, MaintenanceBy: 1, MaintenanceStatus: 1, Title: 1 }, AssetWarranty: { AssetId: 1, ExpirationDate: 1, Id: 1, Length: 1, Notes: 1 }, CheckIn: { AssetAssetLife: 1, AssetAssetPhoto: 1, AssetAssetTagId: 1, AssetBrandId: 1, AssetCategoryId: 1, AssetColor: 1, AssetCost: 1, AssetCreatedby: 1, AssetDateAcquired: 1, AssetDepartmentId: 1, AssetDepreciableAsset: 1, AssetDepreciableCost: 1, AssetDepreciationMethod: 1, AssetDescription: 1, AssetId: 1, AssetLocationId: 1, AssetModel: 1, AssetOnCreated: 1, AssetPurchaseDate: 1, AssetPurchasedfrom: 1, AssetSalvageValue: 1, AssetSiteId: 1, AssetUserId: 1, CheckId: 1, Department: 1, DepartmentId: 1, DueDate: 1, Email: 1, Location: 1, LocationId: 1, LocationSiteId: 1, Notes: 1, ReturnDate: 1, SendMail: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1 }, CheckOut: { AssetAssetLife: 1, AssetAssetPhoto: 1, AssetAssetTagId: 1, AssetBrandId: 1, AssetCategoryId: 1, AssetColor: 1, AssetCost: 1, AssetCreatedby: 1, AssetDateAcquired: 1, AssetDepartmentId: 1, AssetDepreciableAsset: 1, AssetDepreciableCost: 1, AssetDepreciationMethod: 1, AssetDescription: 1, AssetId: 1, AssetLocationId: 1, AssetModel: 1, AssetOnCreated: 1, AssetPurchaseDate: 1, AssetPurchasedfrom: 1, AssetSalvageValue: 1, AssetSiteId: 1, AssetUserId: 1, CheckOutDate: 1, CheckOutId: 1, CheckOutTo: 1, Department: 1, DepartmentId: 1, DueDate: 1, Email: 1, EmployeeDepartmentId: 1, EmployeeEmail: 1, EmployeeEmployeeName: 1, EmployeeId: 1, EmployeeLocationId: 1, EmployeeNote: 1, EmployeePhone: 1, EmployeeSiteId: 1, EmployeeTitle: 1, Location: 1, LocationId: 1, LocationSiteId: 1, NoDueDate: 1, Notes: 1, SendMail: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1 }, Document: { AssetId: 1, Description: 1, Document: 1, Id: 1 } }, Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Advanced: { Customers: { Address: 1, City: 1, Company: 1, CountryCountryName: 1, CountryId: 1, CustomerId: 1, CustomerName: 1, Email: 1, Notes: 1, Phone: 1, SiteStateId: 1, StateId: 1, StateName: 1, Zip: 1 }, Employee: { Department: 1, DepartmentId: 1, Email: 1, EmployeeId: 1, EmployeeName: 1, Location: 1, LocationId: 1, LocationSiteId: 1, Note: 1, Phone: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1, Title: 1 }, Funding: { Amount: 1, Description: 1, EndDate: 1, FundingId: 1, IsActive: 1, Name: 1, Notes: 1, StartDate: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } }, Setup: { Brand: { BrandId: 1, BrandName: 1 }, Category: { Category: 1, CategoryId: 1 }, Company: { Address: 1, City: 1, CompanyId: 1, CompanyName: 1, CountryCountryName: 1, CountryId: 1, PostalCode: 1, StateId: 1, StateStateName: 1, Suite: 1 }, Country: { CountryId: 1, CountryName: 1 }, Currency: { CurrencyId: 1, CurrencyName: 1 }, Department: { Department: 1, DepartmentId: 1 }, Location: { Location: 1, LocationId: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1 }, MaintenanceStatus: { Id: 1, MaintenanceStatus: 1 }, Site: { Address: 1, City: 1, Description: 1, SiteId: 1, SiteName: 1, StateId: 1, StateStateName: 1, Suite: 1 }, State: { StateId: 1, StateName: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
+        AssetManagement['Texts'] = Q.proxyTexts(Texts, '', { Db: { AddAnAsset: { AssetDetails: { AssetId: 1, AssetLife: 1, AssetPhoto: 1, AssetTagId: 1, BrandBrandName: 1, BrandId: 1, Category: 1, CategoryId: 1, Color: 1, Cost: 1, Createdby: 1, DateAcquired: 1, Department: 1, DepartmentId: 1, DepreciableAsset: 1, DepreciableCost: 1, DepreciationMethod: 1, Description: 1, Location: 1, LocationId: 1, LocationSiteId: 1, Model: 1, OnCreated: 1, PurchaseDate: 1, Purchasedfrom: 1, SalvageValue: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1, UserId: 1 }, AssetMaintenance: { AssetId: 1, AssetMaintenanceId: 1, DateCompleted: 1, Details: 1, DueDate: 1, Id: 1, MaintenanceBy: 1, MaintenanceStatus: 1, Title: 1 }, AssetWarranty: { AssetId: 1, ExpirationDate: 1, Id: 1, Length: 1, Notes: 1 }, BrokenAsset: { AssetAssetLife: 1, AssetAssetPhoto: 1, AssetAssetTagId: 1, AssetBrandId: 1, AssetCategoryId: 1, AssetColor: 1, AssetCost: 1, AssetCreatedby: 1, AssetDateAcquired: 1, AssetDepartmentId: 1, AssetDepreciableAsset: 1, AssetDepreciableCost: 1, AssetDepreciationMethod: 1, AssetDescription: 1, AssetId: 1, AssetLocationId: 1, AssetModel: 1, AssetOnCreated: 1, AssetPurchaseDate: 1, AssetPurchasedfrom: 1, AssetSalvageValue: 1, AssetSiteId: 1, AssetUserId: 1, BrokenId: 1, DateBroken: 1, Notes: 1 }, CheckIn: { AssetAssetLife: 1, AssetAssetPhoto: 1, AssetAssetTagId: 1, AssetBrandId: 1, AssetCategoryId: 1, AssetColor: 1, AssetCost: 1, AssetCreatedby: 1, AssetDateAcquired: 1, AssetDepartmentId: 1, AssetDepreciableAsset: 1, AssetDepreciableCost: 1, AssetDepreciationMethod: 1, AssetDescription: 1, AssetId: 1, AssetLocationId: 1, AssetModel: 1, AssetOnCreated: 1, AssetPurchaseDate: 1, AssetPurchasedfrom: 1, AssetSalvageValue: 1, AssetSiteId: 1, AssetUserId: 1, CheckId: 1, Department: 1, DepartmentId: 1, DueDate: 1, Email: 1, Location: 1, LocationId: 1, LocationSiteId: 1, Notes: 1, ReturnDate: 1, SendMail: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1 }, CheckOut: { AssetAssetLife: 1, AssetAssetPhoto: 1, AssetAssetTagId: 1, AssetBrandId: 1, AssetCategoryId: 1, AssetColor: 1, AssetCost: 1, AssetCreatedby: 1, AssetDateAcquired: 1, AssetDepartmentId: 1, AssetDepreciableAsset: 1, AssetDepreciableCost: 1, AssetDepreciationMethod: 1, AssetDescription: 1, AssetId: 1, AssetLocationId: 1, AssetModel: 1, AssetOnCreated: 1, AssetPurchaseDate: 1, AssetPurchasedfrom: 1, AssetSalvageValue: 1, AssetSiteId: 1, AssetUserId: 1, CheckOutDate: 1, CheckOutId: 1, CheckOutTo: 1, Department: 1, DepartmentId: 1, DueDate: 1, Email: 1, EmployeeDepartmentId: 1, EmployeeEmail: 1, EmployeeEmployeeName: 1, EmployeeId: 1, EmployeeLocationId: 1, EmployeeNote: 1, EmployeePhone: 1, EmployeeSiteId: 1, EmployeeTitle: 1, Location: 1, LocationId: 1, LocationSiteId: 1, NoDueDate: 1, Notes: 1, SendMail: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1 }, DisposeAsset: { AssetAssetLife: 1, AssetAssetPhoto: 1, AssetAssetTagId: 1, AssetBrandId: 1, AssetCategoryId: 1, AssetColor: 1, AssetCost: 1, AssetCreatedby: 1, AssetDateAcquired: 1, AssetDepartmentId: 1, AssetDepreciableAsset: 1, AssetDepreciableCost: 1, AssetDepreciationMethod: 1, AssetDescription: 1, AssetId: 1, AssetLocationId: 1, AssetModel: 1, AssetOnCreated: 1, AssetPurchaseDate: 1, AssetPurchasedfrom: 1, AssetSalvageValue: 1, AssetSiteId: 1, AssetUserId: 1, DateDisposed: 1, DisposeId: 1, DisposeTo: 1, Notes: 1 }, Document: { AssetId: 1, Description: 1, Document: 1, Id: 1 }, DonateAsset: { AssetAssetLife: 1, AssetAssetPhoto: 1, AssetAssetTagId: 1, AssetBrandId: 1, AssetCategoryId: 1, AssetColor: 1, AssetCost: 1, AssetCreatedby: 1, AssetDateAcquired: 1, AssetDepartmentId: 1, AssetDepreciableAsset: 1, AssetDepreciableCost: 1, AssetDepreciationMethod: 1, AssetDescription: 1, AssetId: 1, AssetLocationId: 1, AssetModel: 1, AssetOnCreated: 1, AssetPurchaseDate: 1, AssetPurchasedfrom: 1, AssetSalvageValue: 1, AssetSiteId: 1, AssetUserId: 1, DateDonated: 1, Deductible: 1, DonateId: 1, DonateTo: 1, DonateValue: 1, Notes: 1 }, Lease: { AssetAssetLife: 1, AssetAssetPhoto: 1, AssetAssetTagId: 1, AssetBrandId: 1, AssetCategoryId: 1, AssetColor: 1, AssetCost: 1, AssetCreatedby: 1, AssetDateAcquired: 1, AssetDepartmentId: 1, AssetDepreciableAsset: 1, AssetDepreciableCost: 1, AssetDepreciationMethod: 1, AssetDescription: 1, AssetId: 1, AssetLocationId: 1, AssetModel: 1, AssetOnCreated: 1, AssetPurchaseDate: 1, AssetPurchasedfrom: 1, AssetSalvageValue: 1, AssetSiteId: 1, AssetUserId: 1, CustomerAddress: 1, CustomerCity: 1, CustomerCompany: 1, CustomerCountryId: 1, CustomerEmail: 1, CustomerId: 1, CustomerName: 1, CustomerNotes: 1, CustomerPhone: 1, CustomerStateId: 1, CustomerZip: 1, Email: 1, LeaseBegins: 1, LeaseExpires: 1, LeaseId: 1, Notes: 1, SendEmail: 1 }, RepairAsset: { AssetAssetLife: 1, AssetAssetPhoto: 1, AssetAssetTagId: 1, AssetBrandId: 1, AssetCategoryId: 1, AssetColor: 1, AssetCost: 1, AssetCreatedby: 1, AssetDateAcquired: 1, AssetDepartmentId: 1, AssetDepreciableAsset: 1, AssetDepreciableCost: 1, AssetDepreciationMethod: 1, AssetDescription: 1, AssetId: 1, AssetLocationId: 1, AssetModel: 1, AssetOnCreated: 1, AssetPurchaseDate: 1, AssetPurchasedfrom: 1, AssetSalvageValue: 1, AssetSiteId: 1, AssetUserId: 1, AssignedTo: 1, DateCompleted: 1, Id: 1, Notes: 1, RepairCost: 1, ScheduleDate: 1 }, SellAsset: { AssetAssetLife: 1, AssetAssetPhoto: 1, AssetAssetTagId: 1, AssetBrandId: 1, AssetCategoryId: 1, AssetColor: 1, AssetCost: 1, AssetCreatedby: 1, AssetDateAcquired: 1, AssetDepartmentId: 1, AssetDepreciableAsset: 1, AssetDepreciableCost: 1, AssetDepreciationMethod: 1, AssetDescription: 1, AssetId: 1, AssetLocationId: 1, AssetModel: 1, AssetOnCreated: 1, AssetPurchaseDate: 1, AssetPurchasedfrom: 1, AssetSalvageValue: 1, AssetSiteId: 1, AssetUserId: 1, Notes: 1, SaleAmount: 1, SaleDate: 1, SellId: 1, SoldTo: 1 } }, Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Advanced: { Customers: { Address: 1, City: 1, Company: 1, CountryCountryName: 1, CountryId: 1, CustomerId: 1, CustomerName: 1, Email: 1, Notes: 1, Phone: 1, SiteStateId: 1, StateId: 1, StateName: 1, Zip: 1 }, Employee: { Department: 1, DepartmentId: 1, Email: 1, EmployeeId: 1, EmployeeName: 1, Location: 1, LocationId: 1, LocationSiteId: 1, Note: 1, Phone: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1, Title: 1 }, Funding: { Amount: 1, Description: 1, EndDate: 1, FundingId: 1, IsActive: 1, Name: 1, Notes: 1, StartDate: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } }, Setup: { Brand: { BrandId: 1, BrandName: 1 }, Category: { Category: 1, CategoryId: 1 }, Company: { Address: 1, City: 1, CompanyId: 1, CompanyName: 1, CountryCountryName: 1, CountryId: 1, PostalCode: 1, StateId: 1, StateStateName: 1, Suite: 1 }, Country: { CountryId: 1, CountryName: 1 }, Currency: { CurrencyId: 1, CurrencyName: 1 }, Department: { Department: 1, DepartmentId: 1 }, Location: { Location: 1, LocationId: 1, SiteAddress: 1, SiteCity: 1, SiteDescription: 1, SiteId: 1, SiteSiteName: 1, SiteStateId: 1, SiteSuite: 1 }, MaintenanceStatus: { Id: 1, MaintenanceStatus: 1 }, Site: { Address: 1, City: 1, Description: 1, SiteId: 1, SiteName: 1, StateId: 1, StateStateName: 1, Suite: 1 }, State: { StateId: 1, StateName: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
     })(Texts = AssetManagement.Texts || (AssetManagement.Texts = {}));
 })(AssetManagement || (AssetManagement = {}));
 var AssetManagement;
@@ -1886,6 +2322,30 @@ var AssetManagement;
                 _this.tabs.on('tabsactivate', function (e, i) {
                     _this.arrange();
                 });
+                _this.LeaseGrid = new AddAnAsset.LeaseGrid(_this.byId("LeaseGrid"));
+                _this.tabs.on('tabsactivate', function (e, i) {
+                    _this.arrange();
+                });
+                _this.RepairAssetGrid = new AddAnAsset.RepairAssetGrid(_this.byId("RepairAssetGrid"));
+                _this.tabs.on('tabsactivate', function (e, i) {
+                    _this.arrange();
+                });
+                _this.BrokenAssetGrid = new AddAnAsset.BrokenAssetGrid(_this.byId("BrokenAssetGrid"));
+                _this.tabs.on('tabsactivate', function (e, i) {
+                    _this.arrange();
+                });
+                _this.DisposeAssetGrid = new AddAnAsset.DisposeAssetGrid(_this.byId("DisposeAssetGrid"));
+                _this.tabs.on('tabsactivate', function (e, i) {
+                    _this.arrange();
+                });
+                _this.DonateAssetGrid = new AddAnAsset.DonateAssetGrid(_this.byId("DonateAssetGrid"));
+                _this.tabs.on('tabsactivate', function (e, i) {
+                    _this.arrange();
+                });
+                _this.SellAssetGrid = new AddAnAsset.SellAssetGrid(_this.byId("SellAssetGrid"));
+                _this.tabs.on('tabsactivate', function (e, i) {
+                    _this.arrange();
+                });
                 return _this;
             }
             AssetDetailsDialog.prototype.getFormKey = function () { return AddAnAsset.AssetDetailsForm.formKey; };
@@ -1903,6 +2363,12 @@ var AssetManagement;
                 this.AssetMaintenanceGrid.AssetId = this.entity.AssetId;
                 this.CheckInGrid.AssetId = this.entity.AssetId;
                 this.CheckOutGrid.AssetId = this.entity.AssetId;
+                this.LeaseGrid.AssetId = this.entity.AssetId;
+                this.RepairAssetGrid.AssetId = this.entity.AssetId;
+                this.BrokenAssetGrid.AssetId = this.entity.AssetId;
+                this.DisposeAssetGrid.AssetId = this.entity.AssetId;
+                this.DonateAssetGrid.AssetId = this.entity.AssetId;
+                this.SellAssetGrid.AssetId = this.entity.AssetId;
             };
             AssetDetailsDialog = __decorate([
                 Serenity.Decorators.registerClass(),
@@ -2090,11 +2556,93 @@ var AssetManagement;
 (function (AssetManagement) {
     var AddAnAsset;
     (function (AddAnAsset) {
+        var BrokenAssetDialog = /** @class */ (function (_super) {
+            __extends(BrokenAssetDialog, _super);
+            function BrokenAssetDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new AddAnAsset.BrokenAssetForm(_this.idPrefix);
+                return _this;
+            }
+            BrokenAssetDialog.prototype.getFormKey = function () { return AddAnAsset.BrokenAssetForm.formKey; };
+            BrokenAssetDialog.prototype.getIdProperty = function () { return AddAnAsset.BrokenAssetRow.idProperty; };
+            BrokenAssetDialog.prototype.getLocalTextPrefix = function () { return AddAnAsset.BrokenAssetRow.localTextPrefix; };
+            BrokenAssetDialog.prototype.getNameProperty = function () { return AddAnAsset.BrokenAssetRow.nameProperty; };
+            BrokenAssetDialog.prototype.getService = function () { return AddAnAsset.BrokenAssetService.baseUrl; };
+            BrokenAssetDialog.prototype.getDeletePermission = function () { return AddAnAsset.BrokenAssetRow.deletePermission; };
+            BrokenAssetDialog.prototype.getInsertPermission = function () { return AddAnAsset.BrokenAssetRow.insertPermission; };
+            BrokenAssetDialog.prototype.getUpdatePermission = function () { return AddAnAsset.BrokenAssetRow.updatePermission; };
+            BrokenAssetDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], BrokenAssetDialog);
+            return BrokenAssetDialog;
+        }(Serenity.EntityDialog));
+        AddAnAsset.BrokenAssetDialog = BrokenAssetDialog;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var BrokenAssetGrid = /** @class */ (function (_super) {
+            __extends(BrokenAssetGrid, _super);
+            function BrokenAssetGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            BrokenAssetGrid.prototype.getColumnsKey = function () { return 'AddAnAsset.BrokenAsset'; };
+            BrokenAssetGrid.prototype.getDialogType = function () { return AddAnAsset.BrokenAssetDialog; };
+            BrokenAssetGrid.prototype.getIdProperty = function () { return AddAnAsset.BrokenAssetRow.idProperty; };
+            BrokenAssetGrid.prototype.getInsertPermission = function () { return AddAnAsset.BrokenAssetRow.insertPermission; };
+            BrokenAssetGrid.prototype.getLocalTextPrefix = function () { return AddAnAsset.BrokenAssetRow.localTextPrefix; };
+            BrokenAssetGrid.prototype.getService = function () { return AddAnAsset.BrokenAssetService.baseUrl; };
+            BrokenAssetGrid.prototype.addButtonClick = function () {
+                this.editItem({
+                    AssetId: this.AssetId
+                });
+            };
+            BrokenAssetGrid.prototype.usePager = function () {
+                return false;
+            };
+            Object.defineProperty(BrokenAssetGrid.prototype, "AssetId", {
+                get: function () {
+                    return this._AssetId;
+                },
+                set: function (value) {
+                    if (this._AssetId != value) {
+                        this._AssetId = value;
+                        this.setEquality("AssetId" /* AssetId */, value);
+                        this.refresh();
+                    }
+                },
+                enumerable: true,
+                configurable: true
+            });
+            BrokenAssetGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], BrokenAssetGrid);
+            return BrokenAssetGrid;
+        }(Serenity.EntityGrid));
+        AddAnAsset.BrokenAssetGrid = BrokenAssetGrid;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
         var CheckInDialog = /** @class */ (function (_super) {
             __extends(CheckInDialog, _super);
             function CheckInDialog() {
-                var _this = _super !== null && _super.apply(this, arguments) || this;
+                var _this = _super.call(this) || this;
                 _this.form = new AddAnAsset.CheckInForm(_this.idPrefix);
+                _this.form.SendMail.change(function (e) {
+                    _this.getGridField();
+                    if (!_this.form.SendMail.value)
+                        Serenity.EditorUtils.setReadOnly(_this.form.Email, true);
+                    else {
+                        Serenity.EditorUtils.setReadOnly(_this.form.Email, false);
+                    }
+                });
+                if (!_this.form.SendMail.value)
+                    Serenity.EditorUtils.setReadOnly(_this.form.Email, true);
                 return _this;
             }
             CheckInDialog.prototype.getFormKey = function () { return AddAnAsset.CheckInForm.formKey; };
@@ -2170,70 +2718,7 @@ var AssetManagement;
             function CheckOutDialog() {
                 var _this = _super.call(this) || this;
                 _this.form = new AddAnAsset.CheckOutForm(_this.idPrefix);
-                //    this.form.Email.change(e => {
-                //        this.toggleCheck(this.form.SendMail.value);
-                //    });
-                //}
-                //protected toggleCheck(value) {
-                //    this.form.Email.value = value;
-                _this.form.SendMail.change(function (e) {
-                    _this.getGridField();
-                    if (_this.form.SendMail.value != false)
-                        Serenity.EditorUtils.setReadOnly(_this.form.Email, true);
-                    else {
-                        _this.form.SendMail.change(function () {
-                            _this.form.SendMail.value;
-                            Serenity.EditorUtils.setReadOnly(_this.form.Email, true);
-                        });
-                    }
-                });
                 return _this;
-                //this.get_readOnly();
-                //    if (this.form.SendMail.value == false)
-                //        Serenity.EditorUtils.setReadOnly(this.form.Email, true);
-                //    this.element.find('Email').hide();
-                //});
-                //function (e) {
-                //    if (this.form.CheckOutTo.value == true) {
-                //        Serenity.EditorUtils.setRequired(this.form.SiteId, false);
-                //        this.form.CheckOutDate.getGridField().toggle(true);
-                //        Serenity.EditorUtils.setRequired(this.form.LocationId, false);
-                //        this.form.LocationId.getGridField().toggle(true);
-                //        Serenity.EditorUtils.setRequired(this.form.DepartmentId, false);
-                //        this.form.DepartmentId.getGridField().toggle(true);
-                //        Serenity.EditorUtils.setRequired(this.form.CheckOutDate, false);
-                //        this.form.CheckOutDate.getGridField().toggle(true);
-                //        Serenity.EditorUtils.setRequired(this.form.Notes, false);
-                //        this.form.Notes.getGridField().toggle(true);
-                //        Serenity.EditorUtils.setRequired(this.form.NoDueDate, false);
-                //        this.form.NoDueDate.getGridField().toggle(true);
-                //        Serenity.EditorUtils.setRequired(this.form.DueDate, false);
-                //        this.form.DueDate.getGridField().toggle(true);
-                //    }
-                //    else {
-                //        //Serenity.EditorUtils.setRequired(this.form.CheckOutDate, true);
-                //        //this.form.CheckOutDate.getGridField().toggle(false);
-                //        Serenity.EditorUtils.setRequired(this.form.EmployeeId, true);
-                //        this.form.EmployeeId.getGridField().toggle(false);
-                //        //Serenity.EditorUtils.setRequired(this.form.NoDueDate, true);
-                //        //this.form.NoDueDate.getGridField().toggle(false);
-                //        Serenity.EditorUtils.setRequired(this.form.DueDate, true);
-                //        this.form.DueDate.getGridField().toggle(false);
-                //        //Serenity.EditorUtils.setRequired(this.form.SiteId, true);
-                //        //this.form.SiteId.getGridField().toggle(false);
-                //        //Serenity.EditorUtils.setRequired(this.form.LocationId, true);
-                //        //this.form.LocationId.getGridField().toggle(false);
-                //        //Serenity.EditorUtils.setRequired(this.form.DepartmentId, true);
-                //        //this.form.DepartmentId.getGridField().toggle(false);
-                //        //Serenity.EditorUtils.setRequired(this.form.Notes, true);
-                //        //this.form.Notes.getGridField().toggle(false);
-                //        //Serenity.EditorUtils.setRequired(this.form.SendMail, true);
-                //        //this.form.SendMail.getGridField().toggle(false);
-                //        //Serenity.EditorUtils.setRequired(this.form.Email, true);
-                //        //this.form.Email.getGridField().toggle(false);
-                //    }
-                //}.bind(this)
-                //  );
             }
             CheckOutDialog.prototype.getFormKey = function () { return AddAnAsset.CheckOutForm.formKey; };
             CheckOutDialog.prototype.getIdProperty = function () { return AddAnAsset.CheckOutRow.idProperty; };
@@ -2254,9 +2739,18 @@ var AssetManagement;
                     _this.setShowHideFields();
                 });
                 this.setShowHideFields();
+                this.form.SendMail.change(function (e) {
+                    _this.getGridField();
+                    if (!_this.form.SendMail.value)
+                        Serenity.EditorUtils.setReadOnly(_this.form.Email, true);
+                    else {
+                        Serenity.EditorUtils.setReadOnly(_this.form.Email, false);
+                    }
+                });
+                if (!this.form.SendMail.value)
+                    Serenity.EditorUtils.setReadOnly(this.form.Email, true);
             };
             CheckOutDialog.prototype.setShowHideFields = function () {
-                debugger;
                 this.form.EmployeeId.getGridField().toggle(false);
                 if (this.form.CheckOutTo.value) {
                     if (this.form.CheckOutTo.value == '1') {
@@ -2342,6 +2836,78 @@ var AssetManagement;
 (function (AssetManagement) {
     var AddAnAsset;
     (function (AddAnAsset) {
+        var DisposeAssetDialog = /** @class */ (function (_super) {
+            __extends(DisposeAssetDialog, _super);
+            function DisposeAssetDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new AddAnAsset.DisposeAssetForm(_this.idPrefix);
+                return _this;
+            }
+            DisposeAssetDialog.prototype.getFormKey = function () { return AddAnAsset.DisposeAssetForm.formKey; };
+            DisposeAssetDialog.prototype.getIdProperty = function () { return AddAnAsset.DisposeAssetRow.idProperty; };
+            DisposeAssetDialog.prototype.getLocalTextPrefix = function () { return AddAnAsset.DisposeAssetRow.localTextPrefix; };
+            DisposeAssetDialog.prototype.getNameProperty = function () { return AddAnAsset.DisposeAssetRow.nameProperty; };
+            DisposeAssetDialog.prototype.getService = function () { return AddAnAsset.DisposeAssetService.baseUrl; };
+            DisposeAssetDialog.prototype.getDeletePermission = function () { return AddAnAsset.DisposeAssetRow.deletePermission; };
+            DisposeAssetDialog.prototype.getInsertPermission = function () { return AddAnAsset.DisposeAssetRow.insertPermission; };
+            DisposeAssetDialog.prototype.getUpdatePermission = function () { return AddAnAsset.DisposeAssetRow.updatePermission; };
+            DisposeAssetDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], DisposeAssetDialog);
+            return DisposeAssetDialog;
+        }(Serenity.EntityDialog));
+        AddAnAsset.DisposeAssetDialog = DisposeAssetDialog;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var DisposeAssetGrid = /** @class */ (function (_super) {
+            __extends(DisposeAssetGrid, _super);
+            function DisposeAssetGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            DisposeAssetGrid.prototype.getColumnsKey = function () { return 'AddAnAsset.DisposeAsset'; };
+            DisposeAssetGrid.prototype.getDialogType = function () { return AddAnAsset.DisposeAssetDialog; };
+            DisposeAssetGrid.prototype.getIdProperty = function () { return AddAnAsset.DisposeAssetRow.idProperty; };
+            DisposeAssetGrid.prototype.getInsertPermission = function () { return AddAnAsset.DisposeAssetRow.insertPermission; };
+            DisposeAssetGrid.prototype.getLocalTextPrefix = function () { return AddAnAsset.DisposeAssetRow.localTextPrefix; };
+            DisposeAssetGrid.prototype.getService = function () { return AddAnAsset.DisposeAssetService.baseUrl; };
+            DisposeAssetGrid.prototype.addButtonClick = function () {
+                this.editItem({
+                    AssetId: this.AssetId
+                });
+            };
+            DisposeAssetGrid.prototype.usePager = function () {
+                return false;
+            };
+            Object.defineProperty(DisposeAssetGrid.prototype, "AssetId", {
+                get: function () {
+                    return this._AssetId;
+                },
+                set: function (value) {
+                    if (this._AssetId != value) {
+                        this._AssetId = value;
+                        this.setEquality("AssetId" /* AssetId */, value);
+                        this.refresh();
+                    }
+                },
+                enumerable: true,
+                configurable: true
+            });
+            DisposeAssetGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], DisposeAssetGrid);
+            return DisposeAssetGrid;
+        }(Serenity.EntityGrid));
+        AddAnAsset.DisposeAssetGrid = DisposeAssetGrid;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
         var DocumentDialog = /** @class */ (function (_super) {
             __extends(DocumentDialog, _super);
             function DocumentDialog() {
@@ -2385,9 +2951,6 @@ var AssetManagement;
                     AssetId: this.AssetId
                 });
             };
-            //protected getInitialTitle() {
-            //    return null;
-            //}
             DocumentGrid.prototype.usePager = function () {
                 return false;
             };
@@ -2411,6 +2974,303 @@ var AssetManagement;
             return DocumentGrid;
         }(Serenity.EntityGrid));
         AddAnAsset.DocumentGrid = DocumentGrid;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var DonateAssetDialog = /** @class */ (function (_super) {
+            __extends(DonateAssetDialog, _super);
+            function DonateAssetDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new AddAnAsset.DonateAssetForm(_this.idPrefix);
+                return _this;
+            }
+            DonateAssetDialog.prototype.getFormKey = function () { return AddAnAsset.DonateAssetForm.formKey; };
+            DonateAssetDialog.prototype.getIdProperty = function () { return AddAnAsset.DonateAssetRow.idProperty; };
+            DonateAssetDialog.prototype.getLocalTextPrefix = function () { return AddAnAsset.DonateAssetRow.localTextPrefix; };
+            DonateAssetDialog.prototype.getNameProperty = function () { return AddAnAsset.DonateAssetRow.nameProperty; };
+            DonateAssetDialog.prototype.getService = function () { return AddAnAsset.DonateAssetService.baseUrl; };
+            DonateAssetDialog.prototype.getDeletePermission = function () { return AddAnAsset.DonateAssetRow.deletePermission; };
+            DonateAssetDialog.prototype.getInsertPermission = function () { return AddAnAsset.DonateAssetRow.insertPermission; };
+            DonateAssetDialog.prototype.getUpdatePermission = function () { return AddAnAsset.DonateAssetRow.updatePermission; };
+            DonateAssetDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], DonateAssetDialog);
+            return DonateAssetDialog;
+        }(Serenity.EntityDialog));
+        AddAnAsset.DonateAssetDialog = DonateAssetDialog;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var DonateAssetGrid = /** @class */ (function (_super) {
+            __extends(DonateAssetGrid, _super);
+            function DonateAssetGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            DonateAssetGrid.prototype.getColumnsKey = function () { return 'AddAnAsset.DonateAsset'; };
+            DonateAssetGrid.prototype.getDialogType = function () { return AddAnAsset.DonateAssetDialog; };
+            DonateAssetGrid.prototype.getIdProperty = function () { return AddAnAsset.DonateAssetRow.idProperty; };
+            DonateAssetGrid.prototype.getInsertPermission = function () { return AddAnAsset.DonateAssetRow.insertPermission; };
+            DonateAssetGrid.prototype.getLocalTextPrefix = function () { return AddAnAsset.DonateAssetRow.localTextPrefix; };
+            DonateAssetGrid.prototype.getService = function () { return AddAnAsset.DonateAssetService.baseUrl; };
+            DonateAssetGrid.prototype.addButtonClick = function () {
+                this.editItem({
+                    AssetId: this.AssetId
+                });
+            };
+            DonateAssetGrid.prototype.usePager = function () {
+                return false;
+            };
+            Object.defineProperty(DonateAssetGrid.prototype, "AssetId", {
+                get: function () {
+                    return this._AssetId;
+                },
+                set: function (value) {
+                    if (this._AssetId != value) {
+                        this._AssetId = value;
+                        this.setEquality("AssetId" /* AssetId */, value);
+                        this.refresh();
+                    }
+                },
+                enumerable: true,
+                configurable: true
+            });
+            DonateAssetGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], DonateAssetGrid);
+            return DonateAssetGrid;
+        }(Serenity.EntityGrid));
+        AddAnAsset.DonateAssetGrid = DonateAssetGrid;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var LeaseDialog = /** @class */ (function (_super) {
+            __extends(LeaseDialog, _super);
+            function LeaseDialog() {
+                var _this = _super.call(this) || this;
+                _this.form = new AddAnAsset.LeaseForm(_this.idPrefix);
+                _this.form.SendEmail.change(function (e) {
+                    if (!_this.form.SendEmail.value)
+                        Serenity.EditorUtils.setReadOnly(_this.form.Email, true);
+                    else {
+                        Serenity.EditorUtils.setReadOnly(_this.form.Email, false);
+                    }
+                });
+                if (!_this.form.SendEmail.value)
+                    Serenity.EditorUtils.setReadOnly(_this.form.Email, true);
+                return _this;
+            }
+            LeaseDialog.prototype.getFormKey = function () { return AddAnAsset.LeaseForm.formKey; };
+            LeaseDialog.prototype.getIdProperty = function () { return AddAnAsset.LeaseRow.idProperty; };
+            LeaseDialog.prototype.getLocalTextPrefix = function () { return AddAnAsset.LeaseRow.localTextPrefix; };
+            LeaseDialog.prototype.getNameProperty = function () { return AddAnAsset.LeaseRow.nameProperty; };
+            LeaseDialog.prototype.getService = function () { return AddAnAsset.LeaseService.baseUrl; };
+            LeaseDialog.prototype.getDeletePermission = function () { return AddAnAsset.LeaseRow.deletePermission; };
+            LeaseDialog.prototype.getInsertPermission = function () { return AddAnAsset.LeaseRow.insertPermission; };
+            LeaseDialog.prototype.getUpdatePermission = function () { return AddAnAsset.LeaseRow.updatePermission; };
+            LeaseDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], LeaseDialog);
+            return LeaseDialog;
+        }(Serenity.EntityDialog));
+        AddAnAsset.LeaseDialog = LeaseDialog;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var LeaseGrid = /** @class */ (function (_super) {
+            __extends(LeaseGrid, _super);
+            function LeaseGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            LeaseGrid.prototype.getColumnsKey = function () { return 'AddAnAsset.Lease'; };
+            LeaseGrid.prototype.getDialogType = function () { return AddAnAsset.LeaseDialog; };
+            LeaseGrid.prototype.getIdProperty = function () { return AddAnAsset.LeaseRow.idProperty; };
+            LeaseGrid.prototype.getInsertPermission = function () { return AddAnAsset.LeaseRow.insertPermission; };
+            LeaseGrid.prototype.getLocalTextPrefix = function () { return AddAnAsset.LeaseRow.localTextPrefix; };
+            LeaseGrid.prototype.getService = function () { return AddAnAsset.LeaseService.baseUrl; };
+            LeaseGrid.prototype.addButtonClick = function () {
+                this.editItem({
+                    AssetId: this.AssetId
+                });
+            };
+            LeaseGrid.prototype.usePager = function () {
+                return false;
+            };
+            Object.defineProperty(LeaseGrid.prototype, "AssetId", {
+                get: function () {
+                    return this._AssetId;
+                },
+                set: function (value) {
+                    if (this._AssetId != value) {
+                        this._AssetId = value;
+                        this.setEquality("AssetId" /* AssetId */, value);
+                        this.refresh();
+                    }
+                },
+                enumerable: true,
+                configurable: true
+            });
+            LeaseGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], LeaseGrid);
+            return LeaseGrid;
+        }(Serenity.EntityGrid));
+        AddAnAsset.LeaseGrid = LeaseGrid;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var RepairAssetDialog = /** @class */ (function (_super) {
+            __extends(RepairAssetDialog, _super);
+            function RepairAssetDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new AddAnAsset.RepairAssetForm(_this.idPrefix);
+                return _this;
+            }
+            RepairAssetDialog.prototype.getFormKey = function () { return AddAnAsset.RepairAssetForm.formKey; };
+            RepairAssetDialog.prototype.getIdProperty = function () { return AddAnAsset.RepairAssetRow.idProperty; };
+            RepairAssetDialog.prototype.getLocalTextPrefix = function () { return AddAnAsset.RepairAssetRow.localTextPrefix; };
+            RepairAssetDialog.prototype.getNameProperty = function () { return AddAnAsset.RepairAssetRow.nameProperty; };
+            RepairAssetDialog.prototype.getService = function () { return AddAnAsset.RepairAssetService.baseUrl; };
+            RepairAssetDialog.prototype.getDeletePermission = function () { return AddAnAsset.RepairAssetRow.deletePermission; };
+            RepairAssetDialog.prototype.getInsertPermission = function () { return AddAnAsset.RepairAssetRow.insertPermission; };
+            RepairAssetDialog.prototype.getUpdatePermission = function () { return AddAnAsset.RepairAssetRow.updatePermission; };
+            RepairAssetDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], RepairAssetDialog);
+            return RepairAssetDialog;
+        }(Serenity.EntityDialog));
+        AddAnAsset.RepairAssetDialog = RepairAssetDialog;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var RepairAssetGrid = /** @class */ (function (_super) {
+            __extends(RepairAssetGrid, _super);
+            function RepairAssetGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            RepairAssetGrid.prototype.getColumnsKey = function () { return 'AddAnAsset.RepairAsset'; };
+            RepairAssetGrid.prototype.getDialogType = function () { return AddAnAsset.RepairAssetDialog; };
+            RepairAssetGrid.prototype.getIdProperty = function () { return AddAnAsset.RepairAssetRow.idProperty; };
+            RepairAssetGrid.prototype.getInsertPermission = function () { return AddAnAsset.RepairAssetRow.insertPermission; };
+            RepairAssetGrid.prototype.getLocalTextPrefix = function () { return AddAnAsset.RepairAssetRow.localTextPrefix; };
+            RepairAssetGrid.prototype.getService = function () { return AddAnAsset.RepairAssetService.baseUrl; };
+            RepairAssetGrid.prototype.addButtonClick = function () {
+                this.editItem({
+                    AssetId: this.AssetId
+                });
+            };
+            RepairAssetGrid.prototype.usePager = function () {
+                return false;
+            };
+            Object.defineProperty(RepairAssetGrid.prototype, "AssetId", {
+                get: function () {
+                    return this._AssetId;
+                },
+                set: function (value) {
+                    if (this._AssetId != value) {
+                        this._AssetId = value;
+                        this.setEquality("AssetId" /* AssetId */, value);
+                        this.refresh();
+                    }
+                },
+                enumerable: true,
+                configurable: true
+            });
+            RepairAssetGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], RepairAssetGrid);
+            return RepairAssetGrid;
+        }(Serenity.EntityGrid));
+        AddAnAsset.RepairAssetGrid = RepairAssetGrid;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var SellAssetDialog = /** @class */ (function (_super) {
+            __extends(SellAssetDialog, _super);
+            function SellAssetDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new AddAnAsset.SellAssetForm(_this.idPrefix);
+                return _this;
+            }
+            SellAssetDialog.prototype.getFormKey = function () { return AddAnAsset.SellAssetForm.formKey; };
+            SellAssetDialog.prototype.getIdProperty = function () { return AddAnAsset.SellAssetRow.idProperty; };
+            SellAssetDialog.prototype.getLocalTextPrefix = function () { return AddAnAsset.SellAssetRow.localTextPrefix; };
+            SellAssetDialog.prototype.getNameProperty = function () { return AddAnAsset.SellAssetRow.nameProperty; };
+            SellAssetDialog.prototype.getService = function () { return AddAnAsset.SellAssetService.baseUrl; };
+            SellAssetDialog.prototype.getDeletePermission = function () { return AddAnAsset.SellAssetRow.deletePermission; };
+            SellAssetDialog.prototype.getInsertPermission = function () { return AddAnAsset.SellAssetRow.insertPermission; };
+            SellAssetDialog.prototype.getUpdatePermission = function () { return AddAnAsset.SellAssetRow.updatePermission; };
+            SellAssetDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], SellAssetDialog);
+            return SellAssetDialog;
+        }(Serenity.EntityDialog));
+        AddAnAsset.SellAssetDialog = SellAssetDialog;
+    })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
+})(AssetManagement || (AssetManagement = {}));
+var AssetManagement;
+(function (AssetManagement) {
+    var AddAnAsset;
+    (function (AddAnAsset) {
+        var SellAssetGrid = /** @class */ (function (_super) {
+            __extends(SellAssetGrid, _super);
+            function SellAssetGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            SellAssetGrid.prototype.getColumnsKey = function () { return 'AddAnAsset.SellAsset'; };
+            SellAssetGrid.prototype.getDialogType = function () { return AddAnAsset.SellAssetDialog; };
+            SellAssetGrid.prototype.getIdProperty = function () { return AddAnAsset.SellAssetRow.idProperty; };
+            SellAssetGrid.prototype.getInsertPermission = function () { return AddAnAsset.SellAssetRow.insertPermission; };
+            SellAssetGrid.prototype.getLocalTextPrefix = function () { return AddAnAsset.SellAssetRow.localTextPrefix; };
+            SellAssetGrid.prototype.getService = function () { return AddAnAsset.SellAssetService.baseUrl; };
+            SellAssetGrid.prototype.addButtonClick = function () {
+                this.editItem({
+                    AssetId: this.AssetId
+                });
+            };
+            SellAssetGrid.prototype.usePager = function () {
+                return false;
+            };
+            Object.defineProperty(SellAssetGrid.prototype, "AssetId", {
+                get: function () {
+                    return this._AssetId;
+                },
+                set: function (value) {
+                    if (this._AssetId != value) {
+                        this._AssetId = value;
+                        this.setEquality("AssetId" /* AssetId */, value);
+                        this.refresh();
+                    }
+                },
+                enumerable: true,
+                configurable: true
+            });
+            SellAssetGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], SellAssetGrid);
+            return SellAssetGrid;
+        }(Serenity.EntityGrid));
+        AddAnAsset.SellAssetGrid = SellAssetGrid;
     })(AddAnAsset = AssetManagement.AddAnAsset || (AssetManagement.AddAnAsset = {}));
 })(AssetManagement || (AssetManagement = {}));
 var AssetManagement;

@@ -20,7 +20,12 @@ namespace AssetManagement.AddAnAsset {
         private AssetMaintenanceGrid: AssetMaintenanceGrid;
         private CheckInGrid: CheckInGrid;
         private CheckOutGrid: CheckOutGrid;
-     
+        private LeaseGrid: LeaseGrid;
+        private RepairAssetGrid: RepairAssetGrid;
+        private BrokenAssetGrid: BrokenAssetGrid;
+        private DisposeAssetGrid: DisposeAssetGrid;
+        private DonateAssetGrid: DonateAssetGrid;
+        private SellAssetGrid: SellAssetGrid;
 
         constructor() {
             super();
@@ -48,7 +53,37 @@ namespace AssetManagement.AddAnAsset {
             this.tabs.on('tabsactivate', (e, i) => {
                 this.arrange();
             });
-            
+
+            this.LeaseGrid = new LeaseGrid(this.byId("LeaseGrid"));
+            this.tabs.on('tabsactivate', (e, i) => {
+                this.arrange();
+            });
+
+            this.RepairAssetGrid = new RepairAssetGrid(this.byId("RepairAssetGrid"));
+            this.tabs.on('tabsactivate', (e, i) => {
+                this.arrange();
+            });
+
+            this.BrokenAssetGrid = new BrokenAssetGrid(this.byId("BrokenAssetGrid"));
+            this.tabs.on('tabsactivate', (e, i) => {
+                this.arrange();
+            });
+
+            this.DisposeAssetGrid = new DisposeAssetGrid(this.byId("DisposeAssetGrid"));
+            this.tabs.on('tabsactivate', (e, i) => {
+                this.arrange();
+            });
+
+            this.DonateAssetGrid = new DonateAssetGrid(this.byId("DonateAssetGrid"));
+            this.tabs.on('tabsactivate', (e, i) => {
+                this.arrange();
+            });
+
+            this.SellAssetGrid = new SellAssetGrid(this.byId("SellAssetGrid"));
+            this.tabs.on('tabsactivate', (e, i) => {
+                this.arrange();
+            });
+
         }
              protected afterLoadEntity() {
             super.afterLoadEntity();
@@ -58,7 +93,12 @@ namespace AssetManagement.AddAnAsset {
                  this.AssetMaintenanceGrid.AssetId = this.entity.AssetId
                  this.CheckInGrid.AssetId = this.entity.AssetId
                  this.CheckOutGrid.AssetId = this.entity.AssetId
-                 
+                 this.LeaseGrid.AssetId = this.entity.AssetId
+                 this.RepairAssetGrid.AssetId = this.entity.AssetId
+                 this.BrokenAssetGrid.AssetId = this.entity.AssetId
+                 this.DisposeAssetGrid.AssetId = this.entity.AssetId
+                 this.DonateAssetGrid.AssetId = this.entity.AssetId
+                 this.SellAssetGrid.AssetId = this.entity.AssetId
 
             }
 
